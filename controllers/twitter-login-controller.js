@@ -13,7 +13,7 @@ module.exports = (twitterRouter, models) => {
       twitterOAuthRoutes.callback(req, res);
     });
 
-  twitterRouter.get('/logout', isLoggedIn, (req, res) => {
+  twitterRouter.post('/logout', isLoggedIn, (req, res) => {
     twitterOAuthRoutes.logOut(req, res);
   });
 
