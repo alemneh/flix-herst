@@ -22,6 +22,23 @@ let userRoutes = {
       });
   },
 
+  updateUser: function(req, res) {
+
+    User.findByIdAndUpdate(req.params.id, req.body, (err, user) => {
+      if(err) throw err;
+
+      res.json({ message: 'User Updated!'});
+    });
+  },
+
+  removeUser: function(req, res) {
+    User.findByIdAndRemove(req.params.id, (err, user) => {
+      if(err) throw err;
+
+      res.json({ message: 'User Removed!'});
+    });
+  },
+
   createCard4User: function(req, res) {
     let newCard = new Card(req.body);
     newCard._owner.push(req.params.id);
