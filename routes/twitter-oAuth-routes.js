@@ -1,14 +1,14 @@
-'user strict';
+'use strict';
 
 let twitterOAuthRoutes = {
 
-  twitterCallback: function(req, res)  {
-    res.redirect('/');
+  callback: function(req, res)  {
+    res.redirect('/cards');
   },
 
   logOut: function(req, res) {
     req.logout();
-    res.redirect('/');
+    res.redirect('/game');
   }
 
 };

@@ -1,7 +1,7 @@
-'user strict';
-
-const User = require('../models/user');
-const Card = require('../models/card');
+'use strict';
+const models = require('../models');
+const User   = models.User;
+const Card   = models.Card;
 
 let userRoutes = {
   getOneUser: function(req, res) {
@@ -9,6 +9,14 @@ let userRoutes = {
       if(err) throw err;
 
       res.json({ user });
+    });
+  },
+
+  getAllUsers: function(req, res) {
+    User.find({}, (err, users) => {
+      if(err) throw err;
+
+      res.json({ users });
     });
   },
 

@@ -5,9 +5,8 @@ module.exports = (mongoose, models) => {
   const cardSchema = new mongoose.Schema({
     _owner: [{type: Schema.Types.ObjectId, ref: 'User'}],
     title: String,
-    imgUrl: String,
-    passage: String,
-    likes: Number
+    imgURL: String,
+    likes: {type: Number, default: 0}
 
   });
 

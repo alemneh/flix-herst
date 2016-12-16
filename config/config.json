@@ -1,12 +1,12 @@
 {
   "development": {
-    "database": "mongodb://localhost/barter-r-books",
+    "database": "mongodb://localhost/flix-herst",
     "host": "http://127.0.0.1:3000",
     "port": "3000",
     "secret": "keyboard cat"
   },
   "test": {
-    "database": "mongodb://localhost/barter-r-books-test",
+    "database": "mongodb://localhost/flix-herst-test",
     "host": "http://127.0.0.1:3000",
     "port": "3000",
     "secret": "keyboard cat"

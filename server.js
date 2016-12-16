@@ -47,9 +47,9 @@ app.use(passport.session());
 
 app.use('/', userRouter, cardRouter, twitterRouter);
 
-app.get('*', function (request, response){
-  response.sendFile(__dirname + '/src/client/index.html');
-});
+// app.get('*', function (request, response){
+//   response.sendFile(__dirname + '/src/client/index.html');
+// });
 
 
 app.listen(port, () => {console.log('port up on '+ port);});

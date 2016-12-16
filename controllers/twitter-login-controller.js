@@ -8,12 +8,12 @@ module.exports = (twitterRouter, models) => {
 
   twitterRouter.get('/auth/twitter', passportTwitter.authenticate('twitter'));
 
-  twitterRouter.get('/auth/twitter/callback', isLoggedIn,
+  twitterRouter.get('/auth/twitter/callback', passportTwitter.authenticate('twitter'),
     (req, res) => {
       twitterOAuthRoutes.callback(req, res);
     });
 
-  twitterRouter.post('/logout', isLoggedIn, (req, res) => {
+  twitterRouter.get('/logout', isLoggedIn, (req, res) => {
     twitterOAuthRoutes.logOut(req, res);
   });
 

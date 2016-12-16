@@ -5,8 +5,8 @@ module.exports = (mongoose, models) => {
   const userSchema = new mongoose.Schema({
     cards: [{type: Schema.Types.ObjectId, ref: 'Card'}],
     name: String,
-    twiiterImg: String,
-    twitterId: String
+    twitterIMG: String,
+    twitterID: String
 
   });
 

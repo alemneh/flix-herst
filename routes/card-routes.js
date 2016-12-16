@@ -1,6 +1,7 @@
 'use strict';
 
-const Card = require('../models/card');
+const models = require('../models');
+const Card   = models.Card;
 
 let cardRoutes = {
 
