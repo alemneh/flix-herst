@@ -29,7 +29,7 @@ var config = {
   ],
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.min.js'
+    filename: 'bundle.js'
   },
   module: {
     loaders: [

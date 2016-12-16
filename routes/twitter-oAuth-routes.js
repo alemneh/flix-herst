@@ -3,12 +3,12 @@
 let twitterOAuthRoutes = {
 
   callback: function(req, res)  {
-    res.redirect('/cards');
+    res.redirect('/');
   },
 
   logOut: function(req, res) {
     req.logout();
-    res.redirect('/game');
+    res.redirect('/');
   }
 
 };

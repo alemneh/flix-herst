@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <nav className="navbar navbar-inverse">
@@ -22,7 +25,7 @@ class Nav extends Component {
                 <li><a href="#">All Cards</a></li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li><a href="/auth/twitter">Login</a></li>
               </ul>
             </div>
           </div>
