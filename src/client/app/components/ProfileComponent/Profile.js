@@ -29,6 +29,7 @@ class Profile extends Component {
           { this.renderCards() }
         </div>
         <CreateCard handleImgChange={ this.props.handleImgChange }
+                    handleCreateCardClick={ this.props.handleCreateCardClick }
                     imgURL={this.props.imgURL}/>
       </div>
     )

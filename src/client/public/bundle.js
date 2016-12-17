@@ -27115,7 +27115,10 @@
 	  }, {
 	    key: 'handleCreateCardClick',
 	    value: function handleCreateCardClick() {
-	      axios.post(("http://127.0.0.1:3000") + '/users/' + userID + '/cards').then(function (res) {
+	      axios.post(("http://127.0.0.1:3000") + '/users/' + this.props.userID + '/cards', {
+	        tagLine: this.state.tagLine,
+	        imgURL: this.state.imgURL
+	      }).then(function (res) {
 	        console.log(res);
 	      }).catch(function (err) {
 	        console.log(err);
@@ -27217,6 +27220,7 @@
 	          this.renderCards()
 	        ),
 	        _react2.default.createElement(_CreateCard2.default, { handleImgChange: this.props.handleImgChange,
+	          handleCreateCardClick: this.props.handleCreateCardClick,
 	          imgURL: this.props.imgURL })
 	      );
 	    }
@@ -27330,7 +27334,7 @@
 	              ),
 	              _react2.default.createElement(
 	                'button',
-	                { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                { onClick: this.props.handleCreateCardClick, type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
 	                'Create'
 	              )
 	            )

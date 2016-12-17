@@ -23,7 +23,10 @@ class ProfileContainer extends Component {
   }
 
   handleCreateCardClick() {
-    axios.post(process.env.URL + '/users/' + userID + '/cards')
+    axios.post(process.env.URL + '/users/' + this.props.userID + '/cards', {
+      tagLine: this.state.tagLine,
+      imgURL: this.state.imgURL
+    })
       .then((res) => {
         console.log(res);
       })
