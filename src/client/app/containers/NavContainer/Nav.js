@@ -11,7 +11,7 @@ class NavContainer extends Component {
   }
 
   componentWillMount() {
-    this.checkLogIn();
+    // this.checkLogIn();
   }
 
   checkLogIn() {
@@ -47,7 +47,7 @@ class NavContainer extends Component {
     return(
       <div>
         <Nav handleLogoutClick={ this.handleLogoutClick }
-             isLoggedIn={ this.state.isLoggedIn }/>
+             isLoggedIn={ this.props.userID }/>
       </div>
     )
   }

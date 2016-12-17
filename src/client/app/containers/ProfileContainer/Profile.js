@@ -6,7 +6,9 @@ class ProfileContainer extends Component {
     super(props);
     this.state = {
       cards: [],
-      imgURL: ''
+      imgURL: '',
+      tagLine: '',
+      userID: null
     }
   }
 
@@ -15,13 +17,30 @@ class ProfileContainer extends Component {
     this.setState({ imgURL: e.target.value});
   }
 
+  handleTagLineChange(e) {
+    console.log(e.target.value);
+    this.setState({ tagLine: e.target.value });
+  }
+
+  handleCreateCardClick() {
+    axios.post(process.env.URL + '/users/' + userID + '/cards')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
 
   render() {
     return (
       <div className="container">
         <Profile cards={this.state.cards}
                  imgURL={this.state.imgURL}
-                 handleImgChange={ this.handleImgChange.bind(this) }/>
+                 handleImgChange={ this.handleImgChange.bind(this) }
+                 handleTagLineChange={ this.handleTagLineChange.bind(this) }
+                 handleCreateCardClick={ this.handleCreateCardClick.bind(this)}/>
       </div>
     )
   }

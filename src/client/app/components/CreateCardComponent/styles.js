@@ -1,10 +1,10 @@
 const styles = {
   imageHolder: {
-    height: '400px',
+    height: '200px',
     backgroundColor: 'white'
   },
   image: {
-    width: '400px'
+    width: '200px'
   }
 };
 

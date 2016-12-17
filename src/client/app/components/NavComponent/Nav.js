@@ -7,6 +7,7 @@ class Nav extends Component {
   }
 
   renderNavLinks() {
+    console.log(this.props.isLoggedIn);
     if(!this.props.isLoggedIn) {
       return (
         <ul className="nav navbar-nav navbar-right">
