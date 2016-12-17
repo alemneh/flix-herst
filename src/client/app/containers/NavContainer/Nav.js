@@ -1,12 +1,30 @@
 import React, { Component } from 'react';
 import Nav from '../../components/NavComponent/Nav';
+import { browserHistory } from 'react-router';
 
 class NavContainer extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoggedIn: false
+    }
   }
 
-  handleLogout() {
+  componentWillMount() {
+    this.checkLogIn();
+  }
+
+  checkLogIn() {
+    axios.get(process.env.URL + '/isLoggedIn')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  handleLogoutClick() {
     axios.get(process.env.URL + '/logout')
       .then((res) => {
         console.log(res);
@@ -16,23 +34,16 @@ class NavContainer extends Component {
       })
   }
 
-  handleLogin(e) {
-    console.log(e.target);
+  handleLoginClick() {
     console.log('hit');
-    axios.get(process.env.URL + '/auth/twitter')
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+    browserHistory.push('/auth/twitter');
   }
 
   render() {
     return(
       <div>
-        <Nav handleLogin={ this.handleLogin }
-             handleLogout={ this.handleLogout }/>
+        <Nav handleLogoutClick={ this.handleLogoutClick }
+             isLoggedIn={ this.state.isLoggedIn }/>
       </div>
     )
   }

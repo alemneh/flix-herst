@@ -17,6 +17,7 @@ const url           = process.env.URL || CONFIG.host || 'http://127.0.0.1:3000';
 
 
 
+
 require('./controllers/user-controller')(userRouter, models);
 require('./controllers/card-controller')(cardRouter, models);
 require('./controllers/twitter-login-controller')(twitterRouter, models);
@@ -42,14 +43,21 @@ app.use(session({
   saveUninitialized: true
 }));
 
+
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', userRouter, cardRouter, twitterRouter);
 
-// app.get('*', function (request, response){
-//   response.sendFile(__dirname + '/src/client/index.html');
-// });
+app.get('/isLoggedIn', (req, res) => {
+  res.json({user: req.session.user || false });
+});
+
+app.get('*', function (request, response){
+  response.sendFile(__dirname + '/src/client/index.html');
+});
 
 
 app.listen(port, () => {console.log('port up on '+ port);});

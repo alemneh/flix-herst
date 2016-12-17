@@ -8,7 +8,7 @@ let cardRoutes = {
   getAllCards: function(req, res) {
     Card.find({}, (err, cards) => {
       if(err) throw err;
-
+      console.log(req);
       res.json({ cards });
     });
   },

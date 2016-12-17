@@ -5,6 +5,28 @@ class Nav extends Component {
   constructor(props) {
     super(props);
   }
+
+  renderNavLinks() {
+    if(true) {
+      return (
+        <ul className="nav navbar-nav navbar-right">
+          <li><a href='/auth/twitter' >Login</a></li>
+        </ul>
+      )
+    }
+    return (
+      <div>
+        <ul className="nav navbar-nav">
+          <li className="active"><a href="#">Profile <span className="sr-only">(current)</span></a></li>
+          <li><a href="#">All Cards</a></li>
+        </ul>
+        <ul className="nav navbar-nav navbar-right">
+          <li><a href='/auth/twitter' >Logout</a></li>
+        </ul>
+      </div>
+    )
+  }
+
   render() {
     return (
       <nav className="navbar navbar-inverse">
@@ -20,13 +42,7 @@ class Nav extends Component {
             </div>
 
             <div className="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">
-              <ul className="nav navbar-nav">
-                <li className="active"><a href="#">Profile <span className="sr-only">(current)</span></a></li>
-                <li><a href="#">All Cards</a></li>
-              </ul>
-              <ul className="nav navbar-nav navbar-right">
-                <li><a href="/auth/twitter">Login</a></li>
-              </ul>
+              { this.renderNavLinks() }
             </div>
           </div>
         </nav>

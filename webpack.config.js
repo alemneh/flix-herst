@@ -40,7 +40,7 @@ var config = {
       }
     ]
   },
-  plugins: [definePlugin, optimizeBundle]
+  plugins: [definePlugin]
 };
 
 
