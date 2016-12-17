@@ -17,7 +17,10 @@ class NavContainer extends Component {
   checkLogIn() {
     axios.get(process.env.URL + '/isLoggedIn')
       .then((res) => {
-        console.log(res);
+        console.log(res.data.user);
+        this.setState({
+          isLoggedIn: res.data.user
+        })
       })
       .catch((err) => {
         console.log(err);
@@ -25,9 +28,10 @@ class NavContainer extends Component {
   }
 
   handleLogoutClick() {
+    console.log('hit');
     axios.get(process.env.URL + '/logout')
       .then((res) => {
-        console.log(res);
+        console.log(hit);
       })
       .catch((err) => {
         console.log(err);

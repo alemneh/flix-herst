@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CreateCard from '../CreateCardComponent/CreateCard';
 import Styles from './styles';
 
 class Profile extends Component {
@@ -21,10 +22,14 @@ class Profile extends Component {
     return (
       <div className="container">
         <h1>Profile</h1><hr />
-        <a href="#" className="btn btn-success">Create Card</a>
+        <input type="button" value="Create Card" className="btn btn-success"
+                    data-toggle="modal" data-target="#myModal" />
+
         <div style={Styles.cards} className="row">
           { this.renderCards() }
         </div>
+        <CreateCard handleImgChange={ this.props.handleImgChange }
+                    imgURL={this.props.imgURL}/>
       </div>
     )
   }

@@ -7,7 +7,7 @@ class Nav extends Component {
   }
 
   renderNavLinks() {
-    if(true) {
+    if(!this.props.isLoggedIn) {
       return (
         <ul className="nav navbar-nav navbar-right">
           <li><a href='/auth/twitter' >Login</a></li>
@@ -21,7 +21,7 @@ class Nav extends Component {
           <li><a href="#">All Cards</a></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><a href='/auth/twitter' >Logout</a></li>
+          <li><a href='/logout'>Logout</a></li>
         </ul>
       </div>
     )
