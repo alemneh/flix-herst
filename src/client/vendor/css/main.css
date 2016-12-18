@@ -1,0 +1,9 @@
+.col:not(:first-child,:last-child) {
+  padding-right:7px;
+  padding-left:7px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

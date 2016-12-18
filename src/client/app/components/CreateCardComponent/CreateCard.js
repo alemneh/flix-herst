@@ -23,7 +23,8 @@ class CreateCard extends Component {
               </div>
               <div className="form-group">
                 <label className="control-label" for="inputSmall">Tag-line</label>
-                <input className="form-control input-sm" type="text" id="inputSmall" />
+                <input className="form-control input-sm" type="text" id="inputSmall"
+                       onChange={ this.props.handleTagLineChange }/>
               </div>
             </div>
             <div className="modal-footer">

@@ -7,7 +7,6 @@ class Nav extends Component {
   }
 
   renderNavLinks() {
-    console.log(this.props.isLoggedIn);
     if(!this.props.isLoggedIn) {
       return (
         <ul className="nav navbar-nav navbar-right">
@@ -18,7 +17,7 @@ class Nav extends Component {
     return (
       <div>
         <ul className="nav navbar-nav">
-          <li className="active"><a href="#">Profile <span className="sr-only">(current)</span></a></li>
+          <li className="active"><Link to="/profile"><a href="#">Profile <span className="sr-only">(current)</span></a></Link></li>
           <li><a href="#">All Cards</a></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">

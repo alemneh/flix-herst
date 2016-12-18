@@ -73,7 +73,7 @@
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
-	var _Login = __webpack_require__(249);
+	var _Login = __webpack_require__(250);
 
 	var _Login2 = _interopRequireDefault(_Login);
 
@@ -26714,7 +26714,8 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 	    _this.state = {
-	      userID: null
+	      userID: null,
+	      cards: []
 	    };
 	    return _this;
 	  }
@@ -26722,7 +26723,9 @@
 	  _createClass(App, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
+	      console.log(localStorage.userID + ': app');
 	      this.fetchUserID();
+	      // this.fetchUserCards();
 	    }
 	  }, {
 	    key: 'fetchUserID',
@@ -26731,6 +26734,7 @@
 
 	      axios.get(("http://127.0.0.1:3000") + '/isLoggedIn').then(function (res) {
 	        console.log(res);
+	        localStorage.userID = res.data.user;
 	        _this2.setState({ userID: res.data.user });
 	      }).catch(function (err) {
 	        console.log(err);
@@ -26739,11 +26743,15 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      // this.fetchUserCards()
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_Nav2.default, { userID: this.state.userID }),
-	        _react2.default.cloneElement(this.props.children, { userID: this.state.userID })
+	        _react2.default.cloneElement(this.props.children, {
+	          userID: this.state.userID,
+	          cards: this.state.cards
+	        })
 	      );
 	    }
 	  }]);
@@ -26887,7 +26895,6 @@
 	  _createClass(Nav, [{
 	    key: 'renderNavLinks',
 	    value: function renderNavLinks() {
-	      console.log(this.props.isLoggedIn);
 	      if (!this.props.isLoggedIn) {
 	        return _react2.default.createElement(
 	          'ul',
@@ -26913,13 +26920,17 @@
 	            'li',
 	            { className: 'active' },
 	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              'Profile ',
+	              _reactRouter.Link,
+	              { to: '/profile' },
 	              _react2.default.createElement(
-	                'span',
-	                { className: 'sr-only' },
-	                '(current)'
+	                'a',
+	                { href: '#' },
+	                'Profile ',
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'sr-only' },
+	                  '(current)'
+	                )
 	              )
 	            )
 	          ),
@@ -27101,6 +27112,27 @@
 	  }
 
 	  _createClass(ProfileContainer, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.fetchUserCards();
+	    }
+	  }, {
+	    key: 'fetchUserCards',
+	    value: function fetchUserCards() {
+	      var _this2 = this;
+
+	      console.log(localStorage.userID + ': ProfileContainer');
+	      var userID = localStorage.userID;
+
+	      if (!userID) return;
+	      axios.get(("http://127.0.0.1:3000") + '/users/' + userID + '/cards').then(function (res) {
+	        console.log(res);
+	        _this2.setState({ cards: res.data.cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
 	    key: 'handleImgChange',
 	    value: function handleImgChange(e) {
 	      console.log(e.target.value);
@@ -27115,6 +27147,7 @@
 	  }, {
 	    key: 'handleCreateCardClick',
 	    value: function handleCreateCardClick() {
+	      return;
 	      axios.post(("http://127.0.0.1:3000") + '/users/' + this.props.userID + '/cards', {
 	        tagLine: this.state.tagLine,
 	        imgURL: this.state.imgURL
@@ -27127,12 +27160,14 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      // console.log(this.state.cards);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
 	        _react2.default.createElement(_Profile2.default, { cards: this.state.cards,
 	          imgURL: this.state.imgURL,
 	          handleImgChange: this.handleImgChange.bind(this),
+	          fetchUserCards: this.fetchUserCards.bind(this),
 	          handleTagLineChange: this.handleTagLineChange.bind(this),
 	          handleCreateCardClick: this.handleCreateCardClick.bind(this) })
 	      );
@@ -27160,11 +27195,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _CreateCard = __webpack_require__(246);
+	var _Card = __webpack_require__(246);
+
+	var _Card2 = _interopRequireDefault(_Card);
+
+	var _CreateCard = __webpack_require__(247);
 
 	var _CreateCard2 = _interopRequireDefault(_CreateCard);
 
-	var _styles = __webpack_require__(248);
+	var _styles = __webpack_require__(249);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27186,9 +27225,12 @@
 	  }
 
 	  _createClass(Profile, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {}
+	  }, {
 	    key: 'renderCards',
 	    value: function renderCards() {
-	      console.log(document.cookie);
+	      console.log(this.props.cards);
 	      if (this.props.cards.length < 1) {
 	        return _react2.default.createElement(
 	          'div',
@@ -27196,8 +27238,9 @@
 	          'No cards created yet.'
 	        );
 	      }
-	      this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(Card, { key: index, card: card });
+	      console.log(_Card2.default);
+	      return this.props.cards.map(function (card, index) {
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card });
 	      });
 	    }
 	  }, {
@@ -27220,6 +27263,7 @@
 	          this.renderCards()
 	        ),
 	        _react2.default.createElement(_CreateCard2.default, { handleImgChange: this.props.handleImgChange,
+	          handleTagLineChange: this.props.handleTagLineChange,
 	          handleCreateCardClick: this.props.handleCreateCardClick,
 	          imgURL: this.props.imgURL })
 	      );
@@ -27247,7 +27291,71 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(247);
+	var _styles = __webpack_require__(251);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card(props) {
+	    _classCallCheck(this, Card);
+
+	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
+	  }
+
+	  _createClass(Card, [{
+	    key: 'render',
+	    value: function render() {
+	      var card = this.props.card;
+	      return _react2.default.createElement(
+	        'div',
+	        { style: _styles2.default.card, className: 'col-md-3 well well-lg' },
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'button', className: 'close' },
+	          '\xD7'
+	        ),
+	        _react2.default.createElement('img', { src: card.imgURL }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          card.tagLine
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	}(_react.Component);
+
+	exports.default = Card;
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(248);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27321,7 +27429,8 @@
 	                  { className: 'control-label', 'for': 'inputSmall' },
 	                  'Tag-line'
 	                ),
-	                _react2.default.createElement('input', { className: 'form-control input-sm', type: 'text', id: 'inputSmall' })
+	                _react2.default.createElement('input', { className: 'form-control input-sm', type: 'text', id: 'inputSmall',
+	                  onChange: this.props.handleTagLineChange })
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -27350,7 +27459,7 @@
 	exports.default = CreateCard;
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27371,7 +27480,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27389,7 +27498,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27440,6 +27549,26 @@
 	}(_react.Component);
 
 	exports.default = Login;
+
+/***/ },
+/* 251 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var styles = {
+	  card: {
+	    width: '20%',
+	    height: '30%',
+	    overflow: 'auto',
+	    margin: '15px'
+	  }
+	};
+
+	exports.default = styles;
 
 /***/ }
 /******/ ]);

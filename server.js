@@ -52,7 +52,7 @@ app.use(passport.session());
 app.use('/', userRouter, cardRouter, twitterRouter);
 
 app.get('/isLoggedIn', (req, res) => {
-  res.json({user: req.session.user || false });
+  res.json({user: req.session.user || '' });
 });
 
 app.get('*', function (request, response){

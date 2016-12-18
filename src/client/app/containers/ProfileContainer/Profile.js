@@ -12,6 +12,28 @@ class ProfileContainer extends Component {
     }
   }
 
+  componentWillMount() {
+    this.fetchUserCards();
+
+  }
+
+
+
+  fetchUserCards() {
+    console.log(localStorage.userID +': ProfileContainer');
+    const userID = localStorage.userID;
+
+    if(!userID) return;
+    axios.get(process.env.URL + '/users/' + userID + '/cards')
+      .then((res) => {
+        console.log(res);
+        this.setState({ cards: res.data.cards });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
   handleImgChange(e) {
     console.log(e.target.value);
     this.setState({ imgURL: e.target.value});
@@ -23,6 +45,7 @@ class ProfileContainer extends Component {
   }
 
   handleCreateCardClick() {
+    return;
     axios.post(process.env.URL + '/users/' + this.props.userID + '/cards', {
       tagLine: this.state.tagLine,
       imgURL: this.state.imgURL
@@ -37,11 +60,13 @@ class ProfileContainer extends Component {
 
 
   render() {
+    // console.log(this.state.cards);
     return (
       <div className="container">
         <Profile cards={this.state.cards}
                  imgURL={this.state.imgURL}
                  handleImgChange={ this.handleImgChange.bind(this) }
+                 fetchUserCards={ this.fetchUserCards.bind(this) }
                  handleTagLineChange={ this.handleTagLineChange.bind(this) }
                  handleCreateCardClick={ this.handleCreateCardClick.bind(this)}/>
       </div>
