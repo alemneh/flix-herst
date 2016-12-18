@@ -45,13 +45,33 @@ class ProfileContainer extends Component {
   }
 
   handleCreateCardClick() {
-    return;
+    // return;
+    let cards = this.state.cards;
     axios.post(process.env.URL + '/users/' + this.props.userID + '/cards', {
       tagLine: this.state.tagLine,
       imgURL: this.state.imgURL
     })
       .then((res) => {
+        cards.push({
+          tagLine: this.state.tagLine,
+          imgURL: this.state.imgURL,
+          likes: 0
+        })
         console.log(res);
+        this.setState({ cards });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+
+  handleRemoveCardClick(card) {
+    console.log(this.state.cards);
+    let cards = this.state.cards.filter((c) => c._id != card._id);
+    axios.delete(process.env.URL + '/users/' + card._owner + '/cards/' + card._id)
+      .then((res) => {
+        console.log(res);
+        this.setState({ cards });
       })
       .catch((err) => {
         console.log(err);
@@ -68,7 +88,8 @@ class ProfileContainer extends Component {
                  handleImgChange={ this.handleImgChange.bind(this) }
                  fetchUserCards={ this.fetchUserCards.bind(this) }
                  handleTagLineChange={ this.handleTagLineChange.bind(this) }
-                 handleCreateCardClick={ this.handleCreateCardClick.bind(this)}/>
+                 handleCreateCardClick={ this.handleCreateCardClick.bind(this)}
+                 handleRemoveCardClick={ this.handleRemoveCardClick.bind(this)}/>
       </div>
     )
   }

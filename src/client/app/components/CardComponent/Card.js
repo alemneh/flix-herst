@@ -10,7 +10,7 @@ class Card extends Component {
     const card = this.props.card;
     return (
       <div style={ Styles.card} className="col-md-3 well well-lg">
-        <button type="button" className="close">&times;</button>
+        <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
         <img src={card.imgURL} />
         <h2>{ card.tagLine }</h2>
       </div>

@@ -73,7 +73,7 @@
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
-	var _Login = __webpack_require__(250);
+	var _Login = __webpack_require__(251);
 
 	var _Login2 = _interopRequireDefault(_Login);
 
@@ -27147,12 +27147,37 @@
 	  }, {
 	    key: 'handleCreateCardClick',
 	    value: function handleCreateCardClick() {
-	      return;
+	      var _this3 = this;
+
+	      // return;
+	      var cards = this.state.cards;
 	      axios.post(("http://127.0.0.1:3000") + '/users/' + this.props.userID + '/cards', {
 	        tagLine: this.state.tagLine,
 	        imgURL: this.state.imgURL
 	      }).then(function (res) {
+	        cards.push({
+	          tagLine: _this3.state.tagLine,
+	          imgURL: _this3.state.imgURL,
+	          likes: 0
+	        });
 	        console.log(res);
+	        _this3.setState({ cards: cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'handleRemoveCardClick',
+	    value: function handleRemoveCardClick(card) {
+	      var _this4 = this;
+
+	      console.log(this.state.cards);
+	      var cards = this.state.cards.filter(function (c) {
+	        return c._id != card._id;
+	      });
+	      axios.delete(("http://127.0.0.1:3000") + '/users/' + card._owner + '/cards/' + card._id).then(function (res) {
+	        console.log(res);
+	        _this4.setState({ cards: cards });
 	      }).catch(function (err) {
 	        console.log(err);
 	      });
@@ -27169,7 +27194,8 @@
 	          handleImgChange: this.handleImgChange.bind(this),
 	          fetchUserCards: this.fetchUserCards.bind(this),
 	          handleTagLineChange: this.handleTagLineChange.bind(this),
-	          handleCreateCardClick: this.handleCreateCardClick.bind(this) })
+	          handleCreateCardClick: this.handleCreateCardClick.bind(this),
+	          handleRemoveCardClick: this.handleRemoveCardClick.bind(this) })
 	      );
 	    }
 	  }]);
@@ -27199,11 +27225,11 @@
 
 	var _Card2 = _interopRequireDefault(_Card);
 
-	var _CreateCard = __webpack_require__(247);
+	var _CreateCard = __webpack_require__(248);
 
 	var _CreateCard2 = _interopRequireDefault(_CreateCard);
 
-	var _styles = __webpack_require__(249);
+	var _styles = __webpack_require__(250);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27230,6 +27256,8 @@
 	  }, {
 	    key: 'renderCards',
 	    value: function renderCards() {
+	      var _this2 = this;
+
 	      console.log(this.props.cards);
 	      if (this.props.cards.length < 1) {
 	        return _react2.default.createElement(
@@ -27240,7 +27268,8 @@
 	      }
 	      console.log(_Card2.default);
 	      return this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(_Card2.default, { key: index, card: card });
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card,
+	          handleRemoveCardClick: _this2.props.handleRemoveCardClick });
 	      });
 	    }
 	  }, {
@@ -27291,7 +27320,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(251);
+	var _styles = __webpack_require__(247);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27315,13 +27344,17 @@
 	  _createClass(Card, [{
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+
 	      var card = this.props.card;
 	      return _react2.default.createElement(
 	        'div',
 	        { style: _styles2.default.card, className: 'col-md-3 well well-lg' },
 	        _react2.default.createElement(
 	          'button',
-	          { type: 'button', className: 'close' },
+	          { onClick: function onClick() {
+	              _this2.props.handleRemoveCardClick(card);
+	            }, type: 'button', className: 'close' },
 	          '\xD7'
 	        ),
 	        _react2.default.createElement('img', { src: card.imgURL }),
@@ -27341,6 +27374,26 @@
 
 /***/ },
 /* 247 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var styles = {
+	  card: {
+	    width: '20%',
+	    height: '30%',
+	    overflow: 'auto',
+	    margin: '15px'
+	  }
+	};
+
+	exports.default = styles;
+
+/***/ },
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27355,7 +27408,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(248);
+	var _styles = __webpack_require__(249);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27459,7 +27512,7 @@
 	exports.default = CreateCard;
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27480,7 +27533,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27498,7 +27551,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27549,26 +27602,6 @@
 	}(_react.Component);
 
 	exports.default = Login;
-
-/***/ },
-/* 251 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var styles = {
-	  card: {
-	    width: '20%',
-	    height: '30%',
-	    overflow: 'auto',
-	    margin: '15px'
-	  }
-	};
-
-	exports.default = styles;
 
 /***/ }
 /******/ ]);

@@ -14,7 +14,9 @@ module.exports = (userRouter, models) => {
 
   userRouter.route('/users/:id/cards')
     .get((req, res)    => { userRoutes.getAllUserCards(req, res); })
-    .post((req, res)   => { userRoutes.createCard4User(req, res); })
+    .post((req, res)   => { userRoutes.createCard4User(req, res); });
+
+  userRouter.route('/users/:id/cards/:cardID')
     .delete((req, res) => { userRoutes.deleteCardFromUser(req, res); });
 
 };

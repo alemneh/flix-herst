@@ -20,7 +20,8 @@ componentWillMount() {
     }
     console.log(Card);
     return this.props.cards.map((card, index) => {
-      return <Card key={index} card={card} />
+      return <Card key={index} card={card}
+                   handleRemoveCardClick={ this.props.handleRemoveCardClick } />
     })
   }
 
