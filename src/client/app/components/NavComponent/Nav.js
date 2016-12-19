@@ -9,16 +9,21 @@ class Nav extends Component {
   renderNavLinks() {
     if(!this.props.isLoggedIn) {
       return (
-        <ul className="nav navbar-nav navbar-right">
-          <li><a href='/auth/twitter' >Login</a></li>
-        </ul>
+        <div>
+          <ul className="nav navbar-nav">
+            <li className="active"><Link to="/"><a href="#">All Cards <span className="sr-only">(current)</span></a></Link></li>
+          </ul>
+          <ul className="nav navbar-nav navbar-right">
+            <li><a href='/auth/twitter' >Login</a></li>
+          </ul>
+        </div>
       )
     }
     return (
       <div>
         <ul className="nav navbar-nav">
           <li className="active"><Link to="/profile"><a href="#">Profile <span className="sr-only">(current)</span></a></Link></li>
-          <li><a href="#">All Cards</a></li>
+          <li><a href="/">All Cards</a></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li><a href='/logout'>Logout</a></li>

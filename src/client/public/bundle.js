@@ -65,9 +65,9 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _Home = __webpack_require__(243);
+	var _HomePage = __webpack_require__(253);
 
-	var _Home2 = _interopRequireDefault(_Home);
+	var _HomePage2 = _interopRequireDefault(_HomePage);
 
 	var _Profile = __webpack_require__(244);
 
@@ -85,7 +85,7 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default })
 	  )
@@ -26897,15 +26897,41 @@
 	    value: function renderNavLinks() {
 	      if (!this.props.isLoggedIn) {
 	        return _react2.default.createElement(
-	          'ul',
-	          { className: 'nav navbar-nav navbar-right' },
+	          'div',
+	          null,
 	          _react2.default.createElement(
-	            'li',
-	            null,
+	            'ul',
+	            { className: 'nav navbar-nav' },
 	            _react2.default.createElement(
-	              'a',
-	              { href: '/auth/twitter' },
-	              'Login'
+	              'li',
+	              { className: 'active' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: '/' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: '#' },
+	                  'All Cards ',
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'sr-only' },
+	                    '(current)'
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'nav navbar-nav navbar-right' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { href: '/auth/twitter' },
+	                'Login'
+	              )
 	            )
 	          )
 	        );
@@ -26939,7 +26965,7 @@
 	            null,
 	            _react2.default.createElement(
 	              'a',
-	              { href: '#' },
+	              { href: '/' },
 	              'All Cards'
 	            )
 	          )
@@ -27009,64 +27035,7 @@
 	exports.default = Nav;
 
 /***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Home = function (_Component) {
-	  _inherits(Home, _Component);
-
-	  function Home() {
-	    _classCallCheck(this, Home);
-
-	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-	  }
-
-	  _createClass(Home, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container text-center' },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Sign In and Create Cool Cards!'
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'This is a Pinterest like app built for Free Code Camp. Users can login with their twitter account and create cards that that will display an image, passage and number of likes.'
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Home;
-	}(_react.Component);
-
-	exports.default = Home;
-
-/***/ },
+/* 243 */,
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -27349,7 +27318,7 @@
 	      var card = this.props.card;
 	      return _react2.default.createElement(
 	        'div',
-	        { style: _styles2.default.card, className: 'col-md-3 well well-lg' },
+	        { style: _styles2.default.card, className: 'col-xs-6 col-md-3 well well-lg' },
 	        _react2.default.createElement(
 	          'button',
 	          { onClick: function onClick() {
@@ -27362,6 +27331,12 @@
 	          'h2',
 	          null,
 	          card.tagLine
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#', className: 'btn btn-primary btn-xs' },
+	          'Like ',
+	          card.likes
 	        )
 	      );
 	    }
@@ -27602,6 +27577,157 @@
 	}(_react.Component);
 
 	exports.default = Login;
+
+/***/ },
+/* 252 */,
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _HomePage = __webpack_require__(254);
+
+	var _HomePage2 = _interopRequireDefault(_HomePage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var HomePageContainer = function (_Component) {
+	  _inherits(HomePageContainer, _Component);
+
+	  function HomePageContainer(props) {
+	    _classCallCheck(this, HomePageContainer);
+
+	    var _this = _possibleConstructorReturn(this, (HomePageContainer.__proto__ || Object.getPrototypeOf(HomePageContainer)).call(this, props));
+
+	    _this.state = {
+	      cards: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(HomePageContainer, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getAllCards();
+	    }
+	  }, {
+	    key: 'getAllCards',
+	    value: function getAllCards() {
+	      var _this2 = this;
+
+	      axios.get(("http://127.0.0.1:3000") + '/cards').then(function (res) {
+	        console.log(res);
+	        _this2.setState({ cards: res.data.cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(_HomePage2.default, { cards: this.state.cards })
+	      );
+	    }
+	  }]);
+
+	  return HomePageContainer;
+	}(_react.Component);
+
+	exports.default = HomePageContainer;
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Card = __webpack_require__(246);
+
+	var _Card2 = _interopRequireDefault(_Card);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_Component) {
+	  _inherits(Home, _Component);
+
+	  function Home() {
+	    _classCallCheck(this, Home);
+
+	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+	  }
+
+	  _createClass(Home, [{
+	    key: 'renderCards',
+	    value: function renderCards() {
+	      console.log(this.props.cards);
+	      if (this.props.cards.length < 1) {
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-12' },
+	          'No cards created yet.'
+	        );
+	      }
+	      return this.props.cards.map(function (card, index) {
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card
+	        });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'All Cards'
+	        ),
+	        _react2.default.createElement('hr', null),
+	        this.renderCards()
+	      );
+	    }
+	  }]);
+
+	  return Home;
+	}(_react.Component);
+
+	exports.default = Home;
 
 /***/ }
 /******/ ]);

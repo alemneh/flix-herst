@@ -9,10 +9,11 @@ class Card extends Component {
   render() {
     const card = this.props.card;
     return (
-      <div style={ Styles.card} className="col-md-3 well well-lg">
+      <div style={ Styles.card} className="col-xs-6 col-md-3 well well-lg">
         <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
         <img src={card.imgURL} />
         <h2>{ card.tagLine }</h2>
+        <a href="#" className="btn btn-primary btn-xs">Like {card.likes}</a>
       </div>
     )
   }
