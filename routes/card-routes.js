@@ -8,29 +8,30 @@ let cardRoutes = {
   getAllCards: function(req, res) {
     Card.find({}, (err, cards) => {
       if(err) throw err;
-      console.log(req);
       res.json({ cards });
     });
   },
 
   likeBtnClicked: function(req, res) {
     let message;
-
-    Card.findById(req.params.id).exec()
+    console.log(req.params);
+    Card.findById(req.params.cardID).exec()
       .then((card) => {
-        if(card.likes.indexOf(req.params.userID) != -1) {
-
+        console.log(card);
+        if(card.likes.indexOf(req.params.userID) == -1) {
+          console.log('liked');
           card.likes.push(req.params.userID)
           message = 'Liked!';
           return card.save();
+        } else {
+          console.log('unliked');
+          card.likes.pull(req.params.userID);
+          message = 'Unliked!'
+          return card.save();
         }
-
-        card.likes.pull(req.params.userID);
-        message = 'Unliked!'
-        return card.save();
       })
       .then((card) => {
-        res.json({ message });
+        res.json({ card, message });
       })
       .catch((err) => {
         console.log(err);

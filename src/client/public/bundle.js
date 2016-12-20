@@ -65,7 +65,7 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _HomePage = __webpack_require__(253);
+	var _HomePage = __webpack_require__(243);
 
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 
@@ -27035,7 +27035,118 @@
 	exports.default = Nav;
 
 /***/ },
-/* 243 */,
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _HomePage = __webpack_require__(252);
+
+	var _HomePage2 = _interopRequireDefault(_HomePage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// helper for checking if user already liked card
+
+
+	var HomePageContainer = function (_Component) {
+	  _inherits(HomePageContainer, _Component);
+
+	  function HomePageContainer(props) {
+	    _classCallCheck(this, HomePageContainer);
+
+	    var _this = _possibleConstructorReturn(this, (HomePageContainer.__proto__ || Object.getPrototypeOf(HomePageContainer)).call(this, props));
+
+	    _this.state = {
+	      cards: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(HomePageContainer, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getAllCards();
+	    }
+	  }, {
+	    key: 'checkIfCardWasLiked',
+	    value: function checkIfCardWasLiked(card) {
+	      var userID = this.props.userID;
+	      var liker = card.likes.indexOf(userID);
+	      console.log(liker);
+	      if (liker != -1) {
+	        card.likes.splice(liker, 1);
+	      } else {
+	        card.likes.push(userID);
+	      }
+	    }
+	  }, {
+	    key: 'handleLikeClick',
+	    value: function handleLikeClick(card) {
+	      var _this2 = this;
+
+	      var cards = this.state.cards.map(function (c) {
+	        if (c._id == card._id) {
+	          console.log(c.likes);
+	          _this2.checkIfCardWasLiked(c);
+	          console.log(c.likes);
+	        }
+	        return c;
+	      });
+	      // cards.push(card);
+	      axios.put(("http://127.0.0.1:3000") + '/cards/' + card._id + '/' + this.props.userID).then(function (res) {
+	        console.log(res);
+	        _this2.setState({ cards: cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'getAllCards',
+	    value: function getAllCards() {
+	      var _this3 = this;
+
+	      axios.get(("http://127.0.0.1:3000") + '/cards').then(function (res) {
+	        console.log(res);
+	        _this3.setState({ cards: res.data.cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(_HomePage2.default, { cards: this.state.cards,
+	          handleLikeClick: this.handleLikeClick.bind(this) })
+	      );
+	    }
+	  }]);
+
+	  return HomePageContainer;
+	}(_react.Component);
+
+	exports.default = HomePageContainer;
+
+/***/ },
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -27120,16 +27231,12 @@
 
 	      // return;
 	      var cards = this.state.cards;
+
 	      axios.post(("http://127.0.0.1:3000") + '/users/' + this.props.userID + '/cards', {
 	        tagLine: this.state.tagLine,
 	        imgURL: this.state.imgURL
 	      }).then(function (res) {
-	        cards.push({
-	          tagLine: _this3.state.tagLine,
-	          imgURL: _this3.state.imgURL,
-	          likes: 0
-	        });
-	        console.log(res);
+	        cards.push(res.data.newCard);
 	        _this3.setState({ cards: cards });
 	      }).catch(function (err) {
 	        console.log(err);
@@ -27140,7 +27247,6 @@
 	    value: function handleRemoveCardClick(card) {
 	      var _this4 = this;
 
-	      console.log(this.state.cards);
 	      var cards = this.state.cards.filter(function (c) {
 	        return c._id != card._id;
 	      });
@@ -27154,7 +27260,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      // console.log(this.state.cards);
+	      console.log(this.state.cards);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
@@ -27190,9 +27296,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Card = __webpack_require__(246);
+	var _UserCard = __webpack_require__(246);
 
-	var _Card2 = _interopRequireDefault(_Card);
+	var _UserCard2 = _interopRequireDefault(_UserCard);
 
 	var _CreateCard = __webpack_require__(248);
 
@@ -27227,7 +27333,6 @@
 	    value: function renderCards() {
 	      var _this2 = this;
 
-	      console.log(this.props.cards);
 	      if (this.props.cards.length < 1) {
 	        return _react2.default.createElement(
 	          'div',
@@ -27235,9 +27340,8 @@
 	          'No cards created yet.'
 	        );
 	      }
-	      console.log(_Card2.default);
 	      return this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(_Card2.default, { key: index, card: card,
+	        return _react2.default.createElement(_UserCard2.default, { key: index, card: card,
 	          handleRemoveCardClick: _this2.props.handleRemoveCardClick });
 	      });
 	    }
@@ -27331,12 +27435,6 @@
 	          'h2',
 	          null,
 	          card.tagLine
-	        ),
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#', className: 'btn btn-primary btn-xs' },
-	          'Like ',
-	          card.likes
 	        )
 	      );
 	    }
@@ -27579,8 +27677,7 @@
 	exports.default = Login;
 
 /***/ },
-/* 252 */,
-/* 253 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27595,84 +27692,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _HomePage = __webpack_require__(254);
+	var _AllCard = __webpack_require__(253);
 
-	var _HomePage2 = _interopRequireDefault(_HomePage);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var HomePageContainer = function (_Component) {
-	  _inherits(HomePageContainer, _Component);
-
-	  function HomePageContainer(props) {
-	    _classCallCheck(this, HomePageContainer);
-
-	    var _this = _possibleConstructorReturn(this, (HomePageContainer.__proto__ || Object.getPrototypeOf(HomePageContainer)).call(this, props));
-
-	    _this.state = {
-	      cards: []
-	    };
-	    return _this;
-	  }
-
-	  _createClass(HomePageContainer, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.getAllCards();
-	    }
-	  }, {
-	    key: 'getAllCards',
-	    value: function getAllCards() {
-	      var _this2 = this;
-
-	      axios.get(("http://127.0.0.1:3000") + '/cards').then(function (res) {
-	        console.log(res);
-	        _this2.setState({ cards: res.data.cards });
-	      }).catch(function (err) {
-	        console.log(err);
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        _react2.default.createElement(_HomePage2.default, { cards: this.state.cards })
-	      );
-	    }
-	  }]);
-
-	  return HomePageContainer;
-	}(_react.Component);
-
-	exports.default = HomePageContainer;
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Card = __webpack_require__(246);
-
-	var _Card2 = _interopRequireDefault(_Card);
+	var _AllCard2 = _interopRequireDefault(_AllCard);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27694,7 +27716,8 @@
 	  _createClass(Home, [{
 	    key: 'renderCards',
 	    value: function renderCards() {
-	      console.log(this.props.cards);
+	      var _this2 = this;
+
 	      if (this.props.cards.length < 1) {
 	        return _react2.default.createElement(
 	          'div',
@@ -27703,8 +27726,8 @@
 	        );
 	      }
 	      return this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(_Card2.default, { key: index, card: card
-	        });
+	        return _react2.default.createElement(_AllCard2.default, { key: index, card: card,
+	          handleLikeClick: _this2.props.handleLikeClick });
 	      });
 	    }
 	  }, {
@@ -27728,6 +27751,75 @@
 	}(_react.Component);
 
 	exports.default = Home;
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(247);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card(props) {
+	    _classCallCheck(this, Card);
+
+	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
+	  }
+
+	  _createClass(Card, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var card = this.props.card;
+	      return _react2.default.createElement(
+	        'div',
+	        { style: _styles2.default.card, className: 'col-xs-6 col-md-3 well well-lg' },
+	        _react2.default.createElement('img', { src: card.imgURL }),
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          card.tagLine
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { onClick: function onClick() {
+	              _this2.props.handleLikeClick(card);
+	            }, className: 'btn btn-primary btn-xs' },
+	          'Like ',
+	          card.likes.length
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	}(_react.Component);
+
+	exports.default = Card;
 
 /***/ }
 /******/ ]);

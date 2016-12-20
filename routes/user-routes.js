@@ -57,7 +57,7 @@ let userRoutes = {
         newCard.save((err, card) => {
           if(err) throw err;
 
-          res.json({ message: 'New Card Created!'});
+          res.json({ newCard, message: 'New Card Created!'});
         });
       });
   },

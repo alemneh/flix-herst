@@ -8,5 +8,5 @@ module.exports = (cardRouter, models) => {
     .get((req, res) => { cardRoutes.getAllCards(req, res); });
 
   cardRouter.route('/cards/:cardID/:userID')
-    .post((req, res) => { cardRoutes.likeBtnClicked(req, res); });
+    .put(isLoggedIn, (req, res) => { cardRoutes.likeBtnClicked(req, res); });
 };

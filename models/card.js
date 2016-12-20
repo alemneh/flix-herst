@@ -6,7 +6,7 @@ module.exports = (mongoose, models) => {
     _owner: [{type: Schema.Types.ObjectId, ref: 'User'}],
     tagLine: String,
     imgURL: String,
-    likes: {type: Number, default: 0}
+    likes: []
 
   });
 

@@ -47,17 +47,14 @@ class ProfileContainer extends Component {
   handleCreateCardClick() {
     // return;
     let cards = this.state.cards;
+
+
     axios.post(process.env.URL + '/users/' + this.props.userID + '/cards', {
       tagLine: this.state.tagLine,
       imgURL: this.state.imgURL
     })
       .then((res) => {
-        cards.push({
-          tagLine: this.state.tagLine,
-          imgURL: this.state.imgURL,
-          likes: 0
-        })
-        console.log(res);
+        cards.push(res.data.newCard);
         this.setState({ cards });
       })
       .catch((err) => {
@@ -66,7 +63,6 @@ class ProfileContainer extends Component {
   }
 
   handleRemoveCardClick(card) {
-    console.log(this.state.cards);
     let cards = this.state.cards.filter((c) => c._id != card._id);
     axios.delete(process.env.URL + '/users/' + card._owner + '/cards/' + card._id)
       .then((res) => {
@@ -80,7 +76,7 @@ class ProfileContainer extends Component {
 
 
   render() {
-    // console.log(this.state.cards);
+    console.log(this.state.cards);
     return (
       <div className="container">
         <Profile cards={this.state.cards}

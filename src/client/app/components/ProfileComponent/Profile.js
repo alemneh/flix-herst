@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from '../CardComponent/Card';
+import Card from '../CardComponent/UserCard';
 import CreateCard from '../CreateCardComponent/CreateCard';
 import Styles from './styles';
 
@@ -12,13 +12,11 @@ componentWillMount() {
 }
 
   renderCards() {
-    console.log(this.props.cards);
     if(this.props.cards.length < 1) {
       return (
         <div className="col-md-12">No cards created yet.</div>
       )
     }
-    console.log(Card);
     return this.props.cards.map((card, index) => {
       return <Card key={index} card={card}
                    handleRemoveCardClick={ this.props.handleRemoveCardClick } />

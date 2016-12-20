@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import HomePage from '../../components/HomePageComponent/HomePage';
 
+// helper for checking if user already liked card
+
+
 class HomePageContainer extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +14,37 @@ class HomePageContainer extends Component {
 
   componentWillMount() {
     this.getAllCards();
+  }
+
+  checkIfCardWasLiked(card) {
+    const userID = this.props.userID;
+    let liker = card.likes.indexOf(userID);
+    console.log(liker);
+    if(liker != -1) {
+      card.likes.splice(liker, 1);
+    } else {
+      card.likes.push(userID)
+    }
+  }
+
+  handleLikeClick(card) {
+    let cards = this.state.cards.map((c) => {
+      if(c._id == card._id) {
+        console.log(c.likes);
+        this.checkIfCardWasLiked(c);
+        console.log(c.likes);
+      }
+      return c
+    })
+    // cards.push(card);
+    axios.put(process.env.URL + '/cards/' + card._id + '/' + this.props.userID)
+      .then((res) => {
+        console.log(res);
+        this.setState({ cards });
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   getAllCards() {
@@ -27,7 +61,8 @@ class HomePageContainer extends Component {
   render() {
     return (
       <div className="container">
-        <HomePage cards={ this.state.cards }/>
+        <HomePage cards={ this.state.cards }
+                  handleLikeClick={ this.handleLikeClick.bind(this) }/>
       </div>
     )
   }
