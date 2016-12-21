@@ -51,7 +51,8 @@ class ProfileContainer extends Component {
 
     axios.post(process.env.URL + '/users/' + this.props.userID + '/cards', {
       tagLine: this.state.tagLine,
-      imgURL: this.state.imgURL
+      imgURL: this.state.imgURL,
+      twitterIMG: this.props.twitterIMG
     })
       .then((res) => {
         cards.push(res.data.newCard);
@@ -81,6 +82,7 @@ class ProfileContainer extends Component {
       <div className="container">
         <Profile cards={this.state.cards}
                  imgURL={this.state.imgURL}
+                 twitterIMG={ this.props.twitterIMG }
                  handleImgChange={ this.handleImgChange.bind(this) }
                  fetchUserCards={ this.fetchUserCards.bind(this) }
                  handleTagLineChange={ this.handleTagLineChange.bind(this) }

@@ -54,6 +54,8 @@ let userRoutes = {
     User.findOneAndUpdate(req.params.id, {$push: {cards: newCard}},
       function(err, user) {
         if(err) throw err;
+        newCard.twitterIMG = user.twitterIMG;
+        console.log(newCard);
         newCard.save((err, card) => {
           if(err) throw err;
 

@@ -17,7 +17,6 @@ let cardRoutes = {
     console.log(req.params);
     Card.findById(req.params.cardID).exec()
       .then((card) => {
-        console.log(card);
         if(card.likes.indexOf(req.params.userID) == -1) {
           console.log('liked');
           card.likes.push(req.params.userID)

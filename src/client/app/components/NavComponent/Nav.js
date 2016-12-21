@@ -23,7 +23,7 @@ class Nav extends Component {
       <div>
         <ul className="nav navbar-nav">
           <li className="active"><Link to="/profile"><a href="#">Profile <span className="sr-only">(current)</span></a></Link></li>
-          <li><a href="/">All Cards</a></li>
+          <li><Link to='/'>All Cards</Link></li>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li><a href='/logout'>Logout</a></li>

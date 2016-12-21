@@ -12,17 +12,19 @@ class App extends Component {
 
   componentWillMount() {
     console.log(localStorage.userID + ': app');
-    this.fetchUserID();
+    this.fetchUserIDAndTwitterPic();
     // this.fetchUserCards();
   }
 
 
-  fetchUserID() {
+  fetchUserIDAndTwitterPic() {
     axios.get(process.env.URL + '/isLoggedIn')
       .then((res) => {
         console.log(res);
         localStorage.userID = res.data.user;
-        this.setState({ userID: res.data.user })
+        this.setState({
+          userID: res.data.user
+        })
       })
       .catch((err) => {
         console.log(err);
@@ -33,7 +35,6 @@ class App extends Component {
 
 
   render() {
-    // this.fetchUserCards()
     return (
       <div>
         <NavContainer userID={this.state.userID }/>

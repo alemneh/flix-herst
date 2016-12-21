@@ -12,7 +12,8 @@ class Home extends Component {
     }
     return this.props.cards.map((card, index) => {
       return <Card key={index} card={card}
-                   handleLikeClick={ this.props.handleLikeClick }/>
+                   handleLikeClick={ this.props.handleLikeClick }
+                   handleGetUserCards={ this.props.handleGetUserCards }/>
     })
   }
 

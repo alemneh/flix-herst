@@ -13,6 +13,7 @@ class Card extends Component {
         <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
         <img src={card.imgURL} />
         <h2>{ card.tagLine }</h2>
+        <img src={ card.twitterID } />
       </div>
     )
   }

@@ -7,3 +7,22 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
+
+.card-avatar {
+  float: right;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.card-like-btn {
+  float: left;
+  margin-top: 11%;
+}
+
+.card-img {
+  margin-top: 5px;
+}
+
+.close {
+  margin-bottom: 15px;
+}

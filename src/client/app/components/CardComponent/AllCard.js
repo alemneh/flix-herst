@@ -12,7 +12,14 @@ class Card extends Component {
       <div style={ Styles.card} className="col-xs-6 col-md-3 well well-lg">
         <img src={card.imgURL} />
         <h2>{ card.tagLine }</h2>
-        <a onClick={() => {this.props.handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+        <div>
+          <div className="card-like-btn">
+            <a onClick={() => {this.props.handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+          </div>
+          <div className="card-avatar">
+            <img onClick={() => { this.props.handleGetUserCards(card) }} src={ card.twitterIMG } />
+          </div>
+        </div>
       </div>
     )
   }

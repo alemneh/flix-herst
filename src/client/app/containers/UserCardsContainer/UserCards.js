@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import HomePage from '../../components/HomePageComponent/HomePage';
-import { browserHistory } from 'react-router';
+import UserCards from '../../components/UserCardsComponent/UserCards';
 
-// helper for checking if user already liked card
-
-
-class HomePageContainer extends Component {
+class UserCardsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: []
+      userCards: []
     }
   }
 
   componentWillMount() {
-    this.getAllCards();
+    this.getUserCards();
   }
 
   checkIfCardWasLiked(card) {
@@ -29,7 +25,7 @@ class HomePageContainer extends Component {
   }
 
   handleLikeClick(card) {
-    let cards = this.state.cards.map((c) => {
+    let cards = this.state.userCards.map((c) => {
       if(c._id == card._id) {
         console.log(c.likes);
         this.checkIfCardWasLiked(c);
@@ -47,32 +43,27 @@ class HomePageContainer extends Component {
       })
   }
 
-  getAllCards() {
-    axios.get(process.env.URL + '/cards')
+
+  getUserCards() {
+    const userId = localStorage.userId;
+    axios.get(process.env.URL + '/users/' + userId + '/cards')
       .then((res) => {
         console.log(res);
-        this.setState({ cards: res.data.cards });
+        this.setState({ userCards: res.data.cards });
+
       })
       .catch((err) => {
         console.log(err);
       })
   }
-
-  handleGetUserCards(card) {
-    console.log(card);
-    localStorage.userId = card._owner;
-    browserHistory.push('/users/cards');
-  }
-
   render() {
-    return (
-      <div className="container">
-        <HomePage cards={ this.state.cards }
-                  handleLikeClick={ this.handleLikeClick.bind(this) }
-                  handleGetUserCards={ this.handleGetUserCards.bind(this) }/>
-      </div>
+    return(
+      <UserCards userCards={this.state.userCards}
+                 handleLikeClick={ this.handleLikeClick.bind(this) }/>
     )
   }
 }
 
-export default HomePageContainer;
+
+
+export default UserCardsContainer;
