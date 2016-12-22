@@ -44,6 +44,7 @@ class NavContainer extends Component {
   }
 
   render() {
+
     return(
       <div>
         <Nav handleLogoutClick={ this.handleLogoutClick }

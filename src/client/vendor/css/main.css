@@ -8,6 +8,14 @@ img {
     max-height: 100%;
 }
 
+.card {
+  display: inline-block;
+  width: 200px;
+  float: left;
+  padding: 15px;
+  background-color: black;
+}
+
 .card-avatar {
   float: right;
   border: 1px solid;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavItem from '../NavItemComponent/NavItem';
 import { Link } from 'react-router';
 
 class Nav extends Component {
@@ -11,7 +12,7 @@ class Nav extends Component {
       return (
         <div>
           <ul className="nav navbar-nav">
-            <li className="active"><Link to="/"><a href="#">All Cards <span className="sr-only">(current)</span></a></Link></li>
+            <NavItem to='/' index={true}>All Cards</NavItem>
           </ul>
           <ul className="nav navbar-nav navbar-right">
             <li><a href='/auth/twitter' >Login</a></li>
@@ -22,8 +23,8 @@ class Nav extends Component {
     return (
       <div>
         <ul className="nav navbar-nav">
-          <li className="active"><Link to="/profile"><a href="#">Profile <span className="sr-only">(current)</span></a></Link></li>
-          <li><Link to='/'>All Cards</Link></li>
+          <NavItem to='/' index={true}>All Cards</NavItem>
+          <NavItem to="/profile">Profile</NavItem>
         </ul>
         <ul className="nav navbar-nav navbar-right">
           <li><a href='/logout'>Logout</a></li>

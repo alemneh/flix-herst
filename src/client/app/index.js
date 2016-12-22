@@ -13,6 +13,6 @@ render(
       <IndexRoute component={HomePage} />
       <Route path='/login' component={Login} />
       <Route path='/profile' component={Profile} />
-      <Router path='/users/cards' component={UserCards} />
+      <Router path='/view/users/cards' component={UserCards} />
     </Route>
   </Router>, document.getElementById('app'));

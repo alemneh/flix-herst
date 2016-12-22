@@ -92,7 +92,7 @@
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomePage2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/login', component: _Login2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/profile', component: _Profile2.default }),
-	    _react2.default.createElement(_reactRouter.Router, { path: '/users/cards', component: _UserCards2.default })
+	    _react2.default.createElement(_reactRouter.Router, { path: '/view/users/cards', component: _UserCards2.default })
 	  )
 	), document.getElementById('app'));
 
@@ -26702,6 +26702,8 @@
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
+	var _reactRouter = __webpack_require__(184);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26728,13 +26730,18 @@
 	  _createClass(App, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      console.log(localStorage.userID + ': app');
-	      this.fetchUserIDAndTwitterPic();
-	      // this.fetchUserCards();
+	      this.fetchUserID();
+	      this.checkLoggIn();
 	    }
 	  }, {
-	    key: 'fetchUserIDAndTwitterPic',
-	    value: function fetchUserIDAndTwitterPic() {
+	    key: 'checkLoggIn',
+	    value: function checkLoggIn() {
+	      if (localStorage.userID) return;
+	      _reactRouter.browserHistory.push('/');
+	    }
+	  }, {
+	    key: 'fetchUserID',
+	    value: function fetchUserID() {
 	      var _this2 = this;
 
 	      axios.get(("http://127.0.0.1:3000") + '/isLoggedIn').then(function (res) {
@@ -26849,6 +26856,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -26878,6 +26886,10 @@
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _NavItem = __webpack_require__(257);
+
+	var _NavItem2 = _interopRequireDefault(_NavItem);
 
 	var _reactRouter = __webpack_require__(184);
 
@@ -26909,22 +26921,9 @@
 	            'ul',
 	            { className: 'nav navbar-nav' },
 	            _react2.default.createElement(
-	              'li',
-	              { className: 'active' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: '/' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: '#' },
-	                  'All Cards ',
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    '(current)'
-	                  )
-	                )
-	              )
+	              _NavItem2.default,
+	              { to: '/', index: true },
+	              'All Cards'
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -26949,31 +26948,14 @@
 	          'ul',
 	          { className: 'nav navbar-nav' },
 	          _react2.default.createElement(
-	            'li',
-	            { className: 'active' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/profile' },
-	              _react2.default.createElement(
-	                'a',
-	                { href: '#' },
-	                'Profile ',
-	                _react2.default.createElement(
-	                  'span',
-	                  { className: 'sr-only' },
-	                  '(current)'
-	                )
-	              )
-	            )
+	            _NavItem2.default,
+	            { to: '/', index: true },
+	            'All Cards'
 	          ),
 	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'All Cards'
-	            )
+	            _NavItem2.default,
+	            { to: '/profile' },
+	            'Profile'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -27141,7 +27123,7 @@
 	    value: function handleGetUserCards(card) {
 	      console.log(card);
 	      localStorage.userId = card._owner;
-	      _reactRouter.browserHistory.push('/users/cards');
+	      _reactRouter.browserHistory.push('view/users/cards');
 	    }
 	  }, {
 	    key: 'render',
@@ -27150,6 +27132,7 @@
 	        'div',
 	        { className: 'container' },
 	        _react2.default.createElement(_HomePage2.default, { cards: this.state.cards,
+	          isLoggedIn: this.props.userID,
 	          handleLikeClick: this.handleLikeClick.bind(this),
 	          handleGetUserCards: this.handleGetUserCards.bind(this) })
 	      );
@@ -27177,9 +27160,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _AllCard = __webpack_require__(245);
+	var _Card = __webpack_require__(256);
 
-	var _AllCard2 = _interopRequireDefault(_AllCard);
+	var _Card2 = _interopRequireDefault(_Card);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27203,6 +27186,7 @@
 	    value: function renderCards() {
 	      var _this2 = this;
 
+	      var view = this.props.isLoggedIn ? 'read-write' : 'read-only';
 	      if (this.props.cards.length < 1) {
 	        return _react2.default.createElement(
 	          'div',
@@ -27211,7 +27195,7 @@
 	        );
 	      }
 	      return this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(_AllCard2.default, { key: index, card: card,
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card, view: view,
 	          handleLikeClick: _this2.props.handleLikeClick,
 	          handleGetUserCards: _this2.props.handleGetUserCards });
 	      });
@@ -27221,7 +27205,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container' },
+	        { id: 'cards' },
 	        _react2.default.createElement(
 	          'h1',
 	          null,
@@ -27239,90 +27223,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _styles = __webpack_require__(246);
-
-	var _styles2 = _interopRequireDefault(_styles);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Card = function (_Component) {
-	  _inherits(Card, _Component);
-
-	  function Card(props) {
-	    _classCallCheck(this, Card);
-
-	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-	  }
-
-	  _createClass(Card, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      var card = this.props.card;
-	      return _react2.default.createElement(
-	        'div',
-	        { style: _styles2.default.card, className: 'col-xs-6 col-md-3 well well-lg' },
-	        _react2.default.createElement('img', { src: card.imgURL }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          card.tagLine
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'card-like-btn' },
-	            _react2.default.createElement(
-	              'a',
-	              { onClick: function onClick() {
-	                  _this2.props.handleLikeClick(card);
-	                }, className: 'btn btn-primary btn-xs' },
-	              'Like ',
-	              card.likes.length
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'card-avatar' },
-	            _react2.default.createElement('img', { onClick: function onClick() {
-	                _this2.props.handleGetUserCards(card);
-	              }, src: card.twitterIMG })
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Card;
-	}(_react.Component);
-
-	exports.default = Card;
-
-/***/ },
+/* 245 */,
 /* 246 */
 /***/ function(module, exports) {
 
@@ -27337,6 +27238,16 @@
 	    height: '30%',
 	    overflow: 'auto',
 	    margin: '15px'
+	  },
+	  notAllowed: {
+	    cursor: 'not-allowed'
+	  },
+	  tagLine: {
+	    backgroundColor: 'rgba(158, 158, 158, 0.8)',
+	    overflow: 'auto',
+	    padding: '5px',
+	    textAlign: 'center',
+	    borderRadius: '5px'
 	  }
 	};
 
@@ -27457,7 +27368,6 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      console.log(this.state.cards);
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
@@ -27494,9 +27404,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _UserCard = __webpack_require__(249);
+	var _Card = __webpack_require__(256);
 
-	var _UserCard2 = _interopRequireDefault(_UserCard);
+	var _Card2 = _interopRequireDefault(_Card);
 
 	var _CreateCard = __webpack_require__(250);
 
@@ -27539,7 +27449,7 @@
 	        );
 	      }
 	      return this.props.cards.map(function (card, index) {
-	        return _react2.default.createElement(_UserCard2.default, { key: index, card: card,
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card, view: 'profile',
 	          handleRemoveCardClick: _this2.props.handleRemoveCardClick });
 	      });
 	    }
@@ -27577,75 +27487,7 @@
 	exports.default = Profile;
 
 /***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _styles = __webpack_require__(246);
-
-	var _styles2 = _interopRequireDefault(_styles);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Card = function (_Component) {
-	  _inherits(Card, _Component);
-
-	  function Card(props) {
-	    _classCallCheck(this, Card);
-
-	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-	  }
-
-	  _createClass(Card, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      var card = this.props.card;
-	      return _react2.default.createElement(
-	        'div',
-	        { style: _styles2.default.card, className: 'col-xs-6 col-md-3 well well-lg' },
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: function onClick() {
-	              _this2.props.handleRemoveCardClick(card);
-	            }, type: 'button', className: 'close' },
-	          '\xD7'
-	        ),
-	        _react2.default.createElement('img', { src: card.imgURL }),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          card.tagLine
-	        ),
-	        _react2.default.createElement('img', { src: card.twitterID })
-	      );
-	    }
-	  }]);
-
-	  return Card;
-	}(_react.Component);
-
-	exports.default = Card;
-
-/***/ },
+/* 249 */,
 /* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -27920,6 +27762,7 @@
 	    value: function handleLikeClick(card) {
 	      var _this2 = this;
 
+	      var userId = localStorage.userId;
 	      var cards = this.state.userCards.map(function (c) {
 	        if (c._id == card._id) {
 	          console.log(c.likes);
@@ -27928,7 +27771,7 @@
 	        }
 	        return c;
 	      });
-	      axios.put(("http://127.0.0.1:3000") + '/cards/' + card._id + '/' + this.props.userID).then(function (res) {
+	      axios.put(("http://127.0.0.1:3000") + '/cards/' + card._id + '/' + userId).then(function (res) {
 	        console.log(res);
 	        _this2.setState({ cards: cards });
 	      }).catch(function (err) {
@@ -27952,6 +27795,7 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(_UserCards2.default, { userCards: this.state.userCards,
+	        isLoggedIn: this.props.userID,
 	        handleLikeClick: this.handleLikeClick.bind(this) });
 	    }
 	  }]);
@@ -27977,9 +27821,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _AllCard = __webpack_require__(245);
+	var _Card = __webpack_require__(256);
 
-	var _AllCard2 = _interopRequireDefault(_AllCard);
+	var _Card2 = _interopRequireDefault(_Card);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28003,6 +27847,7 @@
 	    value: function renderCards() {
 	      var _this2 = this;
 
+	      var view = this.props.isLoggedIn ? 'read-write' : 'read-only';
 	      if (this.props.userCards.length < 1) {
 	        return _react2.default.createElement(
 	          'div',
@@ -28011,7 +27856,7 @@
 	        );
 	      }
 	      return this.props.userCards.map(function (card, index) {
-	        return _react2.default.createElement(_AllCard2.default, { key: index, card: card,
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card, view: view,
 	          handleLikeClick: _this2.props.handleLikeClick });
 	      });
 	    }
@@ -28021,6 +27866,12 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'container' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'User\'s Cards'
+	        ),
+	        _react2.default.createElement('hr', null),
 	        this.renderCards()
 	      );
 	    }
@@ -28030,6 +27881,221 @@
 	}(_react.Component);
 
 	exports.default = UserCards;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(246);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card(props) {
+	    _classCallCheck(this, Card);
+
+	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
+	  }
+
+	  _createClass(Card, [{
+	    key: 'renderCard',
+	    value: function renderCard(view, card) {
+	      var _this2 = this;
+
+	      switch (view) {
+	        case 'read-write':
+	          return _react2.default.createElement(
+	            'div',
+	            { style: _styles2.default.card, className: 'card' },
+	            _react2.default.createElement('img', { src: card.imgURL }),
+	            _react2.default.createElement(
+	              'h5',
+	              { style: _styles2.default.tagLine },
+	              card.tagLine
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-like-btn' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { onClick: function onClick() {
+	                      _this2.props.handleLikeClick(card);
+	                    }, className: 'btn btn-primary btn-xs' },
+	                  'Like ',
+	                  card.likes.length
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-avatar' },
+	                _react2.default.createElement('img', { onClick: function onClick() {
+	                    _this2.props.handleGetUserCards(card);
+	                  }, src: card.twitterIMG })
+	              )
+	            )
+	          );
+	        case 'read-only':
+	          return _react2.default.createElement(
+	            'div',
+	            { style: _styles2.default.card, className: 'card' },
+	            _react2.default.createElement('img', { src: card.imgURL }),
+	            _react2.default.createElement(
+	              'h5',
+	              { style: _styles2.default.tagLine },
+	              card.tagLine
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-like-btn' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { style: _styles2.default.notAllowed, className: 'btn btn-primary btn-xs' },
+	                  'Like ',
+	                  card.likes.length
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-avatar', style: _styles2.default.notAllowed },
+	                _react2.default.createElement('img', { src: card.twitterIMG })
+	              )
+	            )
+	          );
+	        default:
+	          return _react2.default.createElement(
+	            'div',
+	            { style: _styles2.default.card, className: 'card' },
+	            _react2.default.createElement(
+	              'button',
+	              { onClick: function onClick() {
+	                  _this2.props.handleRemoveCardClick(card);
+	                }, type: 'button', className: 'close' },
+	              '\xD7'
+	            ),
+	            _react2.default.createElement('img', { src: card.imgURL }),
+	            _react2.default.createElement(
+	              'h5',
+	              { style: _styles2.default.tagLine },
+	              card.tagLine
+	            ),
+	            _react2.default.createElement('img', { src: card.twitterID })
+	          );
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var card = this.props.card;
+	      var view = this.props.view;
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.renderCard(view, card)
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	}(_react.Component);
+
+	exports.default = Card;
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(184);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NavItem = function (_Component) {
+	  _inherits(NavItem, _Component);
+
+	  function NavItem() {
+	    _classCallCheck(this, NavItem);
+
+	    return _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).apply(this, arguments));
+	  }
+
+	  _createClass(NavItem, [{
+	    key: 'render',
+	    value: function render() {
+	      var router = this.context.router;
+	      var _props = this.props,
+	          index = _props.index,
+	          to = _props.to,
+	          children = _props.children;
+
+	      console.log(this.props);
+	      var isActive = router.isActive(to, true);
+	      var LinkComponent = index ? _reactRouter.Link : _reactRouter.IndexLink;
+
+	      return _react2.default.createElement(
+	        'li',
+	        { className: isActive ? 'active' : '' },
+	        _react2.default.createElement(
+	          LinkComponent,
+	          this.props,
+	          children
+	        )
+	      );
+	    }
+	  }]);
+
+	  return NavItem;
+	}(_react.Component);
+
+	NavItem.contextTypes = {
+	  router: _react2.default.PropTypes.object
+	};
+
+	exports.default = NavItem;
 
 /***/ }
 /******/ ]);

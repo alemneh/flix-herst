@@ -61,13 +61,14 @@ class HomePageContainer extends Component {
   handleGetUserCards(card) {
     console.log(card);
     localStorage.userId = card._owner;
-    browserHistory.push('/users/cards');
+    browserHistory.push('view/users/cards');
   }
 
   render() {
     return (
       <div className="container">
         <HomePage cards={ this.state.cards }
+                  isLoggedIn={ this.props.userID }
                   handleLikeClick={ this.handleLikeClick.bind(this) }
                   handleGetUserCards={ this.handleGetUserCards.bind(this) }/>
       </div>

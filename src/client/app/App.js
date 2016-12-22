@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavContainer from './containers/NavContainer/Nav';
+import { browserHistory } from 'react-router';
 
 class App extends Component {
   constructor(props) {
@@ -11,13 +12,18 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log(localStorage.userID + ': app');
-    this.fetchUserIDAndTwitterPic();
-    // this.fetchUserCards();
+    this.fetchUserID();
+    this.checkLoggIn();
   }
 
 
-  fetchUserIDAndTwitterPic() {
+
+  checkLoggIn() {
+    if(localStorage.userID) return;
+    browserHistory.push('/');
+  }
+
+  fetchUserID() {
     axios.get(process.env.URL + '/isLoggedIn')
       .then((res) => {
         console.log(res);

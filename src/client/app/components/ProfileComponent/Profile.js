@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from '../CardComponent/UserCard';
+import Card from '../CardComponent/Card';
 import CreateCard from '../CreateCardComponent/CreateCard';
 import Styles from './styles';
 
@@ -18,7 +18,7 @@ componentWillMount() {
       )
     }
     return this.props.cards.map((card, index) => {
-      return <Card key={index} card={card}
+      return <Card key={index} card={card} view="profile"
                    handleRemoveCardClick={ this.props.handleRemoveCardClick } />
     })
   }

@@ -25,6 +25,7 @@ class UserCardsContainer extends Component {
   }
 
   handleLikeClick(card) {
+    const userId = localStorage.userId;
     let cards = this.state.userCards.map((c) => {
       if(c._id == card._id) {
         console.log(c.likes);
@@ -33,7 +34,7 @@ class UserCardsContainer extends Component {
       }
       return c
     })
-    axios.put(process.env.URL + '/cards/' + card._id + '/' + this.props.userID)
+    axios.put(process.env.URL + '/cards/' + card._id + '/' + userId)
       .then((res) => {
         console.log(res);
         this.setState({ cards });
@@ -59,6 +60,7 @@ class UserCardsContainer extends Component {
   render() {
     return(
       <UserCards userCards={this.state.userCards}
+                 isLoggedIn={ this.props.userID }
                  handleLikeClick={ this.handleLikeClick.bind(this) }/>
     )
   }

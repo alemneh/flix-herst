@@ -77,7 +77,6 @@ class ProfileContainer extends Component {
 
 
   render() {
-    console.log(this.state.cards);
     return (
       <div className="container">
         <Profile cards={this.state.cards}

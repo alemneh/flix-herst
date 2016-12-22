@@ -8,7 +8,7 @@ module.exports = (userRouter, models) => {
     .get((req, res) => { userRoutes.getAllUsers(req, res); });
 
   userRouter.route('/users/:id')
-    .get((req, res)    => { userRouter.getOneUser(req, res); })
+    .get((req, res)    => { userRoutes.getOneUser(req, res); })
     .delete((req, res) => { userRoutes.removeUser(req, res); })
     .put((req, res)    => { userRoutes.updateUser(req, res); });
 

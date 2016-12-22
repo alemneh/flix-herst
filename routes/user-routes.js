@@ -5,6 +5,7 @@ const Card   = models.Card;
 
 let userRoutes = {
   getOneUser: function(req, res) {
+    console.log(req.url);
     User.findById(req.id, (err, user) => {
       if(err) throw err;
 
