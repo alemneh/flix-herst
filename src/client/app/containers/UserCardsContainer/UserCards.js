@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import UserCards from '../../components/UserCardsComponent/UserCards';
 
 class UserCardsContainer extends Component {

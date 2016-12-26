@@ -30,8 +30,10 @@ componentWillMount() {
         <input type="button" value="Create Card" className="btn btn-success"
                     data-toggle="modal" data-target="#myModal" />
 
-        <div style={Styles.cards} className="row">
-          { this.renderCards() }
+        <div id="wrapper">
+      	   <div id="columns">
+              { this.renderCards() }
+           </div>
         </div>
         <CreateCard handleImgChange={ this.props.handleImgChange }
                     twitterIMG={ this.props.twitterIMG }

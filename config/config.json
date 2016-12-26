@@ -13,7 +13,7 @@
   },
   "production": {
     "database": "MONGO_URI",
-    "host": " https://book-swap-meet.herokuapp.com",
+    "host": "https://flix-herst.herokuapp.com",
     "secret": "SECRET"
   }
 }

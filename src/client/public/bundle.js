@@ -65,19 +65,19 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _HomePage = __webpack_require__(243);
+	var _HomePage = __webpack_require__(269);
 
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 
-	var _UserCards = __webpack_require__(254);
+	var _UserCards = __webpack_require__(273);
 
 	var _UserCards2 = _interopRequireDefault(_UserCards);
 
-	var _Profile = __webpack_require__(247);
+	var _Profile = __webpack_require__(275);
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
-	var _Login = __webpack_require__(253);
+	var _Login = __webpack_require__(280);
 
 	var _Login2 = _interopRequireDefault(_Login);
 
@@ -139,7 +139,7 @@
 	var createFactory = ReactElement.createFactory;
 	var cloneElement = ReactElement.cloneElement;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var ReactElementValidator = __webpack_require__(25);
 	  createElement = ReactElementValidator.createElement;
 	  createFactory = ReactElementValidator.createFactory;
@@ -148,10 +148,10 @@
 
 	var __spread = _assign;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var warned = false;
 	  __spread = function () {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(warned, 'React.__spread is deprecated and should not be used. Use ' + 'Object.assign directly or another helper function with similar ' + 'semantics. You may be seeing this warning due to your compiler. ' + 'See https://fb.me/react-spread-deprecation for more details.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(warned, 'React.__spread is deprecated and should not be used. Use ' + 'Object.assign directly or another helper function with similar ' + 'semantics. You may be seeing this warning due to your compiler. ' + 'See https://fb.me/react-spread-deprecation for more details.') : void 0;
 	    warned = true;
 	    return _assign.apply(null, arguments);
 	  };
@@ -567,7 +567,7 @@
 
 	var standardReleaser = function (instance) {
 	  var Klass = this;
-	  !(instance instanceof Klass) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Trying to release an instance into a pool of a different type.') : _prodInvariant('25') : void 0;
+	  !(instance instanceof Klass) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Trying to release an instance into a pool of a different type.') : _prodInvariant('25') : void 0;
 	  instance.destructor();
 	  if (Klass.instancePool.length < Klass.poolSize) {
 	    Klass.instancePool.push(instance);
@@ -681,7 +681,7 @@
 	 */
 
 	function invariant(condition, format, a, b, c, d, e, f) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
 	    }
@@ -743,7 +743,7 @@
 	var specialPropKeyWarningShown, specialPropRefWarningShown;
 
 	function hasValidRef(config) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (hasOwnProperty.call(config, 'ref')) {
 	      var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
 	      if (getter && getter.isReactWarning) {
@@ -755,7 +755,7 @@
 	}
 
 	function hasValidKey(config) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (hasOwnProperty.call(config, 'key')) {
 	      var getter = Object.getOwnPropertyDescriptor(config, 'key').get;
 	      if (getter && getter.isReactWarning) {
@@ -770,7 +770,7 @@
 	  var warnAboutAccessingKey = function () {
 	    if (!specialPropKeyWarningShown) {
 	      specialPropKeyWarningShown = true;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;
 	    }
 	  };
 	  warnAboutAccessingKey.isReactWarning = true;
@@ -784,7 +784,7 @@
 	  var warnAboutAccessingRef = function () {
 	    if (!specialPropRefWarningShown) {
 	      specialPropRefWarningShown = true;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://fb.me/react-special-props)', displayName) : void 0;
 	    }
 	  };
 	  warnAboutAccessingRef.isReactWarning = true;
@@ -829,7 +829,7 @@
 	    _owner: owner
 	  };
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    // The validation flag is currently mutative. We put it on
 	    // an external backing store so that we can freeze the whole object.
 	    // This can be replaced with a WeakMap once they are implemented in
@@ -919,7 +919,7 @@
 	    for (var i = 0; i < childrenLength; i++) {
 	      childArray[i] = arguments[i + 2];
 	    }
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (Object.freeze) {
 	        Object.freeze(childArray);
 	      }
@@ -936,7 +936,7 @@
 	      }
 	    }
 	  }
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (key || ref) {
 	      if (typeof props.$$typeof === 'undefined' || props.$$typeof !== REACT_ELEMENT_TYPE) {
 	        var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
@@ -1114,7 +1114,7 @@
 
 	var warning = emptyFunction;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  (function () {
 	    var printWarning = function printWarning(format) {
 	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -1219,7 +1219,7 @@
 	'use strict';
 
 	var canDefineProperty = false;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  try {
 	    // $FlowFixMe https://github.com/facebook/flow/issues/285
 	    Object.defineProperty({}, 'x', { get: function () {} });
@@ -1366,7 +1366,7 @@
 	          subtreeCount += traverseAllChildrenImpl(child, nextName, callback, traverseContext);
 	        }
 	      } else {
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          var mapsAsChildrenAddendum = '';
 	          if (ReactCurrentOwner.current) {
 	            var mapsAsChildrenOwnerName = ReactCurrentOwner.current.getName();
@@ -1374,7 +1374,7 @@
 	              mapsAsChildrenAddendum = ' Check the render method of `' + mapsAsChildrenOwnerName + '`.';
 	            }
 	          }
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(didWarnAboutMaps, 'Using Maps as children is not yet fully supported. It is an ' + 'experimental feature that might be removed. Convert it to a ' + 'sequence / iterable of keyed ReactElements instead.%s', mapsAsChildrenAddendum) : void 0;
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(didWarnAboutMaps, 'Using Maps as children is not yet fully supported. It is an ' + 'experimental feature that might be removed. Convert it to a ' + 'sequence / iterable of keyed ReactElements instead.%s', mapsAsChildrenAddendum) : void 0;
 	          didWarnAboutMaps = true;
 	        }
 	        // Iterator will provide entry [k,v] tuples rather than values.
@@ -1389,7 +1389,7 @@
 	      }
 	    } else if (type === 'object') {
 	      var addendum = '';
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        addendum = ' If you meant to render a collection of children, use an array ' + 'instead or wrap the object using createFragment(object) from the ' + 'React add-ons.';
 	        if (children._isReactElement) {
 	          addendum = ' It looks like you\'re using an element created by a different ' + 'version of React. Make sure to use only one copy of React.';
@@ -1402,7 +1402,7 @@
 	        }
 	      }
 	      var childrenString = String(children);
-	       true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Objects are not valid as a React child (found: %s).%s', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : _prodInvariant('31', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : void 0;
+	       true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Objects are not valid as a React child (found: %s).%s', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : _prodInvariant('31', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : void 0;
 	    }
 	  }
 
@@ -1608,7 +1608,7 @@
 	 * @protected
 	 */
 	ReactComponent.prototype.setState = function (partialState, callback) {
-	  !(typeof partialState === 'object' || typeof partialState === 'function' || partialState == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : _prodInvariant('85') : void 0;
+	  !(typeof partialState === 'object' || typeof partialState === 'function' || partialState == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'setState(...): takes an object of state variables to update or a function which returns an object of state variables.') : _prodInvariant('85') : void 0;
 	  this.updater.enqueueSetState(this, partialState);
 	  if (callback) {
 	    this.updater.enqueueCallback(this, callback, 'setState');
@@ -1641,7 +1641,7 @@
 	 * we would like to deprecate them, we're not going to move them over to this
 	 * modern base class. Instead, we define a getter that warns if it's accessed.
 	 */
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var deprecatedAPIs = {
 	    isMounted: ['isMounted', 'Instead, make sure to clean up subscriptions and pending requests in ' + 'componentWillUnmount to prevent memory leaks.'],
 	    replaceState: ['replaceState', 'Refactor your code to use setState instead (see ' + 'https://github.com/facebook/react/issues/3236).']
@@ -1650,7 +1650,7 @@
 	    if (canDefineProperty) {
 	      Object.defineProperty(ReactComponent.prototype, methodName, {
 	        get: function () {
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s(...) is deprecated in plain JavaScript React classes. %s', info[0], info[1]) : void 0;
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s(...) is deprecated in plain JavaScript React classes. %s', info[0], info[1]) : void 0;
 	          return undefined;
 	        }
 	      });
@@ -1684,9 +1684,9 @@
 	var warning = __webpack_require__(11);
 
 	function warnNoop(publicInstance, callerName) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    var constructor = publicInstance.constructor;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s(...): Can only update a mounted or mounting component. ' + 'This usually means you called %s() on an unmounted component. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, constructor && (constructor.displayName || constructor.name) || 'ReactClass') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s(...): Can only update a mounted or mounting component. ' + 'This usually means you called %s() on an unmounted component. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, constructor && (constructor.displayName || constructor.name) || 'ReactClass') : void 0;
 	  }
 	}
 
@@ -1783,7 +1783,7 @@
 
 	var emptyObject = {};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  Object.freeze(emptyObject);
 	}
 
@@ -2144,13 +2144,13 @@
 	    }
 	  },
 	  childContextTypes: function (Constructor, childContextTypes) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      validateTypeDef(Constructor, childContextTypes, 'childContext');
 	    }
 	    Constructor.childContextTypes = _assign({}, Constructor.childContextTypes, childContextTypes);
 	  },
 	  contextTypes: function (Constructor, contextTypes) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      validateTypeDef(Constructor, contextTypes, 'context');
 	    }
 	    Constructor.contextTypes = _assign({}, Constructor.contextTypes, contextTypes);
@@ -2167,7 +2167,7 @@
 	    }
 	  },
 	  propTypes: function (Constructor, propTypes) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      validateTypeDef(Constructor, propTypes, 'prop');
 	    }
 	    Constructor.propTypes = _assign({}, Constructor.propTypes, propTypes);
@@ -2182,7 +2182,7 @@
 	    if (typeDef.hasOwnProperty(propName)) {
 	      // use a warning instead of an invariant so components
 	      // don't show up in prod but only in __DEV__
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(typeof typeDef[propName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', Constructor.displayName || 'ReactClass', ReactPropTypeLocationNames[location], propName) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(typeof typeDef[propName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', Constructor.displayName || 'ReactClass', ReactPropTypeLocationNames[location], propName) : void 0;
 	    }
 	  }
 	}
@@ -2192,12 +2192,12 @@
 
 	  // Disallow overriding of base class methods unless explicitly allowed.
 	  if (ReactClassMixin.hasOwnProperty(name)) {
-	    !(specPolicy === 'OVERRIDE_BASE') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.', name) : _prodInvariant('73', name) : void 0;
+	    !(specPolicy === 'OVERRIDE_BASE') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.', name) : _prodInvariant('73', name) : void 0;
 	  }
 
 	  // Disallow defining methods more than once unless explicitly allowed.
 	  if (isAlreadyDefined) {
-	    !(specPolicy === 'DEFINE_MANY' || specPolicy === 'DEFINE_MANY_MERGED') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('74', name) : void 0;
+	    !(specPolicy === 'DEFINE_MANY' || specPolicy === 'DEFINE_MANY_MERGED') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('74', name) : void 0;
 	  }
 	}
 
@@ -2207,18 +2207,18 @@
 	 */
 	function mixSpecIntoComponent(Constructor, spec) {
 	  if (!spec) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var typeofSpec = typeof spec;
 	      var isMixinValid = typeofSpec === 'object' && spec !== null;
 
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(isMixinValid, '%s: You\'re attempting to include a mixin that is either null ' + 'or not an object. Check the mixins included by the component, ' + 'as well as any mixins they include themselves. ' + 'Expected object but got %s.', Constructor.displayName || 'ReactClass', spec === null ? null : typeofSpec) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(isMixinValid, '%s: You\'re attempting to include a mixin that is either null ' + 'or not an object. Check the mixins included by the component, ' + 'as well as any mixins they include themselves. ' + 'Expected object but got %s.', Constructor.displayName || 'ReactClass', spec === null ? null : typeofSpec) : void 0;
 	    }
 
 	    return;
 	  }
 
-	  !(typeof spec !== 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You\'re attempting to use a component class or function as a mixin. Instead, just use a regular object.') : _prodInvariant('75') : void 0;
-	  !!ReactElement.isValidElement(spec) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You\'re attempting to use a component as a mixin. Instead, just use a regular object.') : _prodInvariant('76') : void 0;
+	  !(typeof spec !== 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You\'re attempting to use a component class or function as a mixin. Instead, just use a regular object.') : _prodInvariant('75') : void 0;
+	  !!ReactElement.isValidElement(spec) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You\'re attempting to use a component as a mixin. Instead, just use a regular object.') : _prodInvariant('76') : void 0;
 
 	  var proto = Constructor.prototype;
 	  var autoBindPairs = proto.__reactAutoBindPairs;
@@ -2263,7 +2263,7 @@
 	          var specPolicy = ReactClassInterface[name];
 
 	          // These cases should already be caught by validateMethodOverride.
-	          !(isReactClassMethod && (specPolicy === 'DEFINE_MANY_MERGED' || specPolicy === 'DEFINE_MANY')) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.', specPolicy, name) : _prodInvariant('77', specPolicy, name) : void 0;
+	          !(isReactClassMethod && (specPolicy === 'DEFINE_MANY_MERGED' || specPolicy === 'DEFINE_MANY')) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.', specPolicy, name) : _prodInvariant('77', specPolicy, name) : void 0;
 
 	          // For methods which are defined more than once, call the existing
 	          // methods before calling the new property, merging if appropriate.
@@ -2274,7 +2274,7 @@
 	          }
 	        } else {
 	          proto[name] = property;
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            // Add verbose displayName to the function, which helps when looking
 	            // at profiling tools.
 	            if (typeof property === 'function' && spec.displayName) {
@@ -2298,10 +2298,10 @@
 	    }
 
 	    var isReserved = name in RESERVED_SPEC_KEYS;
-	    !!isReserved ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You are attempting to define a reserved property, `%s`, that shouldn\'t be on the "statics" key. Define it as an instance property instead; it will still be accessible on the constructor.', name) : _prodInvariant('78', name) : void 0;
+	    !!isReserved ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You are attempting to define a reserved property, `%s`, that shouldn\'t be on the "statics" key. Define it as an instance property instead; it will still be accessible on the constructor.', name) : _prodInvariant('78', name) : void 0;
 
 	    var isInherited = name in Constructor;
-	    !!isInherited ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('79', name) : void 0;
+	    !!isInherited ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactClass: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('79', name) : void 0;
 	    Constructor[name] = property;
 	  }
 	}
@@ -2314,11 +2314,11 @@
 	 * @return {object} one after it has been mutated to contain everything in two.
 	 */
 	function mergeIntoWithNoDuplicateKeys(one, two) {
-	  !(one && two && typeof one === 'object' && typeof two === 'object') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'mergeIntoWithNoDuplicateKeys(): Cannot merge non-objects.') : _prodInvariant('80') : void 0;
+	  !(one && two && typeof one === 'object' && typeof two === 'object') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'mergeIntoWithNoDuplicateKeys(): Cannot merge non-objects.') : _prodInvariant('80') : void 0;
 
 	  for (var key in two) {
 	    if (two.hasOwnProperty(key)) {
-	      !(one[key] === undefined) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'mergeIntoWithNoDuplicateKeys(): Tried to merge two objects with the same key: `%s`. This conflict may be due to a mixin; in particular, this may be caused by two getInitialState() or getDefaultProps() methods returning objects with clashing keys.', key) : _prodInvariant('81', key) : void 0;
+	      !(one[key] === undefined) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'mergeIntoWithNoDuplicateKeys(): Tried to merge two objects with the same key: `%s`. This conflict may be due to a mixin; in particular, this may be caused by two getInitialState() or getDefaultProps() methods returning objects with clashing keys.', key) : _prodInvariant('81', key) : void 0;
 	      one[key] = two[key];
 	    }
 	  }
@@ -2373,7 +2373,7 @@
 	 */
 	function bindAutoBindMethod(component, method) {
 	  var boundMethod = method.bind(component);
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    boundMethod.__reactBoundContext = component;
 	    boundMethod.__reactBoundMethod = method;
 	    boundMethod.__reactBoundArguments = null;
@@ -2388,9 +2388,9 @@
 	      // ignore the value of "this" that the user is trying to use, so
 	      // let's warn.
 	      if (newThis !== component && newThis !== null) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'bind(): React component methods may only be bound to the ' + 'component instance. See %s', componentName) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'bind(): React component methods may only be bound to the ' + 'component instance. See %s', componentName) : void 0;
 	      } else if (!args.length) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'bind(): You are binding a component method to the component. ' + 'React does this for you automatically in a high-performance ' + 'way, so you can safely remove this call. See %s', componentName) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'bind(): You are binding a component method to the component. ' + 'React does this for you automatically in a high-performance ' + 'way, so you can safely remove this call. See %s', componentName) : void 0;
 	        return boundMethod;
 	      }
 	      var reboundMethod = _bind.apply(boundMethod, arguments);
@@ -2471,8 +2471,8 @@
 	      // This constructor gets overridden by mocks. The argument is used
 	      // by mocks to assert on what gets mounted.
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
 	      }
 
 	      // Wire up auto-binding
@@ -2491,7 +2491,7 @@
 	      // getInitialState and componentWillMount methods for initialization.
 
 	      var initialState = this.getInitialState ? this.getInitialState() : null;
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        // We allow auto-mocks to proceed as if they're returning null.
 	        if (initialState === undefined && this.getInitialState._isMockFunction) {
 	          // This is probably bad practice. Consider warning here and
@@ -2499,7 +2499,7 @@
 	          initialState = null;
 	        }
 	      }
-	      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+	      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
 	      this.state = initialState;
 	    });
@@ -2516,7 +2516,7 @@
 	      Constructor.defaultProps = Constructor.getDefaultProps();
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      // This is a tag to indicate that the use of these method names is ok,
 	      // since it's used with createClass. If it's not, then it's likely a
 	      // mistake so we'll warn you to use the static property, property
@@ -2529,11 +2529,11 @@
 	      }
 	    }
 
-	    !Constructor.prototype.render ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'createClass(...): Class specification must implement a `render` method.') : _prodInvariant('83') : void 0;
+	    !Constructor.prototype.render ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'createClass(...): Class specification must implement a `render` method.') : _prodInvariant('83') : void 0;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentShouldUpdate, '%s has a method called ' + 'componentShouldUpdate(). Did you mean shouldComponentUpdate()? ' + 'The name is phrased as a question because the function is ' + 'expected to return a value.', spec.displayName || 'A component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentWillRecieveProps, '%s has a method called ' + 'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?', spec.displayName || 'A component') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentShouldUpdate, '%s has a method called ' + 'componentShouldUpdate(). Did you mean shouldComponentUpdate()? ' + 'The name is phrased as a question because the function is ' + 'expected to return a value.', spec.displayName || 'A component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!Constructor.prototype.componentWillRecieveProps, '%s has a method called ' + 'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?', spec.displayName || 'A component') : void 0;
 	    }
 
 	    // Reduce time spent doing lookups by setting these on the prototype.
@@ -2575,7 +2575,7 @@
 
 	var ReactPropTypeLocationNames = {};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  ReactPropTypeLocationNames = {
 	    prop: 'prop',
 	    context: 'context',
@@ -2609,7 +2609,7 @@
 	 * @private
 	 */
 	var createDOMFactory = ReactElement.createFactory;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var ReactElementValidator = __webpack_require__(25);
 	  createDOMFactory = ReactElementValidator.createFactory;
 	}
@@ -2855,7 +2855,7 @@
 	    childOwner = ' It was passed a child from ' + element._owner.getName() + '.';
 	  }
 
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Each child in an array or iterator should have a unique "key" prop.' + '%s%s See https://fb.me/react-warning-keys for more information.%s', currentComponentErrorInfo, childOwner, ReactComponentTreeHook.getCurrentStackAddendum(element)) : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Each child in an array or iterator should have a unique "key" prop.' + '%s%s See https://fb.me/react-warning-keys for more information.%s', currentComponentErrorInfo, childOwner, ReactComponentTreeHook.getCurrentStackAddendum(element)) : void 0;
 	}
 
 	/**
@@ -2916,7 +2916,7 @@
 	    checkReactTypeSpec(componentClass.propTypes, element.props, 'prop', name, element, null);
 	  }
 	  if (typeof componentClass.getDefaultProps === 'function') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(componentClass.getDefaultProps.isReactClassApproved, 'getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(componentClass.getDefaultProps.isReactClassApproved, 'getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.') : void 0;
 	  }
 	}
 
@@ -2927,7 +2927,7 @@
 	    // We warn in this case but don't throw. We expect the element creation to
 	    // succeed and there will likely be errors in render.
 	    if (!validType) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'React.createElement: type should not be null, undefined, boolean, or ' + 'number. It should be a string (for DOM elements) or a ReactClass ' + '(for composite components).%s', getDeclarationErrorAddendum()) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'React.createElement: type should not be null, undefined, boolean, or ' + 'number. It should be a string (for DOM elements) or a ReactClass ' + '(for composite components).%s', getDeclarationErrorAddendum()) : void 0;
 	    }
 
 	    var element = ReactElement.createElement.apply(this, arguments);
@@ -2959,12 +2959,12 @@
 	    // Legacy hook TODO: Warn if this is accessed
 	    validatedFactory.type = type;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (canDefineProperty) {
 	        Object.defineProperty(validatedFactory, 'type', {
 	          enumerable: false,
 	          get: function () {
-	            ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Factory.type is deprecated. Access the class directly ' + 'before passing it to createFactory.') : void 0;
+	            ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Factory.type is deprecated. Access the class directly ' + 'before passing it to createFactory.') : void 0;
 	            Object.defineProperty(this, 'type', {
 	              value: type
 	            });
@@ -3157,29 +3157,29 @@
 	  if (ownerID) {
 	    ownerName = ReactComponentTreeHook.getDisplayName(ownerID);
 	  }
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(element, 'ReactComponentTreeHook: Missing React element for debugID %s when ' + 'building stack', id) : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(element, 'ReactComponentTreeHook: Missing React element for debugID %s when ' + 'building stack', id) : void 0;
 	  return describeComponentFrame(name, element && element._source, ownerName);
 	}
 
 	var ReactComponentTreeHook = {
 	  onSetChildren: function (id, nextChildIDs) {
 	    var item = getItem(id);
-	    !item ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
+	    !item ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
 	    item.childIDs = nextChildIDs;
 
 	    for (var i = 0; i < nextChildIDs.length; i++) {
 	      var nextChildID = nextChildIDs[i];
 	      var nextChild = getItem(nextChildID);
-	      !nextChild ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected hook events to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('140') : void 0;
-	      !(nextChild.childIDs != null || typeof nextChild.element !== 'object' || nextChild.element == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onSetChildren() to fire for a container child before its parent includes it in onSetChildren().') : _prodInvariant('141') : void 0;
-	      !nextChild.isMounted ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onMountComponent() to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('71') : void 0;
+	      !nextChild ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected hook events to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('140') : void 0;
+	      !(nextChild.childIDs != null || typeof nextChild.element !== 'object' || nextChild.element == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onSetChildren() to fire for a container child before its parent includes it in onSetChildren().') : _prodInvariant('141') : void 0;
+	      !nextChild.isMounted ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onMountComponent() to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('71') : void 0;
 	      if (nextChild.parentID == null) {
 	        nextChild.parentID = id;
 	        // TODO: This shouldn't be necessary but mounting a new root during in
 	        // componentWillMount currently causes not-yet-mounted components to
 	        // be purged from our tree data so their parent id is missing.
 	      }
-	      !(nextChild.parentID === id) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onBeforeMountComponent() parent and onSetChildren() to be consistent (%s has parents %s and %s).', nextChildID, nextChild.parentID, id) : _prodInvariant('142', nextChildID, nextChild.parentID, id) : void 0;
+	      !(nextChild.parentID === id) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected onBeforeMountComponent() parent and onSetChildren() to be consistent (%s has parents %s and %s).', nextChildID, nextChild.parentID, id) : _prodInvariant('142', nextChildID, nextChild.parentID, id) : void 0;
 	    }
 	  },
 	  onBeforeMountComponent: function (id, element, parentID) {
@@ -3204,7 +3204,7 @@
 	  },
 	  onMountComponent: function (id) {
 	    var item = getItem(id);
-	    !item ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
+	    !item ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
 	    item.isMounted = true;
 	    var isRoot = item.parentID === 0;
 	    if (isRoot) {
@@ -3354,7 +3354,7 @@
 
 	var ReactComponentTreeHook;
 
-	if (typeof process !== 'undefined' && ({"URL":"http://127.0.0.1:3000"}) && ({"URL":"http://127.0.0.1:3000"}).NODE_ENV === 'test') {
+	if (typeof process !== 'undefined' && ({"URL":"https://flix-herst.herokuapp.com"}) && ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -3387,12 +3387,12 @@
 	      try {
 	        // This is intentionally an invariant that gets caught. It's the same
 	        // behavior as without this statement except with a better message.
-	        !(typeof typeSpecs[typeSpecName] === 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : _prodInvariant('84', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : void 0;
+	        !(typeof typeSpecs[typeSpecName] === 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : _prodInvariant('84', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : void 0;
 	        error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
 	      } catch (ex) {
 	        error = ex;
 	      }
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error) : void 0;
 	      if (error instanceof Error && !(error.message in loggedTypeFailures)) {
 	        // Only monitor this failure once because there tends to be a lot of the
 	        // same error.
@@ -3400,7 +3400,7 @@
 
 	        var componentStackInfo = '';
 
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          if (!ReactComponentTreeHook) {
 	            ReactComponentTreeHook = __webpack_require__(26);
 	          }
@@ -3411,7 +3411,7 @@
 	          }
 	        }
 
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Failed %s type: %s%s', location, error.message, componentStackInfo) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Failed %s type: %s%s', location, error.message, componentStackInfo) : void 0;
 	      }
 	    }
 	  }
@@ -3753,17 +3753,17 @@
 	PropTypeError.prototype = Error.prototype;
 
 	function createChainableTypeChecker(validate) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    var manualPropTypeCallCache = {};
 	  }
 	  function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
 	    componentName = componentName || ANONYMOUS;
 	    propFullName = propFullName || propName;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (secret !== ReactPropTypesSecret && typeof console !== 'undefined') {
 	        var cacheKey = componentName + ':' + propName;
 	        if (!manualPropTypeCallCache[cacheKey]) {
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'You are manually calling a React.PropTypes validation ' + 'function for the `%s` prop on `%s`. This is deprecated ' + 'and will not work in production with the next major version. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.', propFullName, componentName) : void 0;
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'You are manually calling a React.PropTypes validation ' + 'function for the `%s` prop on `%s`. This is deprecated ' + 'and will not work in production with the next major version. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.', propFullName, componentName) : void 0;
 	          manualPropTypeCallCache[cacheKey] = true;
 	        }
 	      }
@@ -3860,7 +3860,7 @@
 
 	function createEnumTypeChecker(expectedValues) {
 	  if (!Array.isArray(expectedValues)) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
 	    return emptyFunction.thatReturnsNull;
 	  }
 
@@ -3905,7 +3905,7 @@
 
 	function createUnionTypeChecker(arrayOfTypeCheckers) {
 	  if (!Array.isArray(arrayOfTypeCheckers)) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
 	    return emptyFunction.thatReturnsNull;
 	  }
 
@@ -4119,7 +4119,7 @@
 	 * structure.
 	 */
 	function onlyChild(children) {
-	  !ReactElement.isValidElement(children) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'React.Children.only expected to receive a single React element child.') : _prodInvariant('143') : void 0;
+	  !ReactElement.isValidElement(children) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'React.Children.only expected to receive a single React element child.') : _prodInvariant('143') : void 0;
 	  return children;
 	}
 
@@ -4200,7 +4200,7 @@
 	  });
 	}
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var ExecutionEnvironment = __webpack_require__(52);
 	  if (ExecutionEnvironment.canUseDOM && window.top === window.self) {
 
@@ -4215,13 +4215,13 @@
 	    }
 
 	    var testFunc = function testFn() {};
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning((testFunc.name || testFunc.toString()).indexOf('testFn') !== -1, 'It looks like you\'re using a minified copy of the development build ' + 'of React. When deploying React apps to production, make sure to use ' + 'the production build which skips development warnings and is faster. ' + 'See https://fb.me/react-minification for more details.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning((testFunc.name || testFunc.toString()).indexOf('testFn') !== -1, 'It looks like you\'re using a minified copy of the development build ' + 'of React. When deploying React apps to production, make sure to use ' + 'the production build which skips development warnings and is faster. ' + 'See https://fb.me/react-minification for more details.') : void 0;
 
 	    // If we're in IE8, check to see if we are in compatibility mode and provide
 	    // information on preventing compatibility mode
 	    var ieCompatibilityMode = document.documentMode && document.documentMode < 8;
 
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!ieCompatibilityMode, 'Internet Explorer is running in compatibility mode; please add the ' + 'following tag to your HTML to prevent this from happening: ' + '<meta http-equiv="X-UA-Compatible" content="IE=edge" />') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!ieCompatibilityMode, 'Internet Explorer is running in compatibility mode; please add the ' + 'following tag to your HTML to prevent this from happening: ' + '<meta http-equiv="X-UA-Compatible" content="IE=edge" />') : void 0;
 
 	    var expectedFeatures = [
 	    // shims
@@ -4229,14 +4229,14 @@
 
 	    for (var i = 0; i < expectedFeatures.length; i++) {
 	      if (!expectedFeatures[i]) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'One or more ES5 shims expected by React are not available: ' + 'https://fb.me/react-warning-polyfills') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'One or more ES5 shims expected by React are not available: ' + 'https://fb.me/react-warning-polyfills') : void 0;
 	        break;
 	      }
 	    }
 	  }
 	}
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var ReactInstrumentation = __webpack_require__(67);
 	  var ReactDOMUnknownPropertyHook = __webpack_require__(181);
 	  var ReactDOMNullInputValuePropHook = __webpack_require__(182);
@@ -4348,7 +4348,7 @@
 	      }
 	    }
 	    // We reached the end of the DOM children without finding an ID match.
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Unable to find element with ID %s.', childID) : _prodInvariant('32', childID) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Unable to find element with ID %s.', childID) : _prodInvariant('32', childID) : void 0;
 	  }
 	  inst._flags |= Flags.hasCachedChildNodes;
 	}
@@ -4407,7 +4407,7 @@
 	function getNodeFromInstance(inst) {
 	  // Without this first invariant, passing a non-DOM-component triggers the next
 	  // invariant for a missing parent, which is super confusing.
-	  !(inst._hostNode !== undefined) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
+	  !(inst._hostNode !== undefined) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
 
 	  if (inst._hostNode) {
 	    return inst._hostNode;
@@ -4417,7 +4417,7 @@
 	  var parents = [];
 	  while (!inst._hostNode) {
 	    parents.push(inst);
-	    !inst._hostParent ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'React DOM tree root should always have a node reference.') : _prodInvariant('34') : void 0;
+	    !inst._hostParent ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'React DOM tree root should always have a node reference.') : _prodInvariant('34') : void 0;
 	    inst = inst._hostParent;
 	  }
 
@@ -4560,7 +4560,7 @@
 	    }
 
 	    for (var propName in Properties) {
-	      !!DOMProperty.properties.hasOwnProperty(propName) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'injectDOMPropertyConfig(...): You\'re trying to inject DOM property \'%s\' which has already been injected. You may be accidentally injecting the same DOM property config twice, or you may be injecting two configs that have conflicting property names.', propName) : _prodInvariant('48', propName) : void 0;
+	      !!DOMProperty.properties.hasOwnProperty(propName) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'injectDOMPropertyConfig(...): You\'re trying to inject DOM property \'%s\' which has already been injected. You may be accidentally injecting the same DOM property config twice, or you may be injecting two configs that have conflicting property names.', propName) : _prodInvariant('48', propName) : void 0;
 
 	      var lowerCased = propName.toLowerCase();
 	      var propConfig = Properties[propName];
@@ -4577,16 +4577,16 @@
 	        hasPositiveNumericValue: checkMask(propConfig, Injection.HAS_POSITIVE_NUMERIC_VALUE),
 	        hasOverloadedBooleanValue: checkMask(propConfig, Injection.HAS_OVERLOADED_BOOLEAN_VALUE)
 	      };
-	      !(propertyInfo.hasBooleanValue + propertyInfo.hasNumericValue + propertyInfo.hasOverloadedBooleanValue <= 1) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'DOMProperty: Value can be one of boolean, overloaded boolean, or numeric value, but not a combination: %s', propName) : _prodInvariant('50', propName) : void 0;
+	      !(propertyInfo.hasBooleanValue + propertyInfo.hasNumericValue + propertyInfo.hasOverloadedBooleanValue <= 1) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'DOMProperty: Value can be one of boolean, overloaded boolean, or numeric value, but not a combination: %s', propName) : _prodInvariant('50', propName) : void 0;
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        DOMProperty.getPossibleStandardName[lowerCased] = propName;
 	      }
 
 	      if (DOMAttributeNames.hasOwnProperty(propName)) {
 	        var attributeName = DOMAttributeNames[propName];
 	        propertyInfo.attributeName = attributeName;
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          DOMProperty.getPossibleStandardName[attributeName] = propName;
 	        }
 	      }
@@ -4672,7 +4672,7 @@
 	   *
 	   * @type {Object}
 	   */
-	  getPossibleStandardName: ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,
+	  getPossibleStandardName: ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,
 
 	  /**
 	   * All of the isCustomAttribute() functions that have been injected.
@@ -4726,7 +4726,7 @@
 	 */
 
 	function invariant(condition, format, a, b, c, d, e, f) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
 	    }
@@ -5372,8 +5372,8 @@
 	 * "dispatch" object that pairs the event with the listener.
 	 */
 	function accumulateDirectionalDispatches(inst, phase, event) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
 	  }
 	  var listener = listenerAtPhase(inst, event, phase);
 	  if (listener) {
@@ -5607,7 +5607,7 @@
 	   * @param {function} listener The callback to store.
 	   */
 	  putListener: function (inst, registrationName, listener) {
-	    !(typeof listener === 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected %s listener to be a function, instead got type %s', registrationName, typeof listener) : _prodInvariant('94', registrationName, typeof listener) : void 0;
+	    !(typeof listener === 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected %s listener to be a function, instead got type %s', registrationName, typeof listener) : _prodInvariant('94', registrationName, typeof listener) : void 0;
 
 	    var key = getDictionaryKey(inst);
 	    var bankForRegistrationName = listenerBank[registrationName] || (listenerBank[registrationName] = {});
@@ -5731,7 +5731,7 @@
 	    } else {
 	      forEachAccumulated(processingEventQueue, executeDispatchesAndReleaseTopLevel);
 	    }
-	    !!eventQueue ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'processEventQueue(): Additional events were enqueued while processing an event queue. Support for this has not yet been implemented.') : _prodInvariant('95') : void 0;
+	    !!eventQueue ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'processEventQueue(): Additional events were enqueued while processing an event queue. Support for this has not yet been implemented.') : _prodInvariant('95') : void 0;
 	    // This would be a good time to rethrow if any of the event handlers threw.
 	    ReactErrorUtils.rethrowCaughtError();
 	  },
@@ -5795,15 +5795,15 @@
 	  for (var pluginName in namesToPlugins) {
 	    var pluginModule = namesToPlugins[pluginName];
 	    var pluginIndex = eventPluginOrder.indexOf(pluginName);
-	    !(pluginIndex > -1) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugins that do not exist in the plugin ordering, `%s`.', pluginName) : _prodInvariant('96', pluginName) : void 0;
+	    !(pluginIndex > -1) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugins that do not exist in the plugin ordering, `%s`.', pluginName) : _prodInvariant('96', pluginName) : void 0;
 	    if (EventPluginRegistry.plugins[pluginIndex]) {
 	      continue;
 	    }
-	    !pluginModule.extractEvents ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
+	    !pluginModule.extractEvents ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
 	    EventPluginRegistry.plugins[pluginIndex] = pluginModule;
 	    var publishedEvents = pluginModule.eventTypes;
 	    for (var eventName in publishedEvents) {
-	      !publishEventForPlugin(publishedEvents[eventName], pluginModule, eventName) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
+	      !publishEventForPlugin(publishedEvents[eventName], pluginModule, eventName) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
 	    }
 	  }
 	}
@@ -5817,7 +5817,7 @@
 	 * @private
 	 */
 	function publishEventForPlugin(dispatchConfig, pluginModule, eventName) {
-	  !!EventPluginRegistry.eventNameDispatchConfigs.hasOwnProperty(eventName) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same event name, `%s`.', eventName) : _prodInvariant('99', eventName) : void 0;
+	  !!EventPluginRegistry.eventNameDispatchConfigs.hasOwnProperty(eventName) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same event name, `%s`.', eventName) : _prodInvariant('99', eventName) : void 0;
 	  EventPluginRegistry.eventNameDispatchConfigs[eventName] = dispatchConfig;
 
 	  var phasedRegistrationNames = dispatchConfig.phasedRegistrationNames;
@@ -5845,11 +5845,11 @@
 	 * @private
 	 */
 	function publishRegistrationName(registrationName, pluginModule, eventName) {
-	  !!EventPluginRegistry.registrationNameModules[registrationName] ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
+	  !!EventPluginRegistry.registrationNameModules[registrationName] ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
 	  EventPluginRegistry.registrationNameModules[registrationName] = pluginModule;
 	  EventPluginRegistry.registrationNameDependencies[registrationName] = pluginModule.eventTypes[eventName].dependencies;
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    var lowerCasedName = registrationName.toLowerCase();
 	    EventPluginRegistry.possibleRegistrationNames[lowerCasedName] = registrationName;
 
@@ -5892,7 +5892,7 @@
 	   * only in __DEV__.
 	   * @type {Object}
 	   */
-	  possibleRegistrationNames: ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? {} : null,
+	  possibleRegistrationNames: ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? {} : null,
 	  // Trust the developer to only use possibleRegistrationNames in __DEV__
 
 	  /**
@@ -5905,7 +5905,7 @@
 	   * @see {EventPluginHub.injection.injectEventPluginOrder}
 	   */
 	  injectEventPluginOrder: function (injectedEventPluginOrder) {
-	    !!eventPluginOrder ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
+	    !!eventPluginOrder ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
 	    // Clone the ordering so it cannot be dynamically mutated.
 	    eventPluginOrder = Array.prototype.slice.call(injectedEventPluginOrder);
 	    recomputePluginOrdering();
@@ -5929,7 +5929,7 @@
 	      }
 	      var pluginModule = injectedNamesToPlugins[pluginName];
 	      if (!namesToPlugins.hasOwnProperty(pluginName) || namesToPlugins[pluginName] !== pluginModule) {
-	        !!namesToPlugins[pluginName] ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
+	        !!namesToPlugins[pluginName] ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
 	        namesToPlugins[pluginName] = pluginModule;
 	        isOrderingDirty = true;
 	      }
@@ -5996,7 +5996,7 @@
 	      }
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var possibleRegistrationNames = EventPluginRegistry.possibleRegistrationNames;
 	      for (var lowerCasedName in possibleRegistrationNames) {
 	        if (possibleRegistrationNames.hasOwnProperty(lowerCasedName)) {
@@ -6046,14 +6046,14 @@
 	var injection = {
 	  injectComponentTree: function (Injected) {
 	    ComponentTree = Injected;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(Injected && Injected.getNodeFromInstance && Injected.getInstanceFromNode, 'EventPluginUtils.injection.injectComponentTree(...): Injected ' + 'module is missing getNodeFromInstance or getInstanceFromNode.') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(Injected && Injected.getNodeFromInstance && Injected.getInstanceFromNode, 'EventPluginUtils.injection.injectComponentTree(...): Injected ' + 'module is missing getNodeFromInstance or getInstanceFromNode.') : void 0;
 	    }
 	  },
 	  injectTreeTraversal: function (Injected) {
 	    TreeTraversal = Injected;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(Injected && Injected.isAncestor && Injected.getLowestCommonAncestor, 'EventPluginUtils.injection.injectTreeTraversal(...): Injected ' + 'module is missing isAncestor or getLowestCommonAncestor.') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(Injected && Injected.isAncestor && Injected.getLowestCommonAncestor, 'EventPluginUtils.injection.injectTreeTraversal(...): Injected ' + 'module is missing isAncestor or getLowestCommonAncestor.') : void 0;
 	    }
 	  }
 	};
@@ -6070,7 +6070,7 @@
 	}
 
 	var validateEventDispatches;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  validateEventDispatches = function (event) {
 	    var dispatchListeners = event._dispatchListeners;
 	    var dispatchInstances = event._dispatchInstances;
@@ -6081,7 +6081,7 @@
 	    var instancesIsArr = Array.isArray(dispatchInstances);
 	    var instancesLen = instancesIsArr ? dispatchInstances.length : dispatchInstances ? 1 : 0;
 
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(instancesIsArr === listenersIsArr && instancesLen === listenersLen, 'EventPluginUtils: Invalid `event`.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(instancesIsArr === listenersIsArr && instancesLen === listenersLen, 'EventPluginUtils: Invalid `event`.') : void 0;
 	  };
 	}
 
@@ -6109,7 +6109,7 @@
 	function executeDispatchesInOrder(event, simulated) {
 	  var dispatchListeners = event._dispatchListeners;
 	  var dispatchInstances = event._dispatchInstances;
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    validateEventDispatches(event);
 	  }
 	  if (Array.isArray(dispatchListeners)) {
@@ -6137,7 +6137,7 @@
 	function executeDispatchesInOrderStopAtTrueImpl(event) {
 	  var dispatchListeners = event._dispatchListeners;
 	  var dispatchInstances = event._dispatchInstances;
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    validateEventDispatches(event);
 	  }
 	  if (Array.isArray(dispatchListeners)) {
@@ -6178,12 +6178,12 @@
 	 * @return {*} The return value of executing the single dispatch.
 	 */
 	function executeDirectDispatch(event) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    validateEventDispatches(event);
 	  }
 	  var dispatchListener = event._dispatchListeners;
 	  var dispatchInstance = event._dispatchInstances;
-	  !!Array.isArray(dispatchListener) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'executeDirectDispatch(...): Invalid `event`.') : _prodInvariant('103') : void 0;
+	  !!Array.isArray(dispatchListener) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'executeDirectDispatch(...): Invalid `event`.') : _prodInvariant('103') : void 0;
 	  event.currentTarget = dispatchListener ? EventPluginUtils.getNodeFromInstance(dispatchInstance) : null;
 	  var res = dispatchListener ? dispatchListener(event) : null;
 	  event.currentTarget = null;
@@ -6299,7 +6299,7 @@
 	  }
 	};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  /**
 	   * To help development we can get better devtools integration by simulating a
 	   * real browser event.
@@ -6348,7 +6348,7 @@
 
 	var warning = emptyFunction;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  (function () {
 	    var printWarning = function printWarning(format) {
 	      for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -6470,7 +6470,7 @@
 	 */
 
 	function accumulateInto(current, next) {
-	  !(next != null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'accumulateInto(...): Accumulated items must not be null or undefined.') : _prodInvariant('30') : void 0;
+	  !(next != null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'accumulateInto(...): Accumulated items must not be null or undefined.') : _prodInvariant('30') : void 0;
 
 	  if (current == null) {
 	    return next;
@@ -6845,7 +6845,7 @@
 
 	var standardReleaser = function (instance) {
 	  var Klass = this;
-	  !(instance instanceof Klass) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Trying to release an instance into a pool of a different type.') : _prodInvariant('25') : void 0;
+	  !(instance instanceof Klass) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Trying to release an instance into a pool of a different type.') : _prodInvariant('25') : void 0;
 	  instance.destructor();
 	  if (Klass.instancePool.length < Klass.poolSize) {
 	    Klass.instancePool.push(instance);
@@ -7031,7 +7031,7 @@
 	 * @param {DOMEventTarget} nativeEventTarget Target node.
 	 */
 	function SyntheticEvent(dispatchConfig, targetInst, nativeEvent, nativeEventTarget) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    // these have a getter/setter for warnings
 	    delete this.nativeEvent;
 	    delete this.preventDefault;
@@ -7047,7 +7047,7 @@
 	    if (!Interface.hasOwnProperty(propName)) {
 	      continue;
 	    }
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      delete this[propName]; // this has a getter/setter for warnings
 	    }
 	    var normalize = Interface[propName];
@@ -7133,7 +7133,7 @@
 	  destructor: function () {
 	    var Interface = this.constructor.Interface;
 	    for (var propName in Interface) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        Object.defineProperty(this, propName, getPooledWarningPropertyDefinition(propName, Interface[propName]));
 	      } else {
 	        this[propName] = null;
@@ -7142,7 +7142,7 @@
 	    for (var i = 0; i < shouldBeReleasedProperties.length; i++) {
 	      this[shouldBeReleasedProperties[i]] = null;
 	    }
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      Object.defineProperty(this, 'nativeEvent', getPooledWarningPropertyDefinition('nativeEvent', null));
 	      Object.defineProperty(this, 'preventDefault', getPooledWarningPropertyDefinition('preventDefault', emptyFunction));
 	      Object.defineProperty(this, 'stopPropagation', getPooledWarningPropertyDefinition('stopPropagation', emptyFunction));
@@ -7153,7 +7153,7 @@
 
 	SyntheticEvent.Interface = EventInterface;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  if (isProxySupported) {
 	    /*eslint-disable no-func-assign */
 	    SyntheticEvent = new Proxy(SyntheticEvent, {
@@ -7164,7 +7164,7 @@
 	        return new Proxy(constructor.apply(that, args), {
 	          set: function (target, prop, value) {
 	            if (prop !== 'isPersistent' && !target.constructor.Interface.hasOwnProperty(prop) && shouldBeReleasedProperties.indexOf(prop) === -1) {
-	              ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(didWarnForAddedNewProperty || target.isPersistent(), 'This synthetic event is reused for performance reasons. If you\'re ' + 'seeing this, you\'re adding a new property in the synthetic event object. ' + 'The property is never released. See ' + 'https://fb.me/react-event-pooling for more information.') : void 0;
+	              ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(didWarnForAddedNewProperty || target.isPersistent(), 'This synthetic event is reused for performance reasons. If you\'re ' + 'seeing this, you\'re adding a new property in the synthetic event object. ' + 'The property is never released. See ' + 'https://fb.me/react-event-pooling for more information.') : void 0;
 	              didWarnForAddedNewProperty = true;
 	            }
 	            target[prop] = value;
@@ -7233,7 +7233,7 @@
 
 	  function warn(action, result) {
 	    var warningCondition = false;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
 	  }
 	}
 
@@ -7638,7 +7638,7 @@
 	var batchingStrategy = null;
 
 	function ensureInjected() {
-	  !(ReactUpdates.ReactReconcileTransaction && batchingStrategy) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must inject a reconcile transaction class and batching strategy') : _prodInvariant('123') : void 0;
+	  !(ReactUpdates.ReactReconcileTransaction && batchingStrategy) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must inject a reconcile transaction class and batching strategy') : _prodInvariant('123') : void 0;
 	}
 
 	var NESTED_UPDATES = {
@@ -7719,7 +7719,7 @@
 
 	function runBatchedUpdates(transaction) {
 	  var len = transaction.dirtyComponentsLength;
-	  !(len === dirtyComponents.length) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Expected flush transaction\'s stored dirty-components length (%s) to match dirty-components array length (%s).', len, dirtyComponents.length) : _prodInvariant('124', len, dirtyComponents.length) : void 0;
+	  !(len === dirtyComponents.length) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Expected flush transaction\'s stored dirty-components length (%s) to match dirty-components array length (%s).', len, dirtyComponents.length) : _prodInvariant('124', len, dirtyComponents.length) : void 0;
 
 	  // Since reconciling a component higher in the owner hierarchy usually (not
 	  // always -- see shouldComponentUpdate()) will reconcile children, reconcile
@@ -7821,21 +7821,21 @@
 	 * if no updates are currently being performed.
 	 */
 	function asap(callback, context) {
-	  !batchingStrategy.isBatchingUpdates ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates.asap: Can\'t enqueue an asap callback in a context whereupdates are not being batched.') : _prodInvariant('125') : void 0;
+	  !batchingStrategy.isBatchingUpdates ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates.asap: Can\'t enqueue an asap callback in a context whereupdates are not being batched.') : _prodInvariant('125') : void 0;
 	  asapCallbackQueue.enqueue(callback, context);
 	  asapEnqueued = true;
 	}
 
 	var ReactUpdatesInjection = {
 	  injectReconcileTransaction: function (ReconcileTransaction) {
-	    !ReconcileTransaction ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a reconcile transaction class') : _prodInvariant('126') : void 0;
+	    !ReconcileTransaction ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a reconcile transaction class') : _prodInvariant('126') : void 0;
 	    ReactUpdates.ReactReconcileTransaction = ReconcileTransaction;
 	  },
 
 	  injectBatchingStrategy: function (_batchingStrategy) {
-	    !_batchingStrategy ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a batching strategy') : _prodInvariant('127') : void 0;
-	    !(typeof _batchingStrategy.batchedUpdates === 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a batchedUpdates() function') : _prodInvariant('128') : void 0;
-	    !(typeof _batchingStrategy.isBatchingUpdates === 'boolean') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide an isBatchingUpdates boolean attribute') : _prodInvariant('129') : void 0;
+	    !_batchingStrategy ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a batching strategy') : _prodInvariant('127') : void 0;
+	    !(typeof _batchingStrategy.batchedUpdates === 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide a batchedUpdates() function') : _prodInvariant('128') : void 0;
+	    !(typeof _batchingStrategy.isBatchingUpdates === 'boolean') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactUpdates: must provide an isBatchingUpdates boolean attribute') : _prodInvariant('129') : void 0;
 	    batchingStrategy = _batchingStrategy;
 	  }
 	};
@@ -7933,7 +7933,7 @@
 	    var contexts = this._contexts;
 	    var arg = this._arg;
 	    if (callbacks && contexts) {
-	      !(callbacks.length === contexts.length) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Mismatched list of contexts in callback queue') : _prodInvariant('24') : void 0;
+	      !(callbacks.length === contexts.length) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Mismatched list of contexts in callback queue') : _prodInvariant('24') : void 0;
 	      this._callbacks = null;
 	      this._contexts = null;
 	      for (var i = 0; i < callbacks.length; i++) {
@@ -8051,7 +8051,7 @@
 	   */
 	  mountComponent: function (internalInstance, transaction, hostParent, hostContainerInfo, context, parentDebugID // 0 in production and for roots
 	  ) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onBeforeMountComponent(internalInstance._debugID, internalInstance._currentElement, parentDebugID);
 	      }
@@ -8060,7 +8060,7 @@
 	    if (internalInstance._currentElement && internalInstance._currentElement.ref != null) {
 	      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
 	    }
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onMountComponent(internalInstance._debugID);
 	      }
@@ -8083,14 +8083,14 @@
 	   * @internal
 	   */
 	  unmountComponent: function (internalInstance, safely) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onBeforeUnmountComponent(internalInstance._debugID);
 	      }
 	    }
 	    ReactRef.detachRefs(internalInstance, internalInstance._currentElement);
 	    internalInstance.unmountComponent(safely);
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onUnmountComponent(internalInstance._debugID);
 	      }
@@ -8123,7 +8123,7 @@
 	      return;
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, nextElement);
 	      }
@@ -8141,7 +8141,7 @@
 	      transaction.getReactMountReady().enqueue(attachRefs, internalInstance);
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
 	      }
@@ -8159,16 +8159,16 @@
 	    if (internalInstance._updateBatchNumber !== updateBatchNumber) {
 	      // The component's enqueued batch number should always be the current
 	      // batch or the following one.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(internalInstance._updateBatchNumber == null || internalInstance._updateBatchNumber === updateBatchNumber + 1, 'performUpdateIfNecessary: Unexpected batch number (current %s, ' + 'pending %s)', updateBatchNumber, internalInstance._updateBatchNumber) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(internalInstance._updateBatchNumber == null || internalInstance._updateBatchNumber === updateBatchNumber + 1, 'performUpdateIfNecessary: Unexpected batch number (current %s, ' + 'pending %s)', updateBatchNumber, internalInstance._updateBatchNumber) : void 0;
 	      return;
 	    }
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onBeforeUpdateComponent(internalInstance._debugID, internalInstance._currentElement);
 	      }
 	    }
 	    internalInstance.performUpdateIfNecessary(transaction);
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (internalInstance._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onUpdateComponent(internalInstance._debugID);
 	      }
@@ -8343,7 +8343,7 @@
 	   * @internal
 	   */
 	  addComponentAsRefTo: function (component, ref, owner) {
-	    !isValidOwner(owner) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('119') : void 0;
+	    !isValidOwner(owner) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('119') : void 0;
 	    owner.attachRef(ref, component);
 	  },
 
@@ -8357,7 +8357,7 @@
 	   * @internal
 	   */
 	  removeComponentAsRefFrom: function (component, ref, owner) {
-	    !isValidOwner(owner) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'removeComponentAsRefFrom(...): Only a ReactOwner can have refs. You might be removing a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('120') : void 0;
+	    !isValidOwner(owner) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'removeComponentAsRefFrom(...): Only a ReactOwner can have refs. You might be removing a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('120') : void 0;
 	    var ownerPublicInstance = owner.getPublicInstance();
 	    // Check that `component`'s owner is still alive and that `component` is still the current ref
 	    // because we do not want to detach the ref if another component stole it.
@@ -8391,7 +8391,7 @@
 
 	var debugTool = null;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var ReactDebugTool = __webpack_require__(68);
 	  debugTool = ReactDebugTool;
 	}
@@ -8430,7 +8430,7 @@
 	  try {
 	    fn.call(context, arg1, arg2, arg3, arg4, arg5);
 	  } catch (e) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(didHookThrowForEvent[event], 'Exception thrown by hook while handling %s: %s', event, e + '\n' + e.stack) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(didHookThrowForEvent[event], 'Exception thrown by hook while handling %s: %s', event, e + '\n' + e.stack) : void 0;
 	    didHookThrowForEvent[event] = true;
 	  }
 	}
@@ -8514,7 +8514,7 @@
 	    return;
 	  }
 	  if (!debugID) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'ReactDebugTool: debugID may not be empty.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'ReactDebugTool: debugID may not be empty.') : void 0;
 	  }
 	}
 
@@ -8523,7 +8523,7 @@
 	    return;
 	  }
 	  if (currentTimerType && !lifeCycleTimerHasWarned) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'There is an internal error in the React performance measurement code. ' + 'Did not expect %s timer to start while %s timer is still in ' + 'progress for %s instance.', timerType, currentTimerType || 'no', debugID === currentTimerDebugID ? 'the same' : 'another') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'There is an internal error in the React performance measurement code. ' + 'Did not expect %s timer to start while %s timer is still in ' + 'progress for %s instance.', timerType, currentTimerType || 'no', debugID === currentTimerDebugID ? 'the same' : 'another') : void 0;
 	    lifeCycleTimerHasWarned = true;
 	  }
 	  currentTimerStartTime = performanceNow();
@@ -8537,7 +8537,7 @@
 	    return;
 	  }
 	  if (currentTimerType !== timerType && !lifeCycleTimerHasWarned) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'There is an internal error in the React performance measurement code. ' + 'We did not expect %s timer to stop while %s timer is still in ' + 'progress for %s instance. Please report this as a bug in React.', timerType, currentTimerType || 'no', debugID === currentTimerDebugID ? 'the same' : 'another') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'There is an internal error in the React performance measurement code. ' + 'We did not expect %s timer to stop while %s timer is still in ' + 'progress for %s instance. Please report this as a bug in React.', timerType, currentTimerType || 'no', debugID === currentTimerDebugID ? 'the same' : 'another') : void 0;
 	    lifeCycleTimerHasWarned = true;
 	  }
 	  if (isProfiling) {
@@ -8782,11 +8782,11 @@
 
 	var warning = __webpack_require__(48);
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var processingChildContext = false;
 
 	  var warnInvalidSetState = function () {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!processingChildContext, 'setState(...): Cannot call setState() inside getChildContext()') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!processingChildContext, 'setState(...): Cannot call setState() inside getChildContext()') : void 0;
 	  };
 	}
 
@@ -9039,7 +9039,7 @@
 	   * @return {*} Return value from `method`.
 	   */
 	  perform: function (method, scope, a, b, c, d, e, f) {
-	    !!this.isInTransaction() ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Transaction.perform(...): Cannot initialize a transaction when there is already an outstanding transaction.') : _prodInvariant('27') : void 0;
+	    !!this.isInTransaction() ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Transaction.perform(...): Cannot initialize a transaction when there is already an outstanding transaction.') : _prodInvariant('27') : void 0;
 	    var errorThrown;
 	    var ret;
 	    try {
@@ -9103,7 +9103,7 @@
 	   * invoked).
 	   */
 	  closeAll: function (startIndex) {
-	    !this.isInTransaction() ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : _prodInvariant('28') : void 0;
+	    !this.isInTransaction() ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Transaction.closeAll(): Cannot close transaction when none are open.') : _prodInvariant('28') : void 0;
 	    var transactionWrappers = this.transactionWrappers;
 	    for (var i = startIndex; i < transactionWrappers.length; i++) {
 	      var wrapper = transactionWrappers[i];
@@ -10010,7 +10010,7 @@
 	    }
 	  }
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    ReactInstrumentation.debugTool.onHostOperation({
 	      instanceID: ReactDOMComponentTree.getInstanceFromNode(openingComment)._debugID,
 	      type: 'replace text',
@@ -10020,7 +10020,7 @@
 	}
 
 	var dangerouslyReplaceNodeWithMarkup = Danger.dangerouslyReplaceNodeWithMarkup;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  dangerouslyReplaceNodeWithMarkup = function (oldChild, markup, prevInstance) {
 	    Danger.dangerouslyReplaceNodeWithMarkup(oldChild, markup);
 	    if (prevInstance._debugID !== 0) {
@@ -10059,7 +10059,7 @@
 	   * @internal
 	   */
 	  processUpdates: function (parentNode, updates) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var parentNodeDebugID = ReactDOMComponentTree.getInstanceFromNode(parentNode)._debugID;
 	    }
 
@@ -10068,7 +10068,7 @@
 	      switch (update.type) {
 	        case 'INSERT_MARKUP':
 	          insertLazyTreeChildAt(parentNode, update.content, getNodeAfter(parentNode, update.afterNode));
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            ReactInstrumentation.debugTool.onHostOperation({
 	              instanceID: parentNodeDebugID,
 	              type: 'insert child',
@@ -10078,7 +10078,7 @@
 	          break;
 	        case 'MOVE_EXISTING':
 	          moveChild(parentNode, update.fromNode, getNodeAfter(parentNode, update.afterNode));
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            ReactInstrumentation.debugTool.onHostOperation({
 	              instanceID: parentNodeDebugID,
 	              type: 'move child',
@@ -10088,7 +10088,7 @@
 	          break;
 	        case 'SET_MARKUP':
 	          setInnerHTML(parentNode, update.content);
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            ReactInstrumentation.debugTool.onHostOperation({
 	              instanceID: parentNodeDebugID,
 	              type: 'replace children',
@@ -10098,7 +10098,7 @@
 	          break;
 	        case 'TEXT_CONTENT':
 	          setTextContent(parentNode, update.content);
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            ReactInstrumentation.debugTool.onHostOperation({
 	              instanceID: parentNodeDebugID,
 	              type: 'replace text',
@@ -10108,7 +10108,7 @@
 	          break;
 	        case 'REMOVE_NODE':
 	          removeChild(parentNode, update.fromNode);
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            ReactInstrumentation.debugTool.onHostOperation({
 	              instanceID: parentNodeDebugID,
 	              type: 'remove child',
@@ -10627,9 +10627,9 @@
 	   * @internal
 	   */
 	  dangerouslyReplaceNodeWithMarkup: function (oldChild, markup) {
-	    !ExecutionEnvironment.canUseDOM ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Cannot render markup in a worker thread. Make sure `window` and `document` are available globally before requiring React when unit testing or use ReactDOMServer.renderToString() for server rendering.') : _prodInvariant('56') : void 0;
-	    !markup ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Missing markup.') : _prodInvariant('57') : void 0;
-	    !(oldChild.nodeName !== 'HTML') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Cannot replace markup of the <html> node. This is because browser quirks make this unreliable and/or slow. If you want to render to the root you must use server rendering. See ReactDOMServer.renderToString().') : _prodInvariant('58') : void 0;
+	    !ExecutionEnvironment.canUseDOM ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Cannot render markup in a worker thread. Make sure `window` and `document` are available globally before requiring React when unit testing or use ReactDOMServer.renderToString() for server rendering.') : _prodInvariant('56') : void 0;
+	    !markup ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Missing markup.') : _prodInvariant('57') : void 0;
+	    !(oldChild.nodeName !== 'HTML') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'dangerouslyReplaceNodeWithMarkup(...): Cannot replace markup of the <html> node. This is because browser quirks make this unreliable and/or slow. If you want to render to the root you must use server rendering. See ReactDOMServer.renderToString().') : _prodInvariant('58') : void 0;
 
 	    if (typeof markup === 'string') {
 	      var newChild = createNodesFromMarkup(markup, emptyFunction)[0];
@@ -10701,7 +10701,7 @@
 	 */
 	function createNodesFromMarkup(markup, handleScript) {
 	  var node = dummyNode;
-	  !!!dummyNode ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'createNodesFromMarkup dummy not initialized') : invariant(false) : void 0;
+	  !!!dummyNode ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'createNodesFromMarkup dummy not initialized') : invariant(false) : void 0;
 	  var nodeName = getNodeName(markup);
 
 	  var wrap = nodeName && getMarkupWrap(nodeName);
@@ -10718,7 +10718,7 @@
 
 	  var scripts = node.getElementsByTagName('script');
 	  if (scripts.length) {
-	    !handleScript ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'createNodesFromMarkup(...): Unexpected <script> element rendered.') : invariant(false) : void 0;
+	    !handleScript ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'createNodesFromMarkup(...): Unexpected <script> element rendered.') : invariant(false) : void 0;
 	    createArrayFromMixed(scripts).forEach(handleScript);
 	  }
 
@@ -10764,13 +10764,13 @@
 
 	  // Some browsers builtin objects can report typeof 'function' (e.g. NodeList
 	  // in old versions of Safari).
-	  !(!Array.isArray(obj) && (typeof obj === 'object' || typeof obj === 'function')) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Array-like object expected') : invariant(false) : void 0;
+	  !(!Array.isArray(obj) && (typeof obj === 'object' || typeof obj === 'function')) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Array-like object expected') : invariant(false) : void 0;
 
-	  !(typeof length === 'number') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object needs a length property') : invariant(false) : void 0;
+	  !(typeof length === 'number') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object needs a length property') : invariant(false) : void 0;
 
-	  !(length === 0 || length - 1 in obj) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object should have keys for indices') : invariant(false) : void 0;
+	  !(length === 0 || length - 1 in obj) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object should have keys for indices') : invariant(false) : void 0;
 
-	  !(typeof obj.callee !== 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object can\'t be `arguments`. Use rest params ' + '(function(...args) {}) or Array.from() instead.') : invariant(false) : void 0;
+	  !(typeof obj.callee !== 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'toArray: Object can\'t be `arguments`. Use rest params ' + '(function(...args) {}) or Array.from() instead.') : invariant(false) : void 0;
 
 	  // Old IE doesn't give collections access to hasOwnProperty. Assume inputs
 	  // without method will throw during the slice call and skip straight to the
@@ -10944,7 +10944,7 @@
 	 * @return {?array} Markup wrap configuration, if applicable.
 	 */
 	function getMarkupWrap(nodeName) {
-	  !!!dummyNode ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Markup wrapping node not initialized') : invariant(false) : void 0;
+	  !!!dummyNode ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Markup wrapping node not initialized') : invariant(false) : void 0;
 	  if (!markupWrap.hasOwnProperty(nodeName)) {
 	    nodeName = '*';
 	  }
@@ -11129,7 +11129,7 @@
 
 	  styleMutationWarning[hash] = true;
 
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`%s` was passed a style object that has previously been mutated. ' + 'Mutating `style` is deprecated. Consider cloning it beforehand. Check ' + 'the `render` %s. Previous style: %s. Mutated style: %s.', componentName, owner ? 'of `' + ownerName + '`' : 'using <' + componentName + '>', friendlyStringify(style1), friendlyStringify(style2)) : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`%s` was passed a style object that has previously been mutated. ' + 'Mutating `style` is deprecated. Consider cloning it beforehand. Check ' + 'the `render` %s. Previous style: %s. Mutated style: %s.', componentName, owner ? 'of `' + ownerName + '`' : 'using <' + componentName + '>', friendlyStringify(style1), friendlyStringify(style2)) : void 0;
 	}
 
 	/**
@@ -11142,28 +11142,28 @@
 	  }
 	  // Note the use of `==` which checks for null or undefined.
 	  if (voidElementTags[component._tag]) {
-	    !(props.children == null && props.dangerouslySetInnerHTML == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.%s', component._tag, component._currentElement._owner ? ' Check the render method of ' + component._currentElement._owner.getName() + '.' : '') : _prodInvariant('137', component._tag, component._currentElement._owner ? ' Check the render method of ' + component._currentElement._owner.getName() + '.' : '') : void 0;
+	    !(props.children == null && props.dangerouslySetInnerHTML == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.%s', component._tag, component._currentElement._owner ? ' Check the render method of ' + component._currentElement._owner.getName() + '.' : '') : _prodInvariant('137', component._tag, component._currentElement._owner ? ' Check the render method of ' + component._currentElement._owner.getName() + '.' : '') : void 0;
 	  }
 	  if (props.dangerouslySetInnerHTML != null) {
-	    !(props.children == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Can only set one of `children` or `props.dangerouslySetInnerHTML`.') : _prodInvariant('60') : void 0;
-	    !(typeof props.dangerouslySetInnerHTML === 'object' && HTML in props.dangerouslySetInnerHTML) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://fb.me/react-invariant-dangerously-set-inner-html for more information.') : _prodInvariant('61') : void 0;
+	    !(props.children == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Can only set one of `children` or `props.dangerouslySetInnerHTML`.') : _prodInvariant('60') : void 0;
+	    !(typeof props.dangerouslySetInnerHTML === 'object' && HTML in props.dangerouslySetInnerHTML) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://fb.me/react-invariant-dangerously-set-inner-html for more information.') : _prodInvariant('61') : void 0;
 	  }
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(props.innerHTML == null, 'Directly setting property `innerHTML` is not permitted. ' + 'For more information, lookup documentation on `dangerouslySetInnerHTML`.') : void 0;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(props.suppressContentEditableWarning || !props.contentEditable || props.children == null, 'A component is `contentEditable` and contains `children` managed by ' + 'React. It is now your responsibility to guarantee that none of ' + 'those nodes are unexpectedly modified or duplicated. This is ' + 'probably not intentional.') : void 0;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(props.onFocusIn == null && props.onFocusOut == null, 'React uses onFocus and onBlur instead of onFocusIn and onFocusOut. ' + 'All React events are normalized to bubble, so onFocusIn and onFocusOut ' + 'are not needed/supported by React.') : void 0;
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(props.innerHTML == null, 'Directly setting property `innerHTML` is not permitted. ' + 'For more information, lookup documentation on `dangerouslySetInnerHTML`.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(props.suppressContentEditableWarning || !props.contentEditable || props.children == null, 'A component is `contentEditable` and contains `children` managed by ' + 'React. It is now your responsibility to guarantee that none of ' + 'those nodes are unexpectedly modified or duplicated. This is ' + 'probably not intentional.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(props.onFocusIn == null && props.onFocusOut == null, 'React uses onFocus and onBlur instead of onFocusIn and onFocusOut. ' + 'All React events are normalized to bubble, so onFocusIn and onFocusOut ' + 'are not needed/supported by React.') : void 0;
 	  }
-	  !(props.style == null || typeof props.style === 'object') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + \'em\'}} when using JSX.%s', getDeclarationErrorAddendum(component)) : _prodInvariant('62', getDeclarationErrorAddendum(component)) : void 0;
+	  !(props.style == null || typeof props.style === 'object') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + \'em\'}} when using JSX.%s', getDeclarationErrorAddendum(component)) : _prodInvariant('62', getDeclarationErrorAddendum(component)) : void 0;
 	}
 
 	function enqueuePutListener(inst, registrationName, listener, transaction) {
 	  if (transaction instanceof ReactServerRenderingTransaction) {
 	    return;
 	  }
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    // IE8 has no API for event capturing and the `onScroll` event doesn't
 	    // bubble.
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(registrationName !== 'onScroll' || isEventSupported('scroll', true), 'This browser doesn\'t support the `onScroll` event') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(registrationName !== 'onScroll' || isEventSupported('scroll', true), 'This browser doesn\'t support the `onScroll` event') : void 0;
 	  }
 	  var containerInfo = inst._hostContainerInfo;
 	  var isDocumentFragment = containerInfo._node && containerInfo._node.nodeType === DOC_FRAGMENT_TYPE;
@@ -11197,7 +11197,7 @@
 	}
 
 	var setAndValidateContentChildDev = emptyFunction;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  setAndValidateContentChildDev = function (content) {
 	    var hasExistingContent = this._contentDebugID != null;
 	    var debugID = this._debugID;
@@ -11257,9 +11257,9 @@
 	  var inst = this;
 	  // If a component renders to null or if another component fatals and causes
 	  // the state of the tree to be corrupted, `node` here can be null.
-	  !inst._rootNodeID ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Must be mounted to trap events') : _prodInvariant('63') : void 0;
+	  !inst._rootNodeID ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Must be mounted to trap events') : _prodInvariant('63') : void 0;
 	  var node = getNode(inst);
-	  !node ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'trapBubbledEvent(...): Requires node to be rendered.') : _prodInvariant('64') : void 0;
+	  !node ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'trapBubbledEvent(...): Requires node to be rendered.') : _prodInvariant('64') : void 0;
 
 	  switch (inst._tag) {
 	    case 'iframe':
@@ -11342,7 +11342,7 @@
 
 	function validateDangerousTag(tag) {
 	  if (!hasOwnProperty.call(validatedTagCache, tag)) {
-	    !VALID_TAG_REGEX.test(tag) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Invalid tag: %s', tag) : _prodInvariant('65', tag) : void 0;
+	    !VALID_TAG_REGEX.test(tag) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Invalid tag: %s', tag) : _prodInvariant('65', tag) : void 0;
 	    validatedTagCache[tag] = true;
 	  }
 	}
@@ -11384,7 +11384,7 @@
 	  this._wrapperState = null;
 	  this._topLevelWrapper = null;
 	  this._flags = 0;
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    this._ancestorInfo = null;
 	    setAndValidateContentChildDev.call(this, null);
 	  }
@@ -11473,7 +11473,7 @@
 	    }
 	    this._namespaceURI = namespaceURI;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var parentInfo;
 	      if (hostParent != null) {
 	        parentInfo = hostParent._ancestorInfo;
@@ -11592,7 +11592,7 @@
 	      } else {
 	        if (propKey === STYLE) {
 	          if (propValue) {
-	            if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	            if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	              // See `_updateDOMProperties`. style block
 	              this._previousStyle = propValue;
 	            }
@@ -11651,7 +11651,7 @@
 	      if (contentToUse != null) {
 	        // TODO: Validate that text is allowed as a child of this node
 	        ret = escapeTextContentForBrowser(contentToUse);
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          setAndValidateContentChildDev.call(this, contentToUse);
 	        }
 	      } else if (childrenToUse != null) {
@@ -11688,7 +11688,7 @@
 	      var childrenToUse = contentToUse != null ? null : props.children;
 	      if (contentToUse != null) {
 	        // TODO: Validate that text is allowed as a child of this node
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          setAndValidateContentChildDev.call(this, contentToUse);
 	        }
 	        DOMLazyTree.queueText(lazyTree, contentToUse);
@@ -11826,7 +11826,7 @@
 	      }
 	      if (propKey === STYLE) {
 	        if (nextProp) {
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            checkAndWarnForMutatedStyle(this._previousStyleCopy, this._previousStyle, this);
 	            this._previousStyle = nextProp;
 	          }
@@ -11908,7 +11908,7 @@
 	      this.updateChildren(null, transaction, context);
 	    } else if (lastHasContentOrHtml && !nextHasContentOrHtml) {
 	      this.updateTextContent('');
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        ReactInstrumentation.debugTool.onSetChildren(this._debugID, []);
 	      }
 	    }
@@ -11916,7 +11916,7 @@
 	    if (nextContent != null) {
 	      if (lastContent !== nextContent) {
 	        this.updateTextContent('' + nextContent);
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          setAndValidateContentChildDev.call(this, nextContent);
 	        }
 	      }
@@ -11924,11 +11924,11 @@
 	      if (lastHtml !== nextHtml) {
 	        this.updateMarkup('' + nextHtml);
 	      }
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        ReactInstrumentation.debugTool.onSetChildren(this._debugID, []);
 	      }
 	    } else if (nextChildren != null) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        setAndValidateContentChildDev.call(this, null);
 	      }
 
@@ -11972,7 +11972,7 @@
 	         * take advantage of React's reconciliation for styling and <title>
 	         * management. So we just document it and throw in dangerous cases.
 	         */
-	         true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '<%s> tried to unmount. Because of cross-browser quirks it is impossible to unmount some top-level components (eg <html>, <head>, and <body>) reliably and efficiently. To fix this, have a single top-level component that never unmounts render these elements.', this._tag) : _prodInvariant('66', this._tag) : void 0;
+	         true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '<%s> tried to unmount. Because of cross-browser quirks it is impossible to unmount some top-level components (eg <html>, <head>, and <body>) reliably and efficiently. To fix this, have a single top-level component that never unmounts render these elements.', this._tag) : _prodInvariant('66', this._tag) : void 0;
 	        break;
 	    }
 
@@ -11983,7 +11983,7 @@
 	    this._domID = 0;
 	    this._wrapperState = null;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      setAndValidateContentChildDev.call(this, null);
 	    }
 	  },
@@ -12103,7 +12103,7 @@
 	  }
 	}
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  // 'msTransform' is correct, but the other prefixes should be capitalized
 	  var badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/;
 
@@ -12120,7 +12120,7 @@
 	    }
 
 	    warnedStyleNames[name] = true;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unsupported style property %s. Did you mean %s?%s', name, camelizeStyleName(name), checkRenderMessage(owner)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unsupported style property %s. Did you mean %s?%s', name, camelizeStyleName(name), checkRenderMessage(owner)) : void 0;
 	  };
 
 	  var warnBadVendoredStyleName = function (name, owner) {
@@ -12129,7 +12129,7 @@
 	    }
 
 	    warnedStyleNames[name] = true;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unsupported vendor-prefixed style property %s. Did you mean %s?%s', name, name.charAt(0).toUpperCase() + name.slice(1), checkRenderMessage(owner)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unsupported vendor-prefixed style property %s. Did you mean %s?%s', name, name.charAt(0).toUpperCase() + name.slice(1), checkRenderMessage(owner)) : void 0;
 	  };
 
 	  var warnStyleValueWithSemicolon = function (name, value, owner) {
@@ -12138,7 +12138,7 @@
 	    }
 
 	    warnedStyleValues[value] = true;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Style property values shouldn\'t contain a semicolon.%s ' + 'Try "%s: %s" instead.', checkRenderMessage(owner), name, value.replace(badStyleValueWithSemicolonPattern, '')) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Style property values shouldn\'t contain a semicolon.%s ' + 'Try "%s: %s" instead.', checkRenderMessage(owner), name, value.replace(badStyleValueWithSemicolonPattern, '')) : void 0;
 	  };
 
 	  var warnStyleValueIsNaN = function (name, value, owner) {
@@ -12147,7 +12147,7 @@
 	    }
 
 	    warnedForNaNValue = true;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`NaN` is an invalid value for the `%s` css style property.%s', name, checkRenderMessage(owner)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`NaN` is an invalid value for the `%s` css style property.%s', name, checkRenderMessage(owner)) : void 0;
 	  };
 
 	  var checkRenderMessage = function (owner) {
@@ -12209,7 +12209,7 @@
 	        continue;
 	      }
 	      var styleValue = styles[styleName];
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        warnValidStyle(styleName, styleValue, component);
 	      }
 	      if (styleValue != null) {
@@ -12229,7 +12229,7 @@
 	   * @param {ReactDOMComponent} component
 	   */
 	  setValueForStyles: function (node, styles, component) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: component._debugID,
 	        type: 'update styles',
@@ -12242,7 +12242,7 @@
 	      if (!styles.hasOwnProperty(styleName)) {
 	        continue;
 	      }
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        warnValidStyle(styleName, styles[styleName], component);
 	      }
 	      var styleValue = dangerousStyleValue(styleName, styles[styleName], component);
@@ -12556,7 +12556,7 @@
 	  }
 
 	  if (typeof value === 'string') {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      // Allow '0' to pass through without warning. 0 is already special and
 	      // doesn't require units, so we don't need to warn about it.
 	      if (component && value !== '0') {
@@ -12574,7 +12574,7 @@
 	          }
 	        }
 	        if (!warned) {
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'a `%s` tag (owner: `%s`) was passed a numeric string value ' + 'for CSS property `%s` (value: `%s`) which will be treated ' + 'as a unitless number in a future version of React.', component._currentElement.type, ownerName || 'unknown', name, value) : void 0;
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'a `%s` tag (owner: `%s`) was passed a numeric string value ' + 'for CSS property `%s` (value: `%s`) which will be treated ' + 'as a unitless number in a future version of React.', component._currentElement.type, ownerName || 'unknown', name, value) : void 0;
 	        }
 	      }
 	    }
@@ -12738,7 +12738,7 @@
 	    return true;
 	  }
 	  illegalAttributeNameCache[attributeName] = true;
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Invalid attribute name: `%s`', attributeName) : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Invalid attribute name: `%s`', attributeName) : void 0;
 	  return false;
 	}
 
@@ -12852,7 +12852,7 @@
 	      return;
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var payload = {};
 	      payload[name] = value;
 	      ReactInstrumentation.debugTool.onHostOperation({
@@ -12873,7 +12873,7 @@
 	      node.setAttribute(name, '' + value);
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var payload = {};
 	      payload[name] = value;
 	      ReactInstrumentation.debugTool.onHostOperation({
@@ -12892,7 +12892,7 @@
 	   */
 	  deleteValueForAttribute: function (node, name) {
 	    node.removeAttribute(name);
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'remove attribute',
@@ -12927,7 +12927,7 @@
 	      node.removeAttribute(name);
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'remove attribute',
@@ -13534,25 +13534,25 @@
 	  },
 
 	  mountWrapper: function (inst, props) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      LinkedValueUtils.checkPropTypes('input', props, inst._currentElement._owner);
 
 	      var owner = inst._currentElement._owner;
 
 	      if (props.valueLink !== undefined && !didWarnValueLink) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `input` is deprecated; set `value` and `onChange` instead.') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `input` is deprecated; set `value` and `onChange` instead.') : void 0;
 	        didWarnValueLink = true;
 	      }
 	      if (props.checkedLink !== undefined && !didWarnCheckedLink) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`checkedLink` prop on `input` is deprecated; set `value` and `onChange` instead.') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`checkedLink` prop on `input` is deprecated; set `value` and `onChange` instead.') : void 0;
 	        didWarnCheckedLink = true;
 	      }
 	      if (props.checked !== undefined && props.defaultChecked !== undefined && !didWarnCheckedDefaultChecked) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s contains an input of type %s with both checked and defaultChecked props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the checked prop, or the defaultChecked prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s contains an input of type %s with both checked and defaultChecked props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the checked prop, or the defaultChecked prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
 	        didWarnCheckedDefaultChecked = true;
 	      }
 	      if (props.value !== undefined && props.defaultValue !== undefined && !didWarnValueDefaultValue) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s contains an input of type %s with both value and defaultValue props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s contains an input of type %s with both value and defaultValue props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
 	        didWarnValueDefaultValue = true;
 	      }
 	    }
@@ -13565,7 +13565,7 @@
 	      onChange: _handleChange.bind(inst)
 	    };
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      inst._wrapperState.controlled = isControlled(props);
 	    }
 	  },
@@ -13573,16 +13573,16 @@
 	  updateWrapper: function (inst) {
 	    var props = inst._currentElement.props;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var controlled = isControlled(props);
 	      var owner = inst._currentElement._owner;
 
 	      if (!inst._wrapperState.controlled && controlled && !didWarnUncontrolledToControlled) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s is changing an uncontrolled input of type %s to be controlled. ' + 'Input elements should not switch from uncontrolled to controlled (or vice versa). ' + 'Decide between using a controlled or uncontrolled input ' + 'element for the lifetime of the component. More info: https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s is changing an uncontrolled input of type %s to be controlled. ' + 'Input elements should not switch from uncontrolled to controlled (or vice versa). ' + 'Decide between using a controlled or uncontrolled input ' + 'element for the lifetime of the component. More info: https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
 	        didWarnUncontrolledToControlled = true;
 	      }
 	      if (inst._wrapperState.controlled && !controlled && !didWarnControlledToUncontrolled) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s is changing a controlled input of type %s to be uncontrolled. ' + 'Input elements should not switch from controlled to uncontrolled (or vice versa). ' + 'Decide between using a controlled or uncontrolled input ' + 'element for the lifetime of the component. More info: https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s is changing a controlled input of type %s to be uncontrolled. ' + 'Input elements should not switch from controlled to uncontrolled (or vice versa). ' + 'Decide between using a controlled or uncontrolled input ' + 'element for the lifetime of the component. More info: https://fb.me/react-controlled-components', owner && owner.getName() || 'A component', props.type) : void 0;
 	        didWarnControlledToUncontrolled = true;
 	      }
 	    }
@@ -13703,7 +13703,7 @@
 	      // That's probably okay; we don't support it just as we don't support
 	      // mixing React radio buttons with non-React ones.
 	      var otherInstance = ReactDOMComponentTree.getInstanceFromNode(otherNode);
-	      !otherInstance ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactDOMInput: Mixing React and non-React radio inputs with the same `name` is not supported.') : _prodInvariant('90') : void 0;
+	      !otherInstance ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactDOMInput: Mixing React and non-React radio inputs with the same `name` is not supported.') : _prodInvariant('90') : void 0;
 	      // If this is a controlled radio button group, forcing the input that
 	      // was previously checked to update will cause it to be come re-checked
 	      // as appropriate.
@@ -13751,16 +13751,16 @@
 	};
 
 	function _assertSingleLink(inputProps) {
-	  !(inputProps.checkedLink == null || inputProps.valueLink == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a checkedLink and a valueLink. If you want to use checkedLink, you probably don\'t want to use valueLink and vice versa.') : _prodInvariant('87') : void 0;
+	  !(inputProps.checkedLink == null || inputProps.valueLink == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a checkedLink and a valueLink. If you want to use checkedLink, you probably don\'t want to use valueLink and vice versa.') : _prodInvariant('87') : void 0;
 	}
 	function _assertValueLink(inputProps) {
 	  _assertSingleLink(inputProps);
-	  !(inputProps.value == null && inputProps.onChange == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a valueLink and a value or onChange event. If you want to use value or onChange, you probably don\'t want to use valueLink.') : _prodInvariant('88') : void 0;
+	  !(inputProps.value == null && inputProps.onChange == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a valueLink and a value or onChange event. If you want to use value or onChange, you probably don\'t want to use valueLink.') : _prodInvariant('88') : void 0;
 	}
 
 	function _assertCheckedLink(inputProps) {
 	  _assertSingleLink(inputProps);
-	  !(inputProps.checked == null && inputProps.onChange == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a checkedLink and a checked property or onChange event. If you want to use checked or onChange, you probably don\'t want to use checkedLink') : _prodInvariant('89') : void 0;
+	  !(inputProps.checked == null && inputProps.onChange == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Cannot provide a checkedLink and a checked property or onChange event. If you want to use checked or onChange, you probably don\'t want to use checkedLink') : _prodInvariant('89') : void 0;
 	}
 
 	var propTypes = {
@@ -13806,7 +13806,7 @@
 	        loggedTypeFailures[error.message] = true;
 
 	        var addendum = getDeclarationErrorAddendum(owner);
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Failed form propType: %s%s', error.message, addendum) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Failed form propType: %s%s', error.message, addendum) : void 0;
 	      }
 	    }
 	  },
@@ -13914,7 +13914,7 @@
 	      content += child;
 	    } else if (!didWarnInvalidOptionChildren) {
 	      didWarnInvalidOptionChildren = true;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Only strings and numbers are supported as <option> children.') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Only strings and numbers are supported as <option> children.') : void 0;
 	    }
 	  });
 
@@ -13927,8 +13927,8 @@
 	var ReactDOMOption = {
 	  mountWrapper: function (inst, props, hostParent) {
 	    // TODO (yungsters): Remove support for `selected` in <option>.
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(props.selected == null, 'Use the `defaultValue` or `value` props on <select> instead of ' + 'setting `selected` on <option>.') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(props.selected == null, 'Use the `defaultValue` or `value` props on <select> instead of ' + 'setting `selected` on <option>.') : void 0;
 	    }
 
 	    // Look up whether this option is 'selected'
@@ -14064,7 +14064,7 @@
 	  LinkedValueUtils.checkPropTypes('select', props, owner);
 
 	  if (props.valueLink !== undefined && !didWarnValueLink) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `select` is deprecated; set `value` and `onChange` instead.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `select` is deprecated; set `value` and `onChange` instead.') : void 0;
 	    didWarnValueLink = true;
 	  }
 
@@ -14075,9 +14075,9 @@
 	    }
 	    var isArray = Array.isArray(props[propName]);
 	    if (props.multiple && !isArray) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'The `%s` prop supplied to <select> must be an array if ' + '`multiple` is true.%s', propName, getDeclarationErrorAddendum(owner)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'The `%s` prop supplied to <select> must be an array if ' + '`multiple` is true.%s', propName, getDeclarationErrorAddendum(owner)) : void 0;
 	    } else if (!props.multiple && isArray) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'The `%s` prop supplied to <select> must be a scalar ' + 'value if `multiple` is false.%s', propName, getDeclarationErrorAddendum(owner)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'The `%s` prop supplied to <select> must be a scalar ' + 'value if `multiple` is false.%s', propName, getDeclarationErrorAddendum(owner)) : void 0;
 	    }
 	  }
 	}
@@ -14143,7 +14143,7 @@
 	  },
 
 	  mountWrapper: function (inst, props) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      checkSelectPropTypes(inst, props);
 	    }
 
@@ -14157,7 +14157,7 @@
 	    };
 
 	    if (props.value !== undefined && props.defaultValue !== undefined && !didWarnValueDefaultValue) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Select elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled select ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Select elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled select ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components') : void 0;
 	      didWarnValueDefaultValue = true;
 	    }
 	  },
@@ -14260,7 +14260,7 @@
 	 */
 	var ReactDOMTextarea = {
 	  getHostProps: function (inst, props) {
-	    !(props.dangerouslySetInnerHTML == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '`dangerouslySetInnerHTML` does not make sense on <textarea>.') : _prodInvariant('91') : void 0;
+	    !(props.dangerouslySetInnerHTML == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '`dangerouslySetInnerHTML` does not make sense on <textarea>.') : _prodInvariant('91') : void 0;
 
 	    // Always set children to the same thing. In IE9, the selection range will
 	    // get reset if `textContent` is mutated.  We could add a check in setTextContent
@@ -14278,14 +14278,14 @@
 	  },
 
 	  mountWrapper: function (inst, props) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      LinkedValueUtils.checkPropTypes('textarea', props, inst._currentElement._owner);
 	      if (props.valueLink !== undefined && !didWarnValueLink) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `textarea` is deprecated; set `value` and `onChange` instead.') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`valueLink` prop on `textarea` is deprecated; set `value` and `onChange` instead.') : void 0;
 	        didWarnValueLink = true;
 	      }
 	      if (props.value !== undefined && props.defaultValue !== undefined && !didWarnValDefaultVal) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Textarea elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled textarea ' + 'and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Textarea elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled textarea ' + 'and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components') : void 0;
 	        didWarnValDefaultVal = true;
 	      }
 	    }
@@ -14299,12 +14299,12 @@
 	      // TODO (yungsters): Remove support for children content in <textarea>.
 	      var children = props.children;
 	      if (children != null) {
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Use the `defaultValue` or `value` props instead of setting ' + 'children on <textarea>.') : void 0;
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Use the `defaultValue` or `value` props instead of setting ' + 'children on <textarea>.') : void 0;
 	        }
-	        !(defaultValue == null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'If you supply `defaultValue` on a <textarea>, do not pass children.') : _prodInvariant('92') : void 0;
+	        !(defaultValue == null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'If you supply `defaultValue` on a <textarea>, do not pass children.') : _prodInvariant('92') : void 0;
 	        if (Array.isArray(children)) {
-	          !(children.length <= 1) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '<textarea> can only have at most one child.') : _prodInvariant('93') : void 0;
+	          !(children.length <= 1) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '<textarea> can only have at most one child.') : _prodInvariant('93') : void 0;
 	          children = children[0];
 	        }
 
@@ -14509,7 +14509,7 @@
 	}
 
 	var setChildrenForInstrumentation = emptyFunction;
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var getDebugID = function (inst) {
 	    if (!inst._debugID) {
 	      // Check for ART-like instances. TODO: This is silly/gross.
@@ -14550,7 +14550,7 @@
 	  Mixin: {
 
 	    _reconcilerInstantiateChildren: function (nestedChildren, transaction, context) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        var selfDebugID = getDebugID(this);
 	        if (this._currentElement) {
 	          try {
@@ -14567,7 +14567,7 @@
 	    _reconcilerUpdateChildren: function (prevChildren, nextNestedChildrenElements, mountImages, removedNodes, transaction, context) {
 	      var nextChildren;
 	      var selfDebugID = 0;
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        selfDebugID = getDebugID(this);
 	        if (this._currentElement) {
 	          try {
@@ -14603,7 +14603,7 @@
 	        if (children.hasOwnProperty(name)) {
 	          var child = children[name];
 	          var selfDebugID = 0;
-	          if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	          if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	            selfDebugID = getDebugID(this);
 	          }
 	          var mountImage = ReactReconciler.mountComponent(child, transaction, this, this._hostContainerInfo, context, selfDebugID);
@@ -14612,7 +14612,7 @@
 	        }
 	      }
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        setChildrenForInstrumentation.call(this, children);
 	      }
 
@@ -14631,7 +14631,7 @@
 	      ReactChildReconciler.unmountChildren(prevChildren, false);
 	      for (var name in prevChildren) {
 	        if (prevChildren.hasOwnProperty(name)) {
-	           true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'updateTextContent called on non-empty component.') : _prodInvariant('118') : void 0;
+	           true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'updateTextContent called on non-empty component.') : _prodInvariant('118') : void 0;
 	        }
 	      }
 	      // Set new text content.
@@ -14651,7 +14651,7 @@
 	      ReactChildReconciler.unmountChildren(prevChildren, false);
 	      for (var name in prevChildren) {
 	        if (prevChildren.hasOwnProperty(name)) {
-	           true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'updateTextContent called on non-empty component.') : _prodInvariant('118') : void 0;
+	           true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'updateTextContent called on non-empty component.') : _prodInvariant('118') : void 0;
 	        }
 	      }
 	      var updates = [makeSetMarkup(nextMarkup)];
@@ -14727,7 +14727,7 @@
 	      }
 	      this._renderedChildren = nextChildren;
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        setChildrenForInstrumentation.call(this, nextChildren);
 	      }
 	    },
@@ -14858,7 +14858,7 @@
 
 	  injection: {
 	    injectEnvironment: function (environment) {
-	      !!injected ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactCompositeComponent: injectEnvironment() can only be called once.') : _prodInvariant('104') : void 0;
+	      !!injected ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactCompositeComponent: injectEnvironment() can only be called once.') : _prodInvariant('104') : void 0;
 	      ReactComponentEnvironment.replaceNodeWithMarkup = environment.replaceNodeWithMarkup;
 	      ReactComponentEnvironment.processChildrenUpdates = environment.processChildrenUpdates;
 	      injected = true;
@@ -14947,7 +14947,7 @@
 
 	var ReactComponentTreeHook;
 
-	if (typeof process !== 'undefined' && ({"URL":"http://127.0.0.1:3000"}) && ({"URL":"http://127.0.0.1:3000"}).NODE_ENV === 'test') {
+	if (typeof process !== 'undefined' && ({"URL":"https://flix-herst.herokuapp.com"}) && ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -14959,12 +14959,12 @@
 	function instantiateChild(childInstances, child, name, selfDebugID) {
 	  // We found a component instance.
 	  var keyUnique = childInstances[name] === undefined;
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (!ReactComponentTreeHook) {
 	      ReactComponentTreeHook = __webpack_require__(26);
 	    }
 	    if (!keyUnique) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
 	    }
 	  }
 	  if (child != null && keyUnique) {
@@ -14993,7 +14993,7 @@
 	    }
 	    var childInstances = {};
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      traverseAllChildren(nestedChildNodes, function (childInsts, child, name) {
 	        return instantiateChild(childInsts, child, name, selfDebugID);
 	      }, childInstances);
@@ -15151,7 +15151,7 @@
 	    instance = ReactEmptyComponent.create(instantiateReactComponent);
 	  } else if (typeof node === 'object') {
 	    var element = node;
-	    !(element && (typeof element.type === 'function' || typeof element.type === 'string')) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s', element.type == null ? element.type : typeof element.type, getDeclarationErrorAddendum(element._owner)) : _prodInvariant('130', element.type == null ? element.type : typeof element.type, getDeclarationErrorAddendum(element._owner)) : void 0;
+	    !(element && (typeof element.type === 'function' || typeof element.type === 'string')) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s', element.type == null ? element.type : typeof element.type, getDeclarationErrorAddendum(element._owner)) : _prodInvariant('130', element.type == null ? element.type : typeof element.type, getDeclarationErrorAddendum(element._owner)) : void 0;
 
 	    // Special case string values
 	    if (typeof element.type === 'string') {
@@ -15172,11 +15172,11 @@
 	  } else if (typeof node === 'string' || typeof node === 'number') {
 	    instance = ReactHostComponent.createInstanceForText(node);
 	  } else {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Encountered invalid React node of type %s', typeof node) : _prodInvariant('131', typeof node) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Encountered invalid React node of type %s', typeof node) : _prodInvariant('131', typeof node) : void 0;
 	  }
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(typeof instance.mountComponent === 'function' && typeof instance.receiveComponent === 'function' && typeof instance.getHostNode === 'function' && typeof instance.unmountComponent === 'function', 'Only React Components can be mounted.') : void 0;
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(typeof instance.mountComponent === 'function' && typeof instance.receiveComponent === 'function' && typeof instance.getHostNode === 'function' && typeof instance.unmountComponent === 'function', 'Only React Components can be mounted.') : void 0;
 	  }
 
 	  // These two fields are used by the DOM and ART diffing algorithms
@@ -15185,13 +15185,13 @@
 	  instance._mountIndex = 0;
 	  instance._mountImage = null;
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    instance._debugID = shouldHaveDebugID ? getNextDebugID() : 0;
 	  }
 
 	  // Internal instances should fully constructed at this point, so they should
 	  // not get any new fields added to them at this point.
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (Object.preventExtensions) {
 	      Object.preventExtensions(instance);
 	    }
@@ -15230,7 +15230,7 @@
 	var ReactNodeTypes = __webpack_require__(125);
 	var ReactReconciler = __webpack_require__(64);
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var checkReactTypeSpec = __webpack_require__(126);
 	}
 
@@ -15255,9 +15255,9 @@
 	};
 
 	function warnIfInvalidElement(Component, element) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(element === null || element === false || React.isValidElement(element), '%s(...): A valid React element (or null) must be returned. You may have ' + 'returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : void 0;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!Component.childContextTypes, '%s(...): childContextTypes cannot be defined on a functional component.', Component.displayName || Component.name || 'Component') : void 0;
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(element === null || element === false || React.isValidElement(element), '%s(...): A valid React element (or null) must be returned. You may have ' + 'returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!Component.childContextTypes, '%s(...): childContextTypes cannot be defined on a functional component.', Component.displayName || Component.name || 'Component') : void 0;
 	  }
 	}
 
@@ -15360,7 +15360,7 @@
 	    // ComponentWillUnmount shall only be called once
 	    this._calledComponentWillUnmount = false;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      this._warnedAboutRefsInRender = false;
 	    }
 	  },
@@ -15400,7 +15400,7 @@
 	    if (!doConstruct && (inst == null || inst.render == null)) {
 	      renderedElement = inst;
 	      warnIfInvalidElement(Component, renderedElement);
-	      !(inst === null || inst === false || React.isValidElement(inst)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s(...): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : _prodInvariant('105', Component.displayName || Component.name || 'Component') : void 0;
+	      !(inst === null || inst === false || React.isValidElement(inst)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s(...): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : _prodInvariant('105', Component.displayName || Component.name || 'Component') : void 0;
 	      inst = new StatelessComponent(Component);
 	      this._compositeType = CompositeTypes.StatelessFunctional;
 	    } else {
@@ -15411,17 +15411,17 @@
 	      }
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      // This will throw later in _renderValidatedComponent, but add an early
 	      // warning now to help debugging
 	      if (inst.render == null) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s(...): No `render` method found on the returned component ' + 'instance: you may have forgotten to define `render`.', Component.displayName || Component.name || 'Component') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s(...): No `render` method found on the returned component ' + 'instance: you may have forgotten to define `render`.', Component.displayName || Component.name || 'Component') : void 0;
 	      }
 
 	      var propsMutated = inst.props !== publicProps;
 	      var componentName = Component.displayName || Component.name || 'Component';
 
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(inst.props === undefined || !propsMutated, '%s(...): When calling super() in `%s`, make sure to pass ' + 'up the same props that your component\'s constructor was passed.', componentName, componentName) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(inst.props === undefined || !propsMutated, '%s(...): When calling super() in `%s`, make sure to pass ' + 'up the same props that your component\'s constructor was passed.', componentName, componentName) : void 0;
 	    }
 
 	    // These should be set up in the constructor, but as a convenience for
@@ -15436,24 +15436,24 @@
 	    // Store a reference from the instance back to the internal representation
 	    ReactInstanceMap.set(inst, this);
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      // Since plain JS classes are defined without any special initialization
 	      // logic, we can not catch common errors early. Therefore, we have to
 	      // catch them here, at initialization time, instead.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!inst.getInitialState || inst.getInitialState.isReactClassApproved, 'getInitialState was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Did you mean to define a state property instead?', this.getName() || 'a component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!inst.getDefaultProps || inst.getDefaultProps.isReactClassApproved, 'getDefaultProps was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Use a static property to define defaultProps instead.', this.getName() || 'a component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!inst.propTypes, 'propTypes was defined as an instance property on %s. Use a static ' + 'property to define propTypes instead.', this.getName() || 'a component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!inst.contextTypes, 'contextTypes was defined as an instance property on %s. Use a ' + 'static property to define contextTypes instead.', this.getName() || 'a component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(typeof inst.componentShouldUpdate !== 'function', '%s has a method called ' + 'componentShouldUpdate(). Did you mean shouldComponentUpdate()? ' + 'The name is phrased as a question because the function is ' + 'expected to return a value.', this.getName() || 'A component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(typeof inst.componentDidUnmount !== 'function', '%s has a method called ' + 'componentDidUnmount(). But there is no such lifecycle method. ' + 'Did you mean componentWillUnmount()?', this.getName() || 'A component') : void 0;
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(typeof inst.componentWillRecieveProps !== 'function', '%s has a method called ' + 'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?', this.getName() || 'A component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!inst.getInitialState || inst.getInitialState.isReactClassApproved, 'getInitialState was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Did you mean to define a state property instead?', this.getName() || 'a component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!inst.getDefaultProps || inst.getDefaultProps.isReactClassApproved, 'getDefaultProps was defined on %s, a plain JavaScript class. ' + 'This is only supported for classes created using React.createClass. ' + 'Use a static property to define defaultProps instead.', this.getName() || 'a component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!inst.propTypes, 'propTypes was defined as an instance property on %s. Use a static ' + 'property to define propTypes instead.', this.getName() || 'a component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!inst.contextTypes, 'contextTypes was defined as an instance property on %s. Use a ' + 'static property to define contextTypes instead.', this.getName() || 'a component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(typeof inst.componentShouldUpdate !== 'function', '%s has a method called ' + 'componentShouldUpdate(). Did you mean shouldComponentUpdate()? ' + 'The name is phrased as a question because the function is ' + 'expected to return a value.', this.getName() || 'A component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(typeof inst.componentDidUnmount !== 'function', '%s has a method called ' + 'componentDidUnmount(). But there is no such lifecycle method. ' + 'Did you mean componentWillUnmount()?', this.getName() || 'A component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(typeof inst.componentWillRecieveProps !== 'function', '%s has a method called ' + 'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?', this.getName() || 'A component') : void 0;
 	    }
 
 	    var initialState = inst.state;
 	    if (initialState === undefined) {
 	      inst.state = initialState = null;
 	    }
-	    !(typeof initialState === 'object' && !Array.isArray(initialState)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s.state: must be set to an object or null', this.getName() || 'ReactCompositeComponent') : _prodInvariant('106', this.getName() || 'ReactCompositeComponent') : void 0;
+	    !(typeof initialState === 'object' && !Array.isArray(initialState)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s.state: must be set to an object or null', this.getName() || 'ReactCompositeComponent') : _prodInvariant('106', this.getName() || 'ReactCompositeComponent') : void 0;
 
 	    this._pendingStateQueue = null;
 	    this._pendingReplaceState = false;
@@ -15467,7 +15467,7 @@
 	    }
 
 	    if (inst.componentDidMount) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        transaction.getReactMountReady().enqueue(function () {
 	          measureLifeCyclePerf(function () {
 	            return inst.componentDidMount();
@@ -15482,7 +15482,7 @@
 	  },
 
 	  _constructComponent: function (doConstruct, publicProps, publicContext, updateQueue) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      ReactCurrentOwner.current = this;
 	      try {
 	        return this._constructComponentWithoutOwner(doConstruct, publicProps, publicContext, updateQueue);
@@ -15498,7 +15498,7 @@
 	    var Component = this._currentElement.type;
 
 	    if (doConstruct) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        return measureLifeCyclePerf(function () {
 	          return new Component(publicProps, publicContext, updateQueue);
 	        }, this._debugID, 'ctor');
@@ -15509,7 +15509,7 @@
 
 	    // This can still be an instance in case of factory components
 	    // but we'll count this as time spent rendering as the more common case.
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      return measureLifeCyclePerf(function () {
 	        return Component(publicProps, publicContext, updateQueue);
 	      }, this._debugID, 'render');
@@ -15546,12 +15546,12 @@
 	    var inst = this._instance;
 
 	    var debugID = 0;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      debugID = this._debugID;
 	    }
 
 	    if (inst.componentWillMount) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        measureLifeCyclePerf(function () {
 	          return inst.componentWillMount();
 	        }, debugID, 'componentWillMount');
@@ -15578,7 +15578,7 @@
 
 	    var markup = ReactReconciler.mountComponent(child, transaction, hostParent, hostContainerInfo, this._processChildContext(context), debugID);
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (debugID !== 0) {
 	        var childDebugIDs = child._debugID !== 0 ? [child._debugID] : [];
 	        ReactInstrumentation.debugTool.onSetChildren(debugID, childDebugIDs);
@@ -15612,7 +15612,7 @@
 	        var name = this.getName() + '.componentWillUnmount()';
 	        ReactErrorUtils.invokeGuardedCallback(name, inst.componentWillUnmount.bind(inst));
 	      } else {
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          measureLifeCyclePerf(function () {
 	            return inst.componentWillUnmount();
 	          }, this._debugID, 'componentWillUnmount');
@@ -15687,7 +15687,7 @@
 	   */
 	  _processContext: function (context) {
 	    var maskedContext = this._maskContext(context);
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var Component = this._currentElement.type;
 	      if (Component.contextTypes) {
 	        this._checkContextTypes(Component.contextTypes, maskedContext, 'context');
@@ -15707,7 +15707,7 @@
 	    var childContext;
 
 	    if (inst.getChildContext) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        ReactInstrumentation.debugTool.onBeginProcessingChildContext();
 	        try {
 	          childContext = inst.getChildContext();
@@ -15720,12 +15720,12 @@
 	    }
 
 	    if (childContext) {
-	      !(typeof Component.childContextTypes === 'object') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().', this.getName() || 'ReactCompositeComponent') : _prodInvariant('107', this.getName() || 'ReactCompositeComponent') : void 0;
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      !(typeof Component.childContextTypes === 'object') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().', this.getName() || 'ReactCompositeComponent') : _prodInvariant('107', this.getName() || 'ReactCompositeComponent') : void 0;
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        this._checkContextTypes(Component.childContextTypes, childContext, 'childContext');
 	      }
 	      for (var name in childContext) {
-	        !(name in Component.childContextTypes) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): key "%s" is not defined in childContextTypes.', this.getName() || 'ReactCompositeComponent', name) : _prodInvariant('108', this.getName() || 'ReactCompositeComponent', name) : void 0;
+	        !(name in Component.childContextTypes) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): key "%s" is not defined in childContextTypes.', this.getName() || 'ReactCompositeComponent', name) : _prodInvariant('108', this.getName() || 'ReactCompositeComponent', name) : void 0;
 	      }
 	      return _assign({}, currentContext, childContext);
 	    }
@@ -15741,7 +15741,7 @@
 	   * @private
 	   */
 	  _checkContextTypes: function (typeSpecs, values, location) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      checkReactTypeSpec(typeSpecs, values, location, this.getName(), null, this._debugID);
 	    }
 	  },
@@ -15789,7 +15789,7 @@
 	   */
 	  updateComponent: function (transaction, prevParentElement, nextParentElement, prevUnmaskedContext, nextUnmaskedContext) {
 	    var inst = this._instance;
-	    !(inst != null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Attempted to update component `%s` that has already been unmounted (or failed to mount).', this.getName() || 'ReactCompositeComponent') : _prodInvariant('136', this.getName() || 'ReactCompositeComponent') : void 0;
+	    !(inst != null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Attempted to update component `%s` that has already been unmounted (or failed to mount).', this.getName() || 'ReactCompositeComponent') : _prodInvariant('136', this.getName() || 'ReactCompositeComponent') : void 0;
 
 	    var willReceive = false;
 	    var nextContext;
@@ -15814,7 +15814,7 @@
 	    // _pendingStateQueue which will ensure that any state updates gets
 	    // immediately reconciled instead of waiting for the next batch.
 	    if (willReceive && inst.componentWillReceiveProps) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        measureLifeCyclePerf(function () {
 	          return inst.componentWillReceiveProps(nextProps, nextContext);
 	        }, this._debugID, 'componentWillReceiveProps');
@@ -15828,7 +15828,7 @@
 
 	    if (!this._pendingForceUpdate) {
 	      if (inst.shouldComponentUpdate) {
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          shouldUpdate = measureLifeCyclePerf(function () {
 	            return inst.shouldComponentUpdate(nextProps, nextState, nextContext);
 	          }, this._debugID, 'shouldComponentUpdate');
@@ -15842,8 +15842,8 @@
 	      }
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(shouldUpdate !== undefined, '%s.shouldComponentUpdate(): Returned undefined instead of a ' + 'boolean value. Make sure to return true or false.', this.getName() || 'ReactCompositeComponent') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(shouldUpdate !== undefined, '%s.shouldComponentUpdate(): Returned undefined instead of a ' + 'boolean value. Make sure to return true or false.', this.getName() || 'ReactCompositeComponent') : void 0;
 	    }
 
 	    this._updateBatchNumber = null;
@@ -15914,7 +15914,7 @@
 	    }
 
 	    if (inst.componentWillUpdate) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        measureLifeCyclePerf(function () {
 	          return inst.componentWillUpdate(nextProps, nextState, nextContext);
 	        }, this._debugID, 'componentWillUpdate');
@@ -15932,7 +15932,7 @@
 	    this._updateRenderedComponent(transaction, unmaskedContext);
 
 	    if (hasComponentDidUpdate) {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        transaction.getReactMountReady().enqueue(function () {
 	          measureLifeCyclePerf(inst.componentDidUpdate.bind(inst, prevProps, prevState, prevContext), _this2._debugID, 'componentDidUpdate');
 	        });
@@ -15954,7 +15954,7 @@
 	    var nextRenderedElement = this._renderValidatedComponent();
 
 	    var debugID = 0;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      debugID = this._debugID;
 	    }
 
@@ -15972,7 +15972,7 @@
 
 	      var nextMarkup = ReactReconciler.mountComponent(child, transaction, this._hostParent, this._hostContainerInfo, this._processChildContext(context), debugID);
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        if (debugID !== 0) {
 	          var childDebugIDs = child._debugID !== 0 ? [child._debugID] : [];
 	          ReactInstrumentation.debugTool.onSetChildren(debugID, childDebugIDs);
@@ -15999,7 +15999,7 @@
 	    var inst = this._instance;
 	    var renderedElement;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      renderedElement = measureLifeCyclePerf(function () {
 	        return inst.render();
 	      }, this._debugID, 'render');
@@ -16007,7 +16007,7 @@
 	      renderedElement = inst.render();
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      // We allow auto-mocks to proceed as if they're returning null.
 	      if (renderedElement === undefined && inst.render._isMockFunction) {
 	        // This is probably bad practice. Consider warning here and
@@ -16024,7 +16024,7 @@
 	   */
 	  _renderValidatedComponent: function () {
 	    var renderedElement;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' || this._compositeType !== CompositeTypes.StatelessFunctional) {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' || this._compositeType !== CompositeTypes.StatelessFunctional) {
 	      ReactCurrentOwner.current = this;
 	      try {
 	        renderedElement = this._renderValidatedComponentWithoutOwnerOrContext();
@@ -16036,7 +16036,7 @@
 	    }
 	    !(
 	    // TODO: An `isValidNode` function would probably be more appropriate
-	    renderedElement === null || renderedElement === false || React.isValidElement(renderedElement)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s.render(): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', this.getName() || 'ReactCompositeComponent') : _prodInvariant('109', this.getName() || 'ReactCompositeComponent') : void 0;
+	    renderedElement === null || renderedElement === false || React.isValidElement(renderedElement)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s.render(): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', this.getName() || 'ReactCompositeComponent') : _prodInvariant('109', this.getName() || 'ReactCompositeComponent') : void 0;
 
 	    return renderedElement;
 	  },
@@ -16051,11 +16051,11 @@
 	   */
 	  attachRef: function (ref, component) {
 	    var inst = this.getPublicInstance();
-	    !(inst != null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Stateless function components cannot have refs.') : _prodInvariant('110') : void 0;
+	    !(inst != null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Stateless function components cannot have refs.') : _prodInvariant('110') : void 0;
 	    var publicComponentInstance = component.getPublicInstance();
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var componentName = component && component.getName ? component.getName() : 'a component';
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(publicComponentInstance != null || component._compositeType !== CompositeTypes.StatelessFunctional, 'Stateless function components cannot be given refs ' + '(See ref "%s" in %s created by %s). ' + 'Attempts to access this ref will fail.', ref, componentName, this.getName()) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(publicComponentInstance != null || component._compositeType !== CompositeTypes.StatelessFunctional, 'Stateless function components cannot be given refs ' + '(See ref "%s" in %s created by %s). ' + 'Attempts to access this ref will fail.', ref, componentName, this.getName()) : void 0;
 	    }
 	    var refs = inst.refs === emptyObject ? inst.refs = {} : inst.refs;
 	    refs[ref] = publicComponentInstance;
@@ -16146,7 +16146,7 @@
 	        return ReactNodeTypes.HOST;
 	      }
 	    }
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Unexpected node: %s', node) : _prodInvariant('26', node) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Unexpected node: %s', node) : _prodInvariant('26', node) : void 0;
 	  }
 	};
 
@@ -16178,7 +16178,7 @@
 
 	var ReactComponentTreeHook;
 
-	if (typeof process !== 'undefined' && ({"URL":"http://127.0.0.1:3000"}) && ({"URL":"http://127.0.0.1:3000"}).NODE_ENV === 'test') {
+	if (typeof process !== 'undefined' && ({"URL":"https://flix-herst.herokuapp.com"}) && ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -16211,12 +16211,12 @@
 	      try {
 	        // This is intentionally an invariant that gets caught. It's the same
 	        // behavior as without this statement except with a better message.
-	        !(typeof typeSpecs[typeSpecName] === 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : _prodInvariant('84', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : void 0;
+	        !(typeof typeSpecs[typeSpecName] === 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually from React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : _prodInvariant('84', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName) : void 0;
 	        error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
 	      } catch (ex) {
 	        error = ex;
 	      }
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', ReactPropTypeLocationNames[location], typeSpecName, typeof error) : void 0;
 	      if (error instanceof Error && !(error.message in loggedTypeFailures)) {
 	        // Only monitor this failure once because there tends to be a lot of the
 	        // same error.
@@ -16224,7 +16224,7 @@
 
 	        var componentStackInfo = '';
 
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          if (!ReactComponentTreeHook) {
 	            ReactComponentTreeHook = __webpack_require__(26);
 	          }
@@ -16235,7 +16235,7 @@
 	          }
 	        }
 
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Failed %s type: %s%s', location, error.message, componentStackInfo) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Failed %s type: %s%s', location, error.message, componentStackInfo) : void 0;
 	      }
 	    }
 	  }
@@ -16263,7 +16263,7 @@
 
 	var ReactPropTypeLocationNames = {};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  ReactPropTypeLocationNames = {
 	    prop: 'prop',
 	    context: 'context',
@@ -16291,7 +16291,7 @@
 
 	var emptyObject = {};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  Object.freeze(emptyObject);
 	}
 
@@ -16500,7 +16500,7 @@
 	 * @return {function} The internal class constructor function.
 	 */
 	function createInternalComponent(element) {
-	  !genericComponentClass ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'There is no registered component for the tag %s', element.type) : _prodInvariant('111', element.type) : void 0;
+	  !genericComponentClass ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'There is no registered component for the tag %s', element.type) : _prodInvariant('111', element.type) : void 0;
 	  return new genericComponentClass(element);
 	}
 
@@ -16728,7 +16728,7 @@
 	          subtreeCount += traverseAllChildrenImpl(child, nextName, callback, traverseContext);
 	        }
 	      } else {
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          var mapsAsChildrenAddendum = '';
 	          if (ReactCurrentOwner.current) {
 	            var mapsAsChildrenOwnerName = ReactCurrentOwner.current.getName();
@@ -16736,7 +16736,7 @@
 	              mapsAsChildrenAddendum = ' Check the render method of `' + mapsAsChildrenOwnerName + '`.';
 	            }
 	          }
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(didWarnAboutMaps, 'Using Maps as children is not yet fully supported. It is an ' + 'experimental feature that might be removed. Convert it to a ' + 'sequence / iterable of keyed ReactElements instead.%s', mapsAsChildrenAddendum) : void 0;
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(didWarnAboutMaps, 'Using Maps as children is not yet fully supported. It is an ' + 'experimental feature that might be removed. Convert it to a ' + 'sequence / iterable of keyed ReactElements instead.%s', mapsAsChildrenAddendum) : void 0;
 	          didWarnAboutMaps = true;
 	        }
 	        // Iterator will provide entry [k,v] tuples rather than values.
@@ -16751,7 +16751,7 @@
 	      }
 	    } else if (type === 'object') {
 	      var addendum = '';
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        addendum = ' If you meant to render a collection of children, use an array ' + 'instead or wrap the object using createFragment(object) from the ' + 'React add-ons.';
 	        if (children._isReactElement) {
 	          addendum = ' It looks like you\'re using an element created by a different ' + 'version of React. Make sure to use only one copy of React.';
@@ -16764,7 +16764,7 @@
 	        }
 	      }
 	      var childrenString = String(children);
-	       true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Objects are not valid as a React child (found: %s).%s', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : _prodInvariant('31', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : void 0;
+	       true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Objects are not valid as a React child (found: %s).%s', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : _prodInvariant('31', childrenString === '[object Object]' ? 'object with keys {' + Object.keys(children).join(', ') + '}' : childrenString, addendum) : void 0;
 	    }
 	  }
 
@@ -16889,7 +16889,7 @@
 
 	var ReactComponentTreeHook;
 
-	if (typeof process !== 'undefined' && ({"URL":"http://127.0.0.1:3000"}) && ({"URL":"http://127.0.0.1:3000"}).NODE_ENV === 'test') {
+	if (typeof process !== 'undefined' && ({"URL":"https://flix-herst.herokuapp.com"}) && ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -16909,12 +16909,12 @@
 	  if (traverseContext && typeof traverseContext === 'object') {
 	    var result = traverseContext;
 	    var keyUnique = result[name] === undefined;
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      if (!ReactComponentTreeHook) {
 	        ReactComponentTreeHook = __webpack_require__(26);
 	      }
 	      if (!keyUnique) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
 	      }
 	    }
 	    if (keyUnique && child != null) {
@@ -16934,7 +16934,7 @@
 	  }
 	  var result = {};
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    traverseAllChildren(children, function (traverseContext, child, name) {
 	      return flattenSingleChildIntoContext(traverseContext, child, name, selfDebugID);
 	    }, result);
@@ -16977,7 +16977,7 @@
 	 */
 	var TRANSACTION_WRAPPERS = [];
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  TRANSACTION_WRAPPERS.push({
 	    initialize: ReactInstrumentation.debugTool.onBeginFlush,
 	    close: ReactInstrumentation.debugTool.onEndFlush
@@ -17065,9 +17065,9 @@
 	var warning = __webpack_require__(48);
 
 	function warnNoop(publicInstance, callerName) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    var constructor = publicInstance.constructor;
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '%s(...): Can only update a mounting component. ' + 'This usually means you called %s() outside componentWillMount() on the server. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, constructor && (constructor.displayName || constructor.name) || 'ReactClass') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '%s(...): Can only update a mounting component. ' + 'This usually means you called %s() outside componentWillMount() on the server. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, constructor && (constructor.displayName || constructor.name) || 'ReactClass') : void 0;
 	  }
 	}
 
@@ -17230,18 +17230,18 @@
 	function getInternalInstanceReadyForUpdate(publicInstance, callerName) {
 	  var internalInstance = ReactInstanceMap.get(publicInstance);
 	  if (!internalInstance) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var ctor = publicInstance.constructor;
 	      // Only warn when we have a callerName. Otherwise we should be silent.
 	      // We're probably calling from enqueueCallback. We don't want to warn
 	      // there because we already warned for the corresponding lifecycle method.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!callerName, '%s(...): Can only update a mounted or mounting component. ' + 'This usually means you called %s() on an unmounted component. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, ctor && (ctor.displayName || ctor.name) || 'ReactClass') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!callerName, '%s(...): Can only update a mounted or mounting component. ' + 'This usually means you called %s() on an unmounted component. ' + 'This is a no-op. Please check the code for the %s component.', callerName, callerName, ctor && (ctor.displayName || ctor.name) || 'ReactClass') : void 0;
 	    }
 	    return null;
 	  }
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '%s(...): Cannot update during an existing state transition (such as ' + 'within `render` or another component\'s constructor). Render methods ' + 'should be a pure function of props and state; constructor ' + 'side-effects are an anti-pattern, but can be moved to ' + '`componentWillMount`.', callerName) : void 0;
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '%s(...): Cannot update during an existing state transition (such as ' + 'within `render` or another component\'s constructor). Render methods ' + 'should be a pure function of props and state; constructor ' + 'side-effects are an anti-pattern, but can be moved to ' + '`componentWillMount`.', callerName) : void 0;
 	  }
 
 	  return internalInstance;
@@ -17261,10 +17261,10 @@
 	   * @final
 	   */
 	  isMounted: function (publicInstance) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var owner = ReactCurrentOwner.current;
 	      if (owner !== null) {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing isMounted inside its render() function. ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing isMounted inside its render() function. ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
 	        owner._warnedAboutRefsInRender = true;
 	      }
 	    }
@@ -17382,9 +17382,9 @@
 	   * @internal
 	   */
 	  enqueueSetState: function (publicInstance, partialState) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      ReactInstrumentation.debugTool.onSetState();
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(partialState != null, 'setState(...): You passed an undefined or null state object; ' + 'instead, use forceUpdate().') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(partialState != null, 'setState(...): You passed an undefined or null state object; ' + 'instead, use forceUpdate().') : void 0;
 	    }
 
 	    var internalInstance = getInternalInstanceReadyForUpdate(publicInstance, 'setState');
@@ -17407,7 +17407,7 @@
 	  },
 
 	  validateCallback: function (callback, callerName) {
-	    !(!callback || typeof callback === 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.', callerName, formatUnexpectedArgument(callback)) : _prodInvariant('122', callerName, formatUnexpectedArgument(callback)) : void 0;
+	    !(!callback || typeof callback === 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.', callerName, formatUnexpectedArgument(callback)) : _prodInvariant('122', callerName, formatUnexpectedArgument(callback)) : void 0;
 	  }
 
 	};
@@ -17437,7 +17437,7 @@
 
 	var validateDOMNesting = emptyFunction;
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  // This validation code was written based on the HTML5 parsing spec:
 	  // https://html.spec.whatwg.org/multipage/syntax.html#has-an-element-in-scope
 	  //
@@ -17712,7 +17712,7 @@
 	    var parentTag = parentInfo && parentInfo.tag;
 
 	    if (childText != null) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(childTag == null, 'validateDOMNesting: when childText is passed, childTag should be null') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(childTag == null, 'validateDOMNesting: when childText is passed, childTag should be null') : void 0;
 	      childTag = '#text';
 	    }
 
@@ -17780,9 +17780,9 @@
 	        if (ancestorTag === 'table' && childTag === 'tr') {
 	          info += ' Add a <tbody> to your code to match the DOM tree generated by ' + 'the browser.';
 	        }
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a child of <%s>.%s ' + 'See %s.%s', tagDisplayName, ancestorTag, whitespaceInfo, ownerInfo, info) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a child of <%s>.%s ' + 'See %s.%s', tagDisplayName, ancestorTag, whitespaceInfo, ownerInfo, info) : void 0;
 	      } else {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a descendant of ' + '<%s>. See %s.', tagDisplayName, ancestorTag, ownerInfo) : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a descendant of ' + '<%s>. See %s.', tagDisplayName, ancestorTag, ownerInfo) : void 0;
 	      }
 	    }
 	  };
@@ -17889,8 +17889,8 @@
 	 * different trees.
 	 */
 	function getLowestCommonAncestor(instA, instB) {
-	  !('_hostNode' in instA) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
-	  !('_hostNode' in instB) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
+	  !('_hostNode' in instA) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
+	  !('_hostNode' in instB) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'getNodeFromInstance: Invalid argument.') : _prodInvariant('33') : void 0;
 
 	  var depthA = 0;
 	  for (var tempA = instA; tempA; tempA = tempA._hostParent) {
@@ -17929,8 +17929,8 @@
 	 * Return if A is an ancestor of B.
 	 */
 	function isAncestor(instA, instB) {
-	  !('_hostNode' in instA) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'isAncestor: Invalid argument.') : _prodInvariant('35') : void 0;
-	  !('_hostNode' in instB) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'isAncestor: Invalid argument.') : _prodInvariant('35') : void 0;
+	  !('_hostNode' in instA) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'isAncestor: Invalid argument.') : _prodInvariant('35') : void 0;
+	  !('_hostNode' in instB) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'isAncestor: Invalid argument.') : _prodInvariant('35') : void 0;
 
 	  while (instB) {
 	    if (instB === instA) {
@@ -17945,7 +17945,7 @@
 	 * Return the parent instance of the passed-in instance.
 	 */
 	function getParentInstance(inst) {
-	  !('_hostNode' in inst) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'getParentInstance: Invalid argument.') : _prodInvariant('36') : void 0;
+	  !('_hostNode' in inst) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'getParentInstance: Invalid argument.') : _prodInvariant('36') : void 0;
 
 	  return inst._hostParent;
 	}
@@ -18072,7 +18072,7 @@
 	   * @internal
 	   */
 	  mountComponent: function (transaction, hostParent, hostContainerInfo, context) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var parentInfo;
 	      if (hostParent != null) {
 	        parentInfo = hostParent._ancestorInfo;
@@ -18149,7 +18149,7 @@
 	      var openingComment = ReactDOMComponentTree.getNodeFromInstance(this);
 	      var node = openingComment.nextSibling;
 	      while (true) {
-	        !(node != null) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Missing closing comment for text component %s', this._domID) : _prodInvariant('67', this._domID) : void 0;
+	        !(node != null) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Missing closing comment for text component %s', this._domID) : _prodInvariant('67', this._domID) : void 0;
 	        if (node.nodeType === 8 && node.nodeValue === ' /react-text ') {
 	          this._closingComment = node;
 	          break;
@@ -18477,7 +18477,7 @@
 	        }
 	      };
 	    } else {
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	        console.error('Attempted to listen to events during the capture phase on a ' + 'browser that does not support the capture phase. Your application ' + 'will not receive some events.');
 	      }
 	      return {
@@ -18666,7 +18666,7 @@
 	 */
 	var TRANSACTION_WRAPPERS = [SELECTION_RESTORATION, EVENT_SUPPRESSION, ON_DOM_READY_QUEUEING];
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  TRANSACTION_WRAPPERS.push({
 	    initialize: ReactInstrumentation.debugTool.onBeginFlush,
 	    close: ReactInstrumentation.debugTool.onEndFlush
@@ -20015,7 +20015,7 @@
 	        EventConstructor = SyntheticClipboardEvent;
 	        break;
 	    }
-	    !EventConstructor ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'SimpleEventPlugin: Unhandled event type, `%s`.', topLevelType) : _prodInvariant('86', topLevelType) : void 0;
+	    !EventConstructor ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'SimpleEventPlugin: Unhandled event type, `%s`.', topLevelType) : _prodInvariant('86', topLevelType) : void 0;
 	    var event = EventConstructor.getPooled(dispatchConfig, targetInst, nativeEvent, nativeEventTarget);
 	    EventPropagators.accumulateTwoPhaseDispatches(event);
 	    return event;
@@ -20754,11 +20754,11 @@
 	 * @see {ReactMount.unmountComponentAtNode}
 	 */
 	function unmountComponentFromNode(instance, container, safely) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    ReactInstrumentation.debugTool.onBeginFlush();
 	  }
 	  ReactReconciler.unmountComponent(instance, safely);
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    ReactInstrumentation.debugTool.onEndFlush();
 	  }
 
@@ -20846,7 +20846,7 @@
 	  this.rootID = topLevelRootCounter++;
 	};
 	TopLevelWrapper.prototype.isReactComponent = {};
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  TopLevelWrapper.displayName = 'TopLevelWrapper';
 	}
 	TopLevelWrapper.prototype.render = function () {
@@ -20923,9 +20923,9 @@
 	    // Various parts of our code (such as ReactCompositeComponent's
 	    // _renderValidatedComponent) assume that calls to render aren't nested;
 	    // verify that that's the case.
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '_renderNewRootComponent(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from ' + 'render is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '_renderNewRootComponent(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from ' + 'render is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
 
-	    !isValidContainer(container) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, '_registerComponent(...): Target container is not a DOM element.') : _prodInvariant('37') : void 0;
+	    !isValidContainer(container) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, '_registerComponent(...): Target container is not a DOM element.') : _prodInvariant('37') : void 0;
 
 	    ReactBrowserEventEmitter.ensureScrollValueMonitoring();
 	    var componentInstance = instantiateReactComponent(nextElement, false);
@@ -20956,17 +20956,17 @@
 	   * @return {ReactComponent} Component instance rendered in `container`.
 	   */
 	  renderSubtreeIntoContainer: function (parentComponent, nextElement, container, callback) {
-	    !(parentComponent != null && ReactInstanceMap.has(parentComponent)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'parentComponent must be a valid React Component') : _prodInvariant('38') : void 0;
+	    !(parentComponent != null && ReactInstanceMap.has(parentComponent)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'parentComponent must be a valid React Component') : _prodInvariant('38') : void 0;
 	    return ReactMount._renderSubtreeIntoContainer(parentComponent, nextElement, container, callback);
 	  },
 
 	  _renderSubtreeIntoContainer: function (parentComponent, nextElement, container, callback) {
 	    ReactUpdateQueue.validateCallback(callback, 'ReactDOM.render');
-	    !React.isValidElement(nextElement) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'ReactDOM.render(): Invalid component element.%s', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' :
+	    !React.isValidElement(nextElement) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'ReactDOM.render(): Invalid component element.%s', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' :
 	    // Check if it quacks like an element
 	    nextElement != null && nextElement.props !== undefined ? ' This may be caused by unintentionally loading two independent ' + 'copies of React.' : '') : _prodInvariant('39', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' : nextElement != null && nextElement.props !== undefined ? ' This may be caused by unintentionally loading two independent ' + 'copies of React.' : '') : void 0;
 
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!container || !container.tagName || container.tagName.toUpperCase() !== 'BODY', 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your app.') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!container || !container.tagName || container.tagName.toUpperCase() !== 'BODY', 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your app.') : void 0;
 
 	    var nextWrappedElement = React.createElement(TopLevelWrapper, { child: nextElement });
 
@@ -20999,14 +20999,14 @@
 	    var containerHasReactMarkup = reactRootElement && !!internalGetID(reactRootElement);
 	    var containerHasNonRootReactChild = hasNonRootReactChild(container);
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!containerHasNonRootReactChild, 'render(...): Replacing React-rendered children with a new root ' + 'component. If you intended to update the children of this node, ' + 'you should instead have the existing children update their state ' + 'and render the new components instead of calling ReactDOM.render.') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!containerHasNonRootReactChild, 'render(...): Replacing React-rendered children with a new root ' + 'component. If you intended to update the children of this node, ' + 'you should instead have the existing children update their state ' + 'and render the new components instead of calling ReactDOM.render.') : void 0;
 
 	      if (!containerHasReactMarkup || reactRootElement.nextSibling) {
 	        var rootElementSibling = reactRootElement;
 	        while (rootElementSibling) {
 	          if (internalGetID(rootElementSibling)) {
-	            ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'render(): Target node has markup rendered by React, but there ' + 'are unrelated nodes as well. This is most commonly caused by ' + 'white-space inserted around server-rendered markup.') : void 0;
+	            ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'render(): Target node has markup rendered by React, but there ' + 'are unrelated nodes as well. This is most commonly caused by ' + 'white-space inserted around server-rendered markup.') : void 0;
 	            break;
 	          }
 	          rootElementSibling = rootElementSibling.nextSibling;
@@ -21052,12 +21052,12 @@
 	    // _renderValidatedComponent) assume that calls to render aren't nested;
 	    // verify that that's the case. (Strictly speaking, unmounting won't cause a
 	    // render but we still don't expect to be in a render call here.)
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, 'unmountComponentAtNode(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from render ' + 'is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, 'unmountComponentAtNode(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from render ' + 'is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
 
-	    !isValidContainer(container) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'unmountComponentAtNode(...): Target container is not a DOM element.') : _prodInvariant('40') : void 0;
+	    !isValidContainer(container) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'unmountComponentAtNode(...): Target container is not a DOM element.') : _prodInvariant('40') : void 0;
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!nodeIsRenderedByOtherInstance(container), 'unmountComponentAtNode(): The node you\'re attempting to unmount ' + 'was rendered by another copy of React.') : void 0;
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!nodeIsRenderedByOtherInstance(container), 'unmountComponentAtNode(): The node you\'re attempting to unmount ' + 'was rendered by another copy of React.') : void 0;
 	    }
 
 	    var prevComponent = getTopLevelWrapperInContainer(container);
@@ -21069,8 +21069,8 @@
 	      // Check if the container itself is a React root node.
 	      var isContainerReactRoot = container.nodeType === 1 && container.hasAttribute(ROOT_ATTR_NAME);
 
-	      if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(!containerHasNonRootReactChild, 'unmountComponentAtNode(): The node you\'re attempting to unmount ' + 'was rendered by React and is not a top-level container. %s', isContainerReactRoot ? 'You may have accidentally passed in a React root node instead ' + 'of its container.' : 'Instead, have the parent component update its state and ' + 'rerender in order to remove this component.') : void 0;
+	      if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(!containerHasNonRootReactChild, 'unmountComponentAtNode(): The node you\'re attempting to unmount ' + 'was rendered by React and is not a top-level container. %s', isContainerReactRoot ? 'You may have accidentally passed in a React root node instead ' + 'of its container.' : 'Instead, have the parent component update its state and ' + 'rerender in order to remove this component.') : void 0;
 	      }
 
 	      return false;
@@ -21081,7 +21081,7 @@
 	  },
 
 	  _mountImageIntoNode: function (markup, container, instance, shouldReuseMarkup, transaction) {
-	    !isValidContainer(container) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'mountComponentIntoNode(...): Target container is not valid.') : _prodInvariant('41') : void 0;
+	    !isValidContainer(container) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'mountComponentIntoNode(...): Target container is not valid.') : _prodInvariant('41') : void 0;
 
 	    if (shouldReuseMarkup) {
 	      var rootElement = getReactRootElementInContainer(container);
@@ -21096,7 +21096,7 @@
 	        rootElement.setAttribute(ReactMarkupChecksum.CHECKSUM_ATTR_NAME, checksum);
 
 	        var normalizedMarkup = markup;
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	          // because rootMarkup is retrieved from the DOM, various normalizations
 	          // will have occurred which will not be present in `markup`. Here,
 	          // insert markup into a <div> or <iframe> depending on the container
@@ -21118,15 +21118,15 @@
 	        var diffIndex = firstDifferenceIndex(normalizedMarkup, rootMarkup);
 	        var difference = ' (client) ' + normalizedMarkup.substring(diffIndex - 20, diffIndex + 20) + '\n (server) ' + rootMarkup.substring(diffIndex - 20, diffIndex + 20);
 
-	        !(container.nodeType !== DOC_NODE_TYPE) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'You\'re trying to render a component to the document using server rendering but the checksum was invalid. This usually means you rendered a different component type or props on the client from the one on the server, or your render() methods are impure. React cannot handle this case due to cross-browser quirks by rendering at the document root. You should look for environment dependent code in your components and ensure the props are the same client and server side:\n%s', difference) : _prodInvariant('42', difference) : void 0;
+	        !(container.nodeType !== DOC_NODE_TYPE) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'You\'re trying to render a component to the document using server rendering but the checksum was invalid. This usually means you rendered a different component type or props on the client from the one on the server, or your render() methods are impure. React cannot handle this case due to cross-browser quirks by rendering at the document root. You should look for environment dependent code in your components and ensure the props are the same client and server side:\n%s', difference) : _prodInvariant('42', difference) : void 0;
 
-	        if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
-	          ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'React attempted to reuse markup in a container but the ' + 'checksum was invalid. This generally means that you are ' + 'using server rendering and the markup generated on the ' + 'server was not what the client was expecting. React injected ' + 'new markup to compensate which works but you have lost many ' + 'of the benefits of server rendering. Instead, figure out ' + 'why the markup being generated is different on the client ' + 'or server:\n%s', difference) : void 0;
+	        if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
+	          ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'React attempted to reuse markup in a container but the ' + 'checksum was invalid. This generally means that you are ' + 'using server rendering and the markup generated on the ' + 'server was not what the client was expecting. React injected ' + 'new markup to compensate which works but you have lost many ' + 'of the benefits of server rendering. Instead, figure out ' + 'why the markup being generated is different on the client ' + 'or server:\n%s', difference) : void 0;
 	        }
 	      }
 	    }
 
-	    !(container.nodeType !== DOC_NODE_TYPE) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'You\'re trying to render a component to the document but you didn\'t use server rendering. We can\'t do this without using server rendering due to cross-browser quirks. See ReactDOMServer.renderToString() for server rendering.') : _prodInvariant('43') : void 0;
+	    !(container.nodeType !== DOC_NODE_TYPE) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'You\'re trying to render a component to the document but you didn\'t use server rendering. We can\'t do this without using server rendering due to cross-browser quirks. See ReactDOMServer.renderToString() for server rendering.') : _prodInvariant('43') : void 0;
 
 	    if (transaction.useCreateElement) {
 	      while (container.lastChild) {
@@ -21138,7 +21138,7 @@
 	      ReactDOMComponentTree.precacheNode(instance, container.firstChild);
 	    }
 
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      var hostNode = ReactDOMComponentTree.getInstanceFromNode(container.firstChild);
 	      if (hostNode._debugID !== 0) {
 	        ReactInstrumentation.debugTool.onHostOperation({
@@ -21182,7 +21182,7 @@
 	    _tag: node ? node.nodeName.toLowerCase() : null,
 	    _namespaceURI: node ? node.namespaceURI : null
 	  };
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    info._ancestorInfo = node ? validateDOMNesting.updatedAncestorInfo(null, info._tag, null) : null;
 	  }
 	  return info;
@@ -21368,10 +21368,10 @@
 	 * @return {?DOMElement} The root node of this element.
 	 */
 	function findDOMNode(componentOrElement) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    var owner = ReactCurrentOwner.current;
 	    if (owner !== null) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing findDOMNode inside its render(). ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(owner._warnedAboutRefsInRender, '%s is accessing findDOMNode inside its render(). ' + 'render() should be a pure function of props and state. It should ' + 'never access something that requires stale data from the previous ' + 'render, such as refs. Move this logic to componentDidMount and ' + 'componentDidUpdate instead.', owner.getName() || 'A component') : void 0;
 	      owner._warnedAboutRefsInRender = true;
 	    }
 	  }
@@ -21389,9 +21389,9 @@
 	  }
 
 	  if (typeof componentOrElement.render === 'function') {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'findDOMNode was called on an unmounted component.') : _prodInvariant('44') : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'findDOMNode was called on an unmounted component.') : _prodInvariant('44') : void 0;
 	  } else {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? invariant(false, 'Element appears to be neither ReactComponent nor DOMNode (keys: %s)', Object.keys(componentOrElement)) : _prodInvariant('45', Object.keys(componentOrElement)) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? invariant(false, 'Element appears to be neither ReactComponent nor DOMNode (keys: %s)', Object.keys(componentOrElement)) : _prodInvariant('45', Object.keys(componentOrElement)) : void 0;
 	  }
 	}
 
@@ -21473,7 +21473,7 @@
 
 	var warning = __webpack_require__(48);
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  var reactProps = {
 	    children: true,
 	    dangerouslySetInnerHTML: true,
@@ -21511,10 +21511,10 @@
 	    var registrationName = EventPluginRegistry.possibleRegistrationNames.hasOwnProperty(lowerCasedName) ? EventPluginRegistry.possibleRegistrationNames[lowerCasedName] : null;
 
 	    if (standardName != null) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unknown DOM property %s. Did you mean %s?%s', name, standardName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unknown DOM property %s. Did you mean %s?%s', name, standardName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	      return true;
 	    } else if (registrationName != null) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unknown event handler property %s. Did you mean `%s`?%s', name, registrationName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unknown event handler property %s. Did you mean `%s`?%s', name, registrationName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	      return true;
 	    } else {
 	      // We were unable to guess which prop the user intended.
@@ -21540,9 +21540,9 @@
 	  }).join(', ');
 
 	  if (unknownProps.length === 1) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unknown prop %s on <%s> tag. Remove this prop from the element. ' + 'For details, see https://fb.me/react-unknown-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unknown prop %s on <%s> tag. Remove this prop from the element. ' + 'For details, see https://fb.me/react-unknown-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	  } else if (unknownProps.length > 1) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unknown props %s on <%s> tag. Remove these props from the element. ' + 'For details, see https://fb.me/react-unknown-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unknown props %s on <%s> tag. Remove these props from the element. ' + 'For details, see https://fb.me/react-unknown-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	  }
 	};
 
@@ -21597,7 +21597,7 @@
 	    return;
 	  }
 	  if (element.props != null && element.props.value === null && !didWarnValueNull) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, '`value` prop on `%s` should not be null. ' + 'Consider using the empty string to clear the component or `undefined` ' + 'for uncontrolled components.%s', element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, '`value` prop on `%s` should not be null. ' + 'Consider using the empty string to clear the component or `undefined` ' + 'for uncontrolled components.%s', element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 
 	    didWarnValueNull = true;
 	  }
@@ -21655,7 +21655,7 @@
 	    }
 	    // aria-* attributes should be lowercase; suggest the lowercase version.
 	    if (name !== standardName) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Unknown ARIA attribute %s. Did you mean %s?%s', name, standardName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Unknown ARIA attribute %s. Did you mean %s?%s', name, standardName, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	      warnedProperties[name] = true;
 	      return true;
 	    }
@@ -21679,9 +21679,9 @@
 	  }).join(', ');
 
 	  if (invalidProps.length === 1) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Invalid aria prop %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Invalid aria prop %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	  } else if (invalidProps.length > 1) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? warning(false, 'Invalid aria props %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? warning(false, 'Invalid aria props %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop%s', unknownPropString, element.type, ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
 	  }
 	}
 
@@ -21698,12 +21698,12 @@
 
 	var ReactDOMInvalidARIAHook = {
 	  onBeforeMountComponent: function (debugID, element) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      handleElement(debugID, element);
 	    }
 	  },
 	  onBeforeUpdateComponent: function (debugID, element) {
-	    if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	      handleElement(debugID, element);
 	    }
 	  }
@@ -22165,7 +22165,7 @@
 	    if (token === '*' || token === '**') {
 	      paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;
 
-	      !(paramValue != null || parenCount > 0) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
+	      !(paramValue != null || parenCount > 0) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
 
 	      if (paramValue != null) pathname += encodeURI(paramValue);
 	    } else if (token === '(') {
@@ -22180,7 +22180,7 @@
 	      paramName = token.substring(1);
 	      paramValue = params[paramName];
 
-	      !(paramValue != null || parenCount > 0) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
+	      !(paramValue != null || parenCount > 0) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
 
 	      if (paramValue == null) {
 	        if (parenCount) {
@@ -22197,7 +22197,7 @@
 	            }
 	          }
 
-	          !(nextParenIdx > 0) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren at segment "%s"', pattern, tokensSubset.join('')) : (0, _invariant2.default)(false) : void 0;
+	          !(nextParenIdx > 0) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren at segment "%s"', pattern, tokensSubset.join('')) : (0, _invariant2.default)(false) : void 0;
 
 	          // jump to ending paren
 	          i = curTokenIdx + nextParenIdx - 1;
@@ -22208,7 +22208,7 @@
 	    }
 	  }
 
-	  !(parenCount <= 0) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren', pattern) : (0, _invariant2.default)(false) : void 0;
+	  !(parenCount <= 0) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren', pattern) : (0, _invariant2.default)(false) : void 0;
 
 	  return pathname.replace(/\/+/g, '/');
 	}
@@ -22240,7 +22240,7 @@
 	 */
 
 	var invariant = function(condition, format, a, b, c, d, e, f) {
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    if (format === undefined) {
 	      throw new Error('invariant requires an error message argument');
 	    }
@@ -22384,7 +22384,7 @@
 	        children = _props.children;
 
 
-	    !history.getCurrentLocation ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v2.x or ' + 'earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please upgrade to history v3.x.') : (0, _invariant2.default)(false) : void 0;
+	    !history.getCurrentLocation ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v2.x or ' + 'earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please upgrade to history v3.x.') : (0, _invariant2.default)(false) : void 0;
 
 	    return (0, _createTransitionManager3.default)(history, (0, _RouteUtils.createRoutes)(routes || children));
 	  },
@@ -22409,9 +22409,9 @@
 
 	  /* istanbul ignore next: sanity check */
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : void 0;
 
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : void 0;
 	  },
 	  componentWillUnmount: function componentWillUnmount() {
 	    if (this._unlisten) this._unlisten();
@@ -22699,7 +22699,7 @@
 	          } else if (nextState) {
 	            listener(null, nextState);
 	          } else {
-	            ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : void 0;
+	            ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : void 0;
 	          }
 	        });
 	      }
@@ -22795,7 +22795,7 @@
 
 	var warning = function() {};
 
-	if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	  warning = function(condition, format, args) {
 	    var len = arguments.length;
 	    args = new Array(len > 2 ? len - 2 : 0);
@@ -23549,12 +23549,12 @@
 	            if (Array.isArray(indexRoute)) {
 	              var _match$routes;
 
-	              ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
+	              ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
 	                return !route.path;
 	              }), 'Index routes should not have paths') : void 0;
 	              (_match$routes = match.routes).push.apply(_match$routes, indexRoute);
 	            } else if (indexRoute) {
-	              ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
+	              ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
 	              match.routes.push(indexRoute);
 	            }
 
@@ -23810,7 +23810,7 @@
 	      }, element);
 	    }
 
-	    !(element === null || element === false || _react2.default.isValidElement(element)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
+	    !(element === null || element === false || _react2.default.isValidElement(element)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
 
 	    return element;
 	  }
@@ -24115,7 +24115,7 @@
 
 	    var router = this.context.router;
 
-	    !router ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
+	    !router ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
 
 	    if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
 
@@ -24251,7 +24251,7 @@
 	    propTypes: { router: _PropTypes.routerShape },
 
 	    getWrappedInstance: function getWrappedInstance() {
-	      !withRef ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'To access the wrapped instance, you need to specify ' + '`{ withRef: true }` as the second argument of the withRouter() call.') : (0, _invariant2.default)(false) : void 0;
+	      !withRef ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'To access the wrapped instance, you need to specify ' + '`{ withRef: true }` as the second argument of the withRouter() call.') : (0, _invariant2.default)(false) : void 0;
 
 	      return this.wrappedInstance;
 	    },
@@ -24385,7 +24385,7 @@
 	      if (parentRoute) {
 	        parentRoute.indexRoute = _Redirect2.default.createRouteFromReactElement(element);
 	      } else {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRedirect> does not make sense at the root of your route config') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRedirect> does not make sense at the root of your route config') : void 0;
 	      }
 	    }
 	  },
@@ -24400,7 +24400,7 @@
 
 	  /* istanbul ignore next: sanity check */
 	  render: function render() {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRedirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRedirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
 	  }
 	});
 
@@ -24508,7 +24508,7 @@
 
 	  /* istanbul ignore next: sanity check */
 	  render: function render() {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Redirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Redirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
 	  }
 	});
 
@@ -24559,7 +24559,7 @@
 	      if (parentRoute) {
 	        parentRoute.indexRoute = (0, _RouteUtils.createRouteFromReactElement)(element);
 	      } else {
-	        ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRoute> does not make sense at the root of your route config') : void 0;
+	        ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRoute> does not make sense at the root of your route config') : void 0;
 	      }
 	    }
 	  },
@@ -24574,7 +24574,7 @@
 
 	  /* istanbul ignore next: sanity check */
 	  render: function render() {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRoute> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRoute> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
 	  }
 	});
 
@@ -24637,7 +24637,7 @@
 
 	  /* istanbul ignore next: sanity check */
 	  render: function render() {
-	     true ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Route> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+	     true ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Route> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
 	  }
 	});
 
@@ -24691,7 +24691,7 @@
 	      location = _ref.location,
 	      options = _objectWithoutProperties(_ref, ['history', 'routes', 'location']);
 
-	  !(history || location) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'match needs a history or a location') : (0, _invariant2.default)(false) : void 0;
+	  !(history || location) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'match needs a history or a location') : (0, _invariant2.default)(false) : void 0;
 
 	  history = history ? history : (0, _createMemoryHistory2.default)(options);
 	  var transitionManager = (0, _createTransitionManager2.default)(history, (0, _RouteUtils.createRoutes)(routes));
@@ -25137,7 +25137,7 @@
 	    // call the callback with the return value.
 	    callback(result);
 	  } else {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(result === undefined, 'You should not "return" in a transition hook with a callback argument; ' + 'call the callback instead') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(result === undefined, 'You should not "return" in a transition hook with a callback argument; ' + 'call the callback instead') : void 0;
 	  }
 	};
 
@@ -25181,7 +25181,7 @@
 
 	  var object = typeof input === 'string' ? (0, _PathUtils.parsePath)(input) : input;
 
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;
 
 	  var pathname = object.pathname || '/';
 	  var search = object.search || '';
@@ -25210,11 +25210,11 @@
 
 	  if (typeofA !== typeofB) return false;
 
-	  !(typeofA !== 'function') ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store functions in location state') : (0, _invariant2.default)(false) : void 0;
+	  !(typeofA !== 'function') ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store functions in location state') : (0, _invariant2.default)(false) : void 0;
 
 	  // Not the same object, but same type.
 	  if (typeofA === 'object') {
-	    !!(isDate(a) && isDate(b)) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;
+	    !!(isDate(a) && isDate(b)) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;
 
 	    if (!Array.isArray(a)) {
 	      var keysofA = Object.keys(a);
@@ -25306,7 +25306,7 @@
 	  var search = '';
 	  var hash = '';
 
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(path === pathname, 'A path must be pathname + search + hash only, not a full URL like "%s"', path) : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(path === pathname, 'A path must be pathname + search + hash only, not a full URL like "%s"', path) : void 0;
 
 	  var hashIndex = pathname.indexOf('#');
 	  if (hashIndex !== -1) {
@@ -25533,7 +25533,7 @@
 	    if (!n) return;
 
 	    if (!canGo(n)) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Cannot go(%s) there is not enough history', n) : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Cannot go(%s) there is not enough history', n) : void 0;
 
 	      return;
 	    }
@@ -25585,7 +25585,7 @@
 	  if (current == null) {
 	    current = entries.length - 1;
 	  } else {
-	    !(current >= 0 && current < entries.length) ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Current index must be >= 0 and < %s, was %s', entries.length, current) : (0, _invariant2.default)(false) : void 0;
+	    !(current >= 0 && current < entries.length) ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Current index must be >= 0 and < %s, was %s', entries.length, current) : (0, _invariant2.default)(false) : void 0;
 	  }
 
 	  var storage = createStateStorage(entries);
@@ -25903,9 +25903,9 @@
 	    middlewares[_key] = arguments[_key];
 	  }
 
-	  if (({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production') {
+	  if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production') {
 	    middlewares.forEach(function (middleware, index) {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(middleware.renderRouterContext || middleware.renderRouteComponent, 'The middleware specified at index ' + index + ' does not appear to be ' + 'a valid React Router middleware.') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(middleware.renderRouterContext || middleware.renderRouteComponent, 'The middleware specified at index ' + index + ' does not appear to be ' + 'a valid React Router middleware.') : void 0;
 	    });
 	  }
 
@@ -26004,7 +26004,7 @@
 	var createBrowserHistory = function createBrowserHistory() {
 	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-	  !_ExecutionEnvironment.canUseDOM ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
+	  !_ExecutionEnvironment.canUseDOM ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
 	  var useRefresh = options.forceRefresh || !(0, _DOMUtils.supportsHistory)();
 	  var Protocol = useRefresh ? RefreshProtocol : BrowserProtocol;
@@ -26246,7 +26246,7 @@
 	  if (!window.sessionStorage) {
 	    // Session storage is not available or hidden.
 	    // sessionStorage is undefined in Internet Explorer when served via file protocol.
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available') : void 0;
 
 	    return;
 	  }
@@ -26261,14 +26261,14 @@
 	    if (SecurityErrors[error.name]) {
 	      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
 	      // attempt to access window.sessionStorage.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available due to security settings') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available due to security settings') : void 0;
 
 	      return;
 	    }
 
 	    if (QuotaExceededErrors[error.name] && window.sessionStorage.length === 0) {
 	      // Safari "private mode" throws QuotaExceededError.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : void 0;
 
 	      return;
 	    }
@@ -26285,7 +26285,7 @@
 	    if (SecurityErrors[error.name]) {
 	      // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
 	      // attempt to access window.sessionStorage.
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to read state; sessionStorage is not available due to security settings') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to read state; sessionStorage is not available due to security settings') : void 0;
 
 	      return undefined;
 	    }
@@ -26453,20 +26453,20 @@
 	var createHashHistory = function createHashHistory() {
 	  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-	  !_ExecutionEnvironment.canUseDOM ? ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
+	  !_ExecutionEnvironment.canUseDOM ? ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
 	  var queryKey = options.queryKey;
 	  var hashType = options.hashType;
 
 
-	  ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(queryKey !== false, 'Using { queryKey: false } no longer works. Instead, just don\'t ' + 'use location state if you don\'t want a key in your URL query string') : void 0;
+	  ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(queryKey !== false, 'Using { queryKey: false } no longer works. Instead, just don\'t ' + 'use location state if you don\'t want a key in your URL query string') : void 0;
 
 	  if (typeof queryKey !== 'string') queryKey = DefaultQueryKey;
 
 	  if (hashType == null) hashType = 'slash';
 
 	  if (!(hashType in HashPathCoders)) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Invalid hash type: %s', hashType) : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Invalid hash type: %s', hashType) : void 0;
 
 	    hashType = 'slash';
 	  }
@@ -26522,7 +26522,7 @@
 	  var goIsSupportedWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
 
 	  var go = function go(n) {
-	    ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(goIsSupportedWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
+	    ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(goIsSupportedWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
 
 	    history.go(n);
 	  };
@@ -26671,7 +26671,7 @@
 	    if (getHashPath() !== path) {
 	      pushHashPath(path);
 	    } else {
-	      ({"URL":"http://127.0.0.1:3000"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'You cannot PUSH the same path using hash history') : void 0;
+	      ({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'You cannot PUSH the same path using hash history') : void 0;
 	    }
 	  });
 	};
@@ -26698,7 +26698,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Nav = __webpack_require__(241);
+	var _axios = __webpack_require__(241);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _Nav = __webpack_require__(266);
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -26744,7 +26748,7 @@
 	    value: function fetchUserID() {
 	      var _this2 = this;
 
-	      axios.get(("http://127.0.0.1:3000") + '/isLoggedIn').then(function (res) {
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/isLoggedIn').then(function (res) {
 	        console.log(res);
 	        localStorage.userID = res.data.user;
 	        _this2.setState({
@@ -26778,6 +26782,1494 @@
 /* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(242);
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+	var bind = __webpack_require__(244);
+	var Axios = __webpack_require__(245);
+	var defaults = __webpack_require__(246);
+
+	/**
+	 * Create an instance of Axios
+	 *
+	 * @param {Object} defaultConfig The default config for the instance
+	 * @return {Axios} A new instance of Axios
+	 */
+	function createInstance(defaultConfig) {
+	  var context = new Axios(defaultConfig);
+	  var instance = bind(Axios.prototype.request, context);
+
+	  // Copy axios.prototype to instance
+	  utils.extend(instance, Axios.prototype, context);
+
+	  // Copy context to instance
+	  utils.extend(instance, context);
+
+	  return instance;
+	}
+
+	// Create the default instance to be exported
+	var axios = createInstance(defaults);
+
+	// Expose Axios class to allow class inheritance
+	axios.Axios = Axios;
+
+	// Factory for creating new instances
+	axios.create = function create(instanceConfig) {
+	  return createInstance(utils.merge(defaults, instanceConfig));
+	};
+
+	// Expose Cancel & CancelToken
+	axios.Cancel = __webpack_require__(263);
+	axios.CancelToken = __webpack_require__(264);
+	axios.isCancel = __webpack_require__(260);
+
+	// Expose all/spread
+	axios.all = function all(promises) {
+	  return Promise.all(promises);
+	};
+	axios.spread = __webpack_require__(265);
+
+	module.exports = axios;
+
+	// Allow use of default import syntax in TypeScript
+	module.exports.default = axios;
+
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var bind = __webpack_require__(244);
+
+	/*global toString:true*/
+
+	// utils is a library of generic helper functions non-specific to axios
+
+	var toString = Object.prototype.toString;
+
+	/**
+	 * Determine if a value is an Array
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Array, otherwise false
+	 */
+	function isArray(val) {
+	  return toString.call(val) === '[object Array]';
+	}
+
+	/**
+	 * Determine if a value is an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+	 */
+	function isArrayBuffer(val) {
+	  return toString.call(val) === '[object ArrayBuffer]';
+	}
+
+	/**
+	 * Determine if a value is a FormData
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an FormData, otherwise false
+	 */
+	function isFormData(val) {
+	  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+	}
+
+	/**
+	 * Determine if a value is a view on an ArrayBuffer
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+	 */
+	function isArrayBufferView(val) {
+	  var result;
+	  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
+	    result = ArrayBuffer.isView(val);
+	  } else {
+	    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+	  }
+	  return result;
+	}
+
+	/**
+	 * Determine if a value is a String
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a String, otherwise false
+	 */
+	function isString(val) {
+	  return typeof val === 'string';
+	}
+
+	/**
+	 * Determine if a value is a Number
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Number, otherwise false
+	 */
+	function isNumber(val) {
+	  return typeof val === 'number';
+	}
+
+	/**
+	 * Determine if a value is undefined
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if the value is undefined, otherwise false
+	 */
+	function isUndefined(val) {
+	  return typeof val === 'undefined';
+	}
+
+	/**
+	 * Determine if a value is an Object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is an Object, otherwise false
+	 */
+	function isObject(val) {
+	  return val !== null && typeof val === 'object';
+	}
+
+	/**
+	 * Determine if a value is a Date
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Date, otherwise false
+	 */
+	function isDate(val) {
+	  return toString.call(val) === '[object Date]';
+	}
+
+	/**
+	 * Determine if a value is a File
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a File, otherwise false
+	 */
+	function isFile(val) {
+	  return toString.call(val) === '[object File]';
+	}
+
+	/**
+	 * Determine if a value is a Blob
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Blob, otherwise false
+	 */
+	function isBlob(val) {
+	  return toString.call(val) === '[object Blob]';
+	}
+
+	/**
+	 * Determine if a value is a Function
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Function, otherwise false
+	 */
+	function isFunction(val) {
+	  return toString.call(val) === '[object Function]';
+	}
+
+	/**
+	 * Determine if a value is a Stream
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a Stream, otherwise false
+	 */
+	function isStream(val) {
+	  return isObject(val) && isFunction(val.pipe);
+	}
+
+	/**
+	 * Determine if a value is a URLSearchParams object
+	 *
+	 * @param {Object} val The value to test
+	 * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+	 */
+	function isURLSearchParams(val) {
+	  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+	}
+
+	/**
+	 * Trim excess whitespace off the beginning and end of a string
+	 *
+	 * @param {String} str The String to trim
+	 * @returns {String} The String freed of excess whitespace
+	 */
+	function trim(str) {
+	  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+	}
+
+	/**
+	 * Determine if we're running in a standard browser environment
+	 *
+	 * This allows axios to run in a web worker, and react-native.
+	 * Both environments support XMLHttpRequest, but not fully standard globals.
+	 *
+	 * web workers:
+	 *  typeof window -> undefined
+	 *  typeof document -> undefined
+	 *
+	 * react-native:
+	 *  typeof document.createElement -> undefined
+	 */
+	function isStandardBrowserEnv() {
+	  return (
+	    typeof window !== 'undefined' &&
+	    typeof document !== 'undefined' &&
+	    typeof document.createElement === 'function'
+	  );
+	}
+
+	/**
+	 * Iterate over an Array or an Object invoking a function for each item.
+	 *
+	 * If `obj` is an Array callback will be called passing
+	 * the value, index, and complete array for each item.
+	 *
+	 * If 'obj' is an Object callback will be called passing
+	 * the value, key, and complete object for each property.
+	 *
+	 * @param {Object|Array} obj The object to iterate
+	 * @param {Function} fn The callback to invoke for each item
+	 */
+	function forEach(obj, fn) {
+	  // Don't bother if no value provided
+	  if (obj === null || typeof obj === 'undefined') {
+	    return;
+	  }
+
+	  // Force an array if not already something iterable
+	  if (typeof obj !== 'object' && !isArray(obj)) {
+	    /*eslint no-param-reassign:0*/
+	    obj = [obj];
+	  }
+
+	  if (isArray(obj)) {
+	    // Iterate over array values
+	    for (var i = 0, l = obj.length; i < l; i++) {
+	      fn.call(null, obj[i], i, obj);
+	    }
+	  } else {
+	    // Iterate over object keys
+	    for (var key in obj) {
+	      if (Object.prototype.hasOwnProperty.call(obj, key)) {
+	        fn.call(null, obj[key], key, obj);
+	      }
+	    }
+	  }
+	}
+
+	/**
+	 * Accepts varargs expecting each argument to be an object, then
+	 * immutably merges the properties of each object and returns result.
+	 *
+	 * When multiple objects contain the same key the later object in
+	 * the arguments list will take precedence.
+	 *
+	 * Example:
+	 *
+	 * ```js
+	 * var result = merge({foo: 123}, {foo: 456});
+	 * console.log(result.foo); // outputs 456
+	 * ```
+	 *
+	 * @param {Object} obj1 Object to merge
+	 * @returns {Object} Result of all merge properties
+	 */
+	function merge(/* obj1, obj2, obj3, ... */) {
+	  var result = {};
+	  function assignValue(val, key) {
+	    if (typeof result[key] === 'object' && typeof val === 'object') {
+	      result[key] = merge(result[key], val);
+	    } else {
+	      result[key] = val;
+	    }
+	  }
+
+	  for (var i = 0, l = arguments.length; i < l; i++) {
+	    forEach(arguments[i], assignValue);
+	  }
+	  return result;
+	}
+
+	/**
+	 * Extends object a by mutably adding to it the properties of object b.
+	 *
+	 * @param {Object} a The object to be extended
+	 * @param {Object} b The object to copy properties from
+	 * @param {Object} thisArg The object to bind function to
+	 * @return {Object} The resulting value of object a
+	 */
+	function extend(a, b, thisArg) {
+	  forEach(b, function assignValue(val, key) {
+	    if (thisArg && typeof val === 'function') {
+	      a[key] = bind(val, thisArg);
+	    } else {
+	      a[key] = val;
+	    }
+	  });
+	  return a;
+	}
+
+	module.exports = {
+	  isArray: isArray,
+	  isArrayBuffer: isArrayBuffer,
+	  isFormData: isFormData,
+	  isArrayBufferView: isArrayBufferView,
+	  isString: isString,
+	  isNumber: isNumber,
+	  isObject: isObject,
+	  isUndefined: isUndefined,
+	  isDate: isDate,
+	  isFile: isFile,
+	  isBlob: isBlob,
+	  isFunction: isFunction,
+	  isStream: isStream,
+	  isURLSearchParams: isURLSearchParams,
+	  isStandardBrowserEnv: isStandardBrowserEnv,
+	  forEach: forEach,
+	  merge: merge,
+	  extend: extend,
+	  trim: trim
+	};
+
+
+/***/ },
+/* 244 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = function bind(fn, thisArg) {
+	  return function wrap() {
+	    var args = new Array(arguments.length);
+	    for (var i = 0; i < args.length; i++) {
+	      args[i] = arguments[i];
+	    }
+	    return fn.apply(thisArg, args);
+	  };
+	};
+
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var defaults = __webpack_require__(246);
+	var utils = __webpack_require__(243);
+	var InterceptorManager = __webpack_require__(257);
+	var dispatchRequest = __webpack_require__(258);
+	var isAbsoluteURL = __webpack_require__(261);
+	var combineURLs = __webpack_require__(262);
+
+	/**
+	 * Create a new instance of Axios
+	 *
+	 * @param {Object} instanceConfig The default config for the instance
+	 */
+	function Axios(instanceConfig) {
+	  this.defaults = instanceConfig;
+	  this.interceptors = {
+	    request: new InterceptorManager(),
+	    response: new InterceptorManager()
+	  };
+	}
+
+	/**
+	 * Dispatch a request
+	 *
+	 * @param {Object} config The config specific for this request (merged with this.defaults)
+	 */
+	Axios.prototype.request = function request(config) {
+	  /*eslint no-param-reassign:0*/
+	  // Allow for axios('example/url'[, config]) a la fetch API
+	  if (typeof config === 'string') {
+	    config = utils.merge({
+	      url: arguments[0]
+	    }, arguments[1]);
+	  }
+
+	  config = utils.merge(defaults, this.defaults, { method: 'get' }, config);
+
+	  // Support baseURL config
+	  if (config.baseURL && !isAbsoluteURL(config.url)) {
+	    config.url = combineURLs(config.baseURL, config.url);
+	  }
+
+	  // Hook up interceptors middleware
+	  var chain = [dispatchRequest, undefined];
+	  var promise = Promise.resolve(config);
+
+	  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+	    chain.unshift(interceptor.fulfilled, interceptor.rejected);
+	  });
+
+	  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+	    chain.push(interceptor.fulfilled, interceptor.rejected);
+	  });
+
+	  while (chain.length) {
+	    promise = promise.then(chain.shift(), chain.shift());
+	  }
+
+	  return promise;
+	};
+
+	// Provide aliases for supported request methods
+	utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url
+	    }));
+	  };
+	});
+
+	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+	  /*eslint func-names:0*/
+	  Axios.prototype[method] = function(url, data, config) {
+	    return this.request(utils.merge(config || {}, {
+	      method: method,
+	      url: url,
+	      data: data
+	    }));
+	  };
+	});
+
+	module.exports = Axios;
+
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	var utils = __webpack_require__(243);
+	var normalizeHeaderName = __webpack_require__(247);
+
+	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
+	var DEFAULT_CONTENT_TYPE = {
+	  'Content-Type': 'application/x-www-form-urlencoded'
+	};
+
+	function setContentTypeIfUnset(headers, value) {
+	  if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
+	    headers['Content-Type'] = value;
+	  }
+	}
+
+	function getDefaultAdapter() {
+	  var adapter;
+	  if (typeof XMLHttpRequest !== 'undefined') {
+	    // For browsers use XHR adapter
+	    adapter = __webpack_require__(248);
+	  } else if (typeof process !== 'undefined') {
+	    // For node use HTTP adapter
+	    adapter = __webpack_require__(248);
+	  }
+	  return adapter;
+	}
+
+	var defaults = {
+	  adapter: getDefaultAdapter(),
+
+	  transformRequest: [function transformRequest(data, headers) {
+	    normalizeHeaderName(headers, 'Content-Type');
+	    if (utils.isFormData(data) ||
+	      utils.isArrayBuffer(data) ||
+	      utils.isStream(data) ||
+	      utils.isFile(data) ||
+	      utils.isBlob(data)
+	    ) {
+	      return data;
+	    }
+	    if (utils.isArrayBufferView(data)) {
+	      return data.buffer;
+	    }
+	    if (utils.isURLSearchParams(data)) {
+	      setContentTypeIfUnset(headers, 'application/x-www-form-urlencoded;charset=utf-8');
+	      return data.toString();
+	    }
+	    if (utils.isObject(data)) {
+	      setContentTypeIfUnset(headers, 'application/json;charset=utf-8');
+	      return JSON.stringify(data);
+	    }
+	    return data;
+	  }],
+
+	  transformResponse: [function transformResponse(data) {
+	    /*eslint no-param-reassign:0*/
+	    if (typeof data === 'string') {
+	      data = data.replace(PROTECTION_PREFIX, '');
+	      try {
+	        data = JSON.parse(data);
+	      } catch (e) { /* Ignore */ }
+	    }
+	    return data;
+	  }],
+
+	  timeout: 0,
+
+	  xsrfCookieName: 'XSRF-TOKEN',
+	  xsrfHeaderName: 'X-XSRF-TOKEN',
+
+	  maxContentLength: -1,
+
+	  validateStatus: function validateStatus(status) {
+	    return status >= 200 && status < 300;
+	  }
+	};
+
+	defaults.headers = {
+	  common: {
+	    'Accept': 'application/json, text/plain, */*'
+	  }
+	};
+
+	utils.forEach(['delete', 'get', 'head'], function forEachMehtodNoData(method) {
+	  defaults.headers[method] = {};
+	});
+
+	utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+	  defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
+	});
+
+	module.exports = defaults;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(28)))
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	module.exports = function normalizeHeaderName(headers, normalizedName) {
+	  utils.forEach(headers, function processHeader(value, name) {
+	    if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
+	      headers[normalizedName] = value;
+	      delete headers[name];
+	    }
+	  });
+	};
+
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+	var settle = __webpack_require__(249);
+	var buildURL = __webpack_require__(252);
+	var parseHeaders = __webpack_require__(253);
+	var isURLSameOrigin = __webpack_require__(254);
+	var createError = __webpack_require__(250);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(255);
+
+	module.exports = function xhrAdapter(config) {
+	  return new Promise(function dispatchXhrRequest(resolve, reject) {
+	    var requestData = config.data;
+	    var requestHeaders = config.headers;
+
+	    if (utils.isFormData(requestData)) {
+	      delete requestHeaders['Content-Type']; // Let the browser set it
+	    }
+
+	    var request = new XMLHttpRequest();
+	    var loadEvent = 'onreadystatechange';
+	    var xDomain = false;
+
+	    // For IE 8/9 CORS support
+	    // Only supports POST and GET calls and doesn't returns the response headers.
+	    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
+	    if (({"URL":"https://flix-herst.herokuapp.com"}).NODE_ENV !== 'test' &&
+	        typeof window !== 'undefined' &&
+	        window.XDomainRequest && !('withCredentials' in request) &&
+	        !isURLSameOrigin(config.url)) {
+	      request = new window.XDomainRequest();
+	      loadEvent = 'onload';
+	      xDomain = true;
+	      request.onprogress = function handleProgress() {};
+	      request.ontimeout = function handleTimeout() {};
+	    }
+
+	    // HTTP basic authentication
+	    if (config.auth) {
+	      var username = config.auth.username || '';
+	      var password = config.auth.password || '';
+	      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+	    }
+
+	    request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
+
+	    // Set the request timeout in MS
+	    request.timeout = config.timeout;
+
+	    // Listen for ready state
+	    request[loadEvent] = function handleLoad() {
+	      if (!request || (request.readyState !== 4 && !xDomain)) {
+	        return;
+	      }
+
+	      // The request errored out and we didn't get a response, this will be
+	      // handled by onerror instead
+	      // With one exception: request that using file: protocol, most browsers
+	      // will return status as 0 even though it's a successful request
+	      if (request.status === 0 && !(request.responseURL && request.responseURL.indexOf('file:') === 0)) {
+	        return;
+	      }
+
+	      // Prepare the response
+	      var responseHeaders = 'getAllResponseHeaders' in request ? parseHeaders(request.getAllResponseHeaders()) : null;
+	      var responseData = !config.responseType || config.responseType === 'text' ? request.responseText : request.response;
+	      var response = {
+	        data: responseData,
+	        // IE sends 1223 instead of 204 (https://github.com/mzabriskie/axios/issues/201)
+	        status: request.status === 1223 ? 204 : request.status,
+	        statusText: request.status === 1223 ? 'No Content' : request.statusText,
+	        headers: responseHeaders,
+	        config: config,
+	        request: request
+	      };
+
+	      settle(resolve, reject, response);
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Handle low level network errors
+	    request.onerror = function handleError() {
+	      // Real errors are hidden from us by the browser
+	      // onerror should only fire if it's a network error
+	      reject(createError('Network Error', config));
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Handle timeout
+	    request.ontimeout = function handleTimeout() {
+	      reject(createError('timeout of ' + config.timeout + 'ms exceeded', config, 'ECONNABORTED'));
+
+	      // Clean up request
+	      request = null;
+	    };
+
+	    // Add xsrf header
+	    // This is only done if running in a standard browser environment.
+	    // Specifically not if we're in a web worker, or react-native.
+	    if (utils.isStandardBrowserEnv()) {
+	      var cookies = __webpack_require__(256);
+
+	      // Add xsrf header
+	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
+	          cookies.read(config.xsrfCookieName) :
+	          undefined;
+
+	      if (xsrfValue) {
+	        requestHeaders[config.xsrfHeaderName] = xsrfValue;
+	      }
+	    }
+
+	    // Add headers to the request
+	    if ('setRequestHeader' in request) {
+	      utils.forEach(requestHeaders, function setRequestHeader(val, key) {
+	        if (typeof requestData === 'undefined' && key.toLowerCase() === 'content-type') {
+	          // Remove Content-Type if data is undefined
+	          delete requestHeaders[key];
+	        } else {
+	          // Otherwise add header to the request
+	          request.setRequestHeader(key, val);
+	        }
+	      });
+	    }
+
+	    // Add withCredentials to request if needed
+	    if (config.withCredentials) {
+	      request.withCredentials = true;
+	    }
+
+	    // Add responseType to request if needed
+	    if (config.responseType) {
+	      try {
+	        request.responseType = config.responseType;
+	      } catch (e) {
+	        if (request.responseType !== 'json') {
+	          throw e;
+	        }
+	      }
+	    }
+
+	    // Handle progress if needed
+	    if (typeof config.onDownloadProgress === 'function') {
+	      request.addEventListener('progress', config.onDownloadProgress);
+	    }
+
+	    // Not all browsers support upload events
+	    if (typeof config.onUploadProgress === 'function' && request.upload) {
+	      request.upload.addEventListener('progress', config.onUploadProgress);
+	    }
+
+	    if (config.cancelToken) {
+	      // Handle cancellation
+	      config.cancelToken.promise.then(function onCanceled(cancel) {
+	        if (!request) {
+	          return;
+	        }
+
+	        request.abort();
+	        reject(cancel);
+	        // Clean up request
+	        request = null;
+	      });
+	    }
+
+	    if (requestData === undefined) {
+	      requestData = null;
+	    }
+
+	    // Send the request
+	    request.send(requestData);
+	  });
+	};
+
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var createError = __webpack_require__(250);
+
+	/**
+	 * Resolve or reject a Promise based on response status.
+	 *
+	 * @param {Function} resolve A function that resolves the promise.
+	 * @param {Function} reject A function that rejects the promise.
+	 * @param {object} response The response.
+	 */
+	module.exports = function settle(resolve, reject, response) {
+	  var validateStatus = response.config.validateStatus;
+	  // Note: status is not exposed by XDomainRequest
+	  if (!response.status || !validateStatus || validateStatus(response.status)) {
+	    resolve(response);
+	  } else {
+	    reject(createError(
+	      'Request failed with status code ' + response.status,
+	      response.config,
+	      null,
+	      response
+	    ));
+	  }
+	};
+
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var enhanceError = __webpack_require__(251);
+
+	/**
+	 * Create an Error with the specified message, config, error code, and response.
+	 *
+	 * @param {string} message The error message.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The created error.
+	 */
+	module.exports = function createError(message, config, code, response) {
+	  var error = new Error(message);
+	  return enhanceError(error, config, code, response);
+	};
+
+
+/***/ },
+/* 251 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Update an Error with the specified config, error code, and response.
+	 *
+	 * @param {Error} error The error to update.
+	 * @param {Object} config The config.
+	 * @param {string} [code] The error code (for example, 'ECONNABORTED').
+	 @ @param {Object} [response] The response.
+	 * @returns {Error} The error.
+	 */
+	module.exports = function enhanceError(error, config, code, response) {
+	  error.config = config;
+	  if (code) {
+	    error.code = code;
+	  }
+	  error.response = response;
+	  return error;
+	};
+
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	function encode(val) {
+	  return encodeURIComponent(val).
+	    replace(/%40/gi, '@').
+	    replace(/%3A/gi, ':').
+	    replace(/%24/g, '$').
+	    replace(/%2C/gi, ',').
+	    replace(/%20/g, '+').
+	    replace(/%5B/gi, '[').
+	    replace(/%5D/gi, ']');
+	}
+
+	/**
+	 * Build a URL by appending params to the end
+	 *
+	 * @param {string} url The base of the url (e.g., http://www.google.com)
+	 * @param {object} [params] The params to be appended
+	 * @returns {string} The formatted url
+	 */
+	module.exports = function buildURL(url, params, paramsSerializer) {
+	  /*eslint no-param-reassign:0*/
+	  if (!params) {
+	    return url;
+	  }
+
+	  var serializedParams;
+	  if (paramsSerializer) {
+	    serializedParams = paramsSerializer(params);
+	  } else if (utils.isURLSearchParams(params)) {
+	    serializedParams = params.toString();
+	  } else {
+	    var parts = [];
+
+	    utils.forEach(params, function serialize(val, key) {
+	      if (val === null || typeof val === 'undefined') {
+	        return;
+	      }
+
+	      if (utils.isArray(val)) {
+	        key = key + '[]';
+	      }
+
+	      if (!utils.isArray(val)) {
+	        val = [val];
+	      }
+
+	      utils.forEach(val, function parseValue(v) {
+	        if (utils.isDate(v)) {
+	          v = v.toISOString();
+	        } else if (utils.isObject(v)) {
+	          v = JSON.stringify(v);
+	        }
+	        parts.push(encode(key) + '=' + encode(v));
+	      });
+	    });
+
+	    serializedParams = parts.join('&');
+	  }
+
+	  if (serializedParams) {
+	    url += (url.indexOf('?') === -1 ? '?' : '&') + serializedParams;
+	  }
+
+	  return url;
+	};
+
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	/**
+	 * Parse headers into an object
+	 *
+	 * ```
+	 * Date: Wed, 27 Aug 2014 08:58:49 GMT
+	 * Content-Type: application/json
+	 * Connection: keep-alive
+	 * Transfer-Encoding: chunked
+	 * ```
+	 *
+	 * @param {String} headers Headers needing to be parsed
+	 * @returns {Object} Headers parsed into an object
+	 */
+	module.exports = function parseHeaders(headers) {
+	  var parsed = {};
+	  var key;
+	  var val;
+	  var i;
+
+	  if (!headers) { return parsed; }
+
+	  utils.forEach(headers.split('\n'), function parser(line) {
+	    i = line.indexOf(':');
+	    key = utils.trim(line.substr(0, i)).toLowerCase();
+	    val = utils.trim(line.substr(i + 1));
+
+	    if (key) {
+	      parsed[key] = parsed[key] ? parsed[key] + ', ' + val : val;
+	    }
+	  });
+
+	  return parsed;
+	};
+
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+
+	  // Standard browser envs have full support of the APIs needed to test
+	  // whether the request URL is of the same origin as current location.
+	  (function standardBrowserEnv() {
+	    var msie = /(msie|trident)/i.test(navigator.userAgent);
+	    var urlParsingNode = document.createElement('a');
+	    var originURL;
+
+	    /**
+	    * Parse a URL to discover it's components
+	    *
+	    * @param {String} url The URL to be parsed
+	    * @returns {Object}
+	    */
+	    function resolveURL(url) {
+	      var href = url;
+
+	      if (msie) {
+	        // IE needs attribute set twice to normalize properties
+	        urlParsingNode.setAttribute('href', href);
+	        href = urlParsingNode.href;
+	      }
+
+	      urlParsingNode.setAttribute('href', href);
+
+	      // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+	      return {
+	        href: urlParsingNode.href,
+	        protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+	        host: urlParsingNode.host,
+	        search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+	        hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+	        hostname: urlParsingNode.hostname,
+	        port: urlParsingNode.port,
+	        pathname: (urlParsingNode.pathname.charAt(0) === '/') ?
+	                  urlParsingNode.pathname :
+	                  '/' + urlParsingNode.pathname
+	      };
+	    }
+
+	    originURL = resolveURL(window.location.href);
+
+	    /**
+	    * Determine if a URL shares the same origin as the current location
+	    *
+	    * @param {String} requestURL The URL to test
+	    * @returns {boolean} True if URL shares the same origin, otherwise false
+	    */
+	    return function isURLSameOrigin(requestURL) {
+	      var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
+	      return (parsed.protocol === originURL.protocol &&
+	            parsed.host === originURL.host);
+	    };
+	  })() :
+
+	  // Non standard browser envs (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return function isURLSameOrigin() {
+	      return true;
+	    };
+	  })()
+	);
+
+
+/***/ },
+/* 255 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	// btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
+
+	var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+
+	function E() {
+	  this.message = 'String contains an invalid character';
+	}
+	E.prototype = new Error;
+	E.prototype.code = 5;
+	E.prototype.name = 'InvalidCharacterError';
+
+	function btoa(input) {
+	  var str = String(input);
+	  var output = '';
+	  for (
+	    // initialize result and counter
+	    var block, charCode, idx = 0, map = chars;
+	    // if the next str index does not exist:
+	    //   change the mapping table to "="
+	    //   check if d has no fractional digits
+	    str.charAt(idx | 0) || (map = '=', idx % 1);
+	    // "8 - idx % 1 * 8" generates the sequence 2, 4, 6, 8
+	    output += map.charAt(63 & block >> 8 - idx % 1 * 8)
+	  ) {
+	    charCode = str.charCodeAt(idx += 3 / 4);
+	    if (charCode > 0xFF) {
+	      throw new E();
+	    }
+	    block = block << 8 | charCode;
+	  }
+	  return output;
+	}
+
+	module.exports = btoa;
+
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	module.exports = (
+	  utils.isStandardBrowserEnv() ?
+
+	  // Standard browser envs support document.cookie
+	  (function standardBrowserEnv() {
+	    return {
+	      write: function write(name, value, expires, path, domain, secure) {
+	        var cookie = [];
+	        cookie.push(name + '=' + encodeURIComponent(value));
+
+	        if (utils.isNumber(expires)) {
+	          cookie.push('expires=' + new Date(expires).toGMTString());
+	        }
+
+	        if (utils.isString(path)) {
+	          cookie.push('path=' + path);
+	        }
+
+	        if (utils.isString(domain)) {
+	          cookie.push('domain=' + domain);
+	        }
+
+	        if (secure === true) {
+	          cookie.push('secure');
+	        }
+
+	        document.cookie = cookie.join('; ');
+	      },
+
+	      read: function read(name) {
+	        var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
+	        return (match ? decodeURIComponent(match[3]) : null);
+	      },
+
+	      remove: function remove(name) {
+	        this.write(name, '', Date.now() - 86400000);
+	      }
+	    };
+	  })() :
+
+	  // Non standard browser env (web workers, react-native) lack needed support.
+	  (function nonStandardBrowserEnv() {
+	    return {
+	      write: function write() {},
+	      read: function read() { return null; },
+	      remove: function remove() {}
+	    };
+	  })()
+	);
+
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	function InterceptorManager() {
+	  this.handlers = [];
+	}
+
+	/**
+	 * Add a new interceptor to the stack
+	 *
+	 * @param {Function} fulfilled The function to handle `then` for a `Promise`
+	 * @param {Function} rejected The function to handle `reject` for a `Promise`
+	 *
+	 * @return {Number} An ID used to remove interceptor later
+	 */
+	InterceptorManager.prototype.use = function use(fulfilled, rejected) {
+	  this.handlers.push({
+	    fulfilled: fulfilled,
+	    rejected: rejected
+	  });
+	  return this.handlers.length - 1;
+	};
+
+	/**
+	 * Remove an interceptor from the stack
+	 *
+	 * @param {Number} id The ID that was returned by `use`
+	 */
+	InterceptorManager.prototype.eject = function eject(id) {
+	  if (this.handlers[id]) {
+	    this.handlers[id] = null;
+	  }
+	};
+
+	/**
+	 * Iterate over all the registered interceptors
+	 *
+	 * This method is particularly useful for skipping over any
+	 * interceptors that may have become `null` calling `eject`.
+	 *
+	 * @param {Function} fn The function to call for each interceptor
+	 */
+	InterceptorManager.prototype.forEach = function forEach(fn) {
+	  utils.forEach(this.handlers, function forEachHandler(h) {
+	    if (h !== null) {
+	      fn(h);
+	    }
+	  });
+	};
+
+	module.exports = InterceptorManager;
+
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+	var transformData = __webpack_require__(259);
+	var isCancel = __webpack_require__(260);
+	var defaults = __webpack_require__(246);
+
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	function throwIfCancellationRequested(config) {
+	  if (config.cancelToken) {
+	    config.cancelToken.throwIfRequested();
+	  }
+	}
+
+	/**
+	 * Dispatch a request to the server using the configured adapter.
+	 *
+	 * @param {object} config The config that is to be used for the request
+	 * @returns {Promise} The Promise to be fulfilled
+	 */
+	module.exports = function dispatchRequest(config) {
+	  throwIfCancellationRequested(config);
+
+	  // Ensure headers exist
+	  config.headers = config.headers || {};
+
+	  // Transform request data
+	  config.data = transformData(
+	    config.data,
+	    config.headers,
+	    config.transformRequest
+	  );
+
+	  // Flatten headers
+	  config.headers = utils.merge(
+	    config.headers.common || {},
+	    config.headers[config.method] || {},
+	    config.headers || {}
+	  );
+
+	  utils.forEach(
+	    ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
+	    function cleanHeaderConfig(method) {
+	      delete config.headers[method];
+	    }
+	  );
+
+	  var adapter = config.adapter || defaults.adapter;
+
+	  return adapter(config).then(function onAdapterResolution(response) {
+	    throwIfCancellationRequested(config);
+
+	    // Transform response data
+	    response.data = transformData(
+	      response.data,
+	      response.headers,
+	      config.transformResponse
+	    );
+
+	    return response;
+	  }, function onAdapterRejection(reason) {
+	    if (!isCancel(reason)) {
+	      throwIfCancellationRequested(config);
+
+	      // Transform response data
+	      if (reason && reason.response) {
+	        reason.response.data = transformData(
+	          reason.response.data,
+	          reason.response.headers,
+	          config.transformResponse
+	        );
+	      }
+	    }
+
+	    return Promise.reject(reason);
+	  });
+	};
+
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var utils = __webpack_require__(243);
+
+	/**
+	 * Transform the data for a request or a response
+	 *
+	 * @param {Object|String} data The data to be transformed
+	 * @param {Array} headers The headers for the request or response
+	 * @param {Array|Function} fns A single function or Array of functions
+	 * @returns {*} The resulting transformed data
+	 */
+	module.exports = function transformData(data, headers, fns) {
+	  /*eslint no-param-reassign:0*/
+	  utils.forEach(fns, function transform(fn) {
+	    data = fn(data, headers);
+	  });
+
+	  return data;
+	};
+
+
+/***/ },
+/* 260 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = function isCancel(value) {
+	  return !!(value && value.__CANCEL__);
+	};
+
+
+/***/ },
+/* 261 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Determines whether the specified URL is absolute
+	 *
+	 * @param {string} url The URL to test
+	 * @returns {boolean} True if the specified URL is absolute, otherwise false
+	 */
+	module.exports = function isAbsoluteURL(url) {
+	  // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+	  // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+	  // by any combination of letters, digits, plus, period, or hyphen.
+	  return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
+	};
+
+
+/***/ },
+/* 262 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Creates a new URL by combining the specified URLs
+	 *
+	 * @param {string} baseURL The base URL
+	 * @param {string} relativeURL The relative URL
+	 * @returns {string} The combined URL
+	 */
+	module.exports = function combineURLs(baseURL, relativeURL) {
+	  return baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '');
+	};
+
+
+/***/ },
+/* 263 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * A `Cancel` is an object that is thrown when an operation is canceled.
+	 *
+	 * @class
+	 * @param {string=} message The message.
+	 */
+	function Cancel(message) {
+	  this.message = message;
+	}
+
+	Cancel.prototype.toString = function toString() {
+	  return 'Cancel' + (this.message ? ': ' + this.message : '');
+	};
+
+	Cancel.prototype.__CANCEL__ = true;
+
+	module.exports = Cancel;
+
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var Cancel = __webpack_require__(263);
+
+	/**
+	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
+	 *
+	 * @class
+	 * @param {Function} executor The executor function.
+	 */
+	function CancelToken(executor) {
+	  if (typeof executor !== 'function') {
+	    throw new TypeError('executor must be a function.');
+	  }
+
+	  var resolvePromise;
+	  this.promise = new Promise(function promiseExecutor(resolve) {
+	    resolvePromise = resolve;
+	  });
+
+	  var token = this;
+	  executor(function cancel(message) {
+	    if (token.reason) {
+	      // Cancellation has already been requested
+	      return;
+	    }
+
+	    token.reason = new Cancel(message);
+	    resolvePromise(token.reason);
+	  });
+	}
+
+	/**
+	 * Throws a `Cancel` if cancellation has been requested.
+	 */
+	CancelToken.prototype.throwIfRequested = function throwIfRequested() {
+	  if (this.reason) {
+	    throw this.reason;
+	  }
+	};
+
+	/**
+	 * Returns an object that contains a new `CancelToken` and a function that, when called,
+	 * cancels the `CancelToken`.
+	 */
+	CancelToken.source = function source() {
+	  var cancel;
+	  var token = new CancelToken(function executor(c) {
+	    cancel = c;
+	  });
+	  return {
+	    token: token,
+	    cancel: cancel
+	  };
+	};
+
+	module.exports = CancelToken;
+
+
+/***/ },
+/* 265 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Syntactic sugar for invoking a function and expanding an array for arguments.
+	 *
+	 * Common use case would be to use `Function.prototype.apply`.
+	 *
+	 *  ```js
+	 *  function f(x, y, z) {}
+	 *  var args = [1, 2, 3];
+	 *  f.apply(null, args);
+	 *  ```
+	 *
+	 * With `spread` this example can be re-written.
+	 *
+	 *  ```js
+	 *  spread(function(x, y, z) {})([1, 2, 3]);
+	 *  ```
+	 *
+	 * @param {Function} callback
+	 * @returns {Function}
+	 */
+	module.exports = function spread(callback) {
+	  return function wrap(arr) {
+	    return callback.apply(null, arr);
+	  };
+	};
+
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -26790,7 +28282,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Nav = __webpack_require__(242);
+	var _axios = __webpack_require__(241);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _Nav = __webpack_require__(267);
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -26828,7 +28324,7 @@
 	    value: function checkLogIn() {
 	      var _this2 = this;
 
-	      axios.get(("http://127.0.0.1:3000") + '/isLoggedIn').then(function (res) {
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/isLoggedIn').then(function (res) {
 	        console.log(res.data.user);
 	        _this2.setState({
 	          isLoggedIn: res.data.user
@@ -26841,7 +28337,7 @@
 	    key: 'handleLogoutClick',
 	    value: function handleLogoutClick() {
 	      console.log('hit');
-	      axios.get(("http://127.0.0.1:3000") + '/logout').then(function (res) {
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/logout').then(function (res) {
 	        console.log(hit);
 	      }).catch(function (err) {
 	        console.log(err);
@@ -26872,7 +28368,7 @@
 	exports.default = NavContainer;
 
 /***/ },
-/* 242 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26887,7 +28383,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NavItem = __webpack_require__(257);
+	var _NavItem = __webpack_require__(268);
 
 	var _NavItem2 = _interopRequireDefault(_NavItem);
 
@@ -27023,7 +28519,7 @@
 	exports.default = Nav;
 
 /***/ },
-/* 243 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27038,7 +28534,80 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _HomePage = __webpack_require__(244);
+	var _reactRouter = __webpack_require__(184);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NavItem = function (_Component) {
+	  _inherits(NavItem, _Component);
+
+	  function NavItem() {
+	    _classCallCheck(this, NavItem);
+
+	    return _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).apply(this, arguments));
+	  }
+
+	  _createClass(NavItem, [{
+	    key: 'render',
+	    value: function render() {
+	      var router = this.context.router;
+	      var _props = this.props,
+	          index = _props.index,
+	          to = _props.to,
+	          children = _props.children;
+
+	      console.log(this.props);
+	      var isActive = router.isActive(to, true);
+	      var LinkComponent = index ? _reactRouter.Link : _reactRouter.IndexLink;
+
+	      return _react2.default.createElement(
+	        'li',
+	        { className: isActive ? 'active' : '' },
+	        _react2.default.createElement(
+	          LinkComponent,
+	          this.props,
+	          children
+	        )
+	      );
+	    }
+	  }]);
+
+	  return NavItem;
+	}(_react.Component);
+
+	NavItem.contextTypes = {
+	  router: _react2.default.PropTypes.object
+	};
+
+	exports.default = NavItem;
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _axios = __webpack_require__(241);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _HomePage = __webpack_require__(270);
 
 	var _HomePage2 = _interopRequireDefault(_HomePage);
 
@@ -27099,7 +28668,7 @@
 	        }
 	        return c;
 	      });
-	      axios.put(("http://127.0.0.1:3000") + '/cards/' + card._id + '/' + this.props.userID).then(function (res) {
+	      _axios2.default.put(("https://flix-herst.herokuapp.com") + '/cards/' + card._id + '/' + this.props.userID).then(function (res) {
 	        console.log(res);
 	        _this2.setState({ cards: cards });
 	      }).catch(function (err) {
@@ -27111,7 +28680,7 @@
 	    value: function getAllCards() {
 	      var _this3 = this;
 
-	      axios.get(("http://127.0.0.1:3000") + '/cards').then(function (res) {
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/cards').then(function (res) {
 	        console.log(res);
 	        _this3.setState({ cards: res.data.cards });
 	      }).catch(function (err) {
@@ -27145,7 +28714,7 @@
 	exports.default = HomePageContainer;
 
 /***/ },
-/* 244 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27160,7 +28729,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Card = __webpack_require__(256);
+	var _Card = __webpack_require__(271);
 
 	var _Card2 = _interopRequireDefault(_Card);
 
@@ -27203,16 +28772,15 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var view = this.props.isLoggedIn ? 'read-write' : 'read-only';
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'cards' },
+	        { id: 'wrapper' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'All Cards'
-	        ),
-	        _react2.default.createElement('hr', null),
-	        this.renderCards()
+	          'div',
+	          { id: 'columns' },
+	          this.renderCards()
+	        )
 	      );
 	    }
 	  }]);
@@ -27223,8 +28791,161 @@
 	exports.default = Home;
 
 /***/ },
-/* 245 */,
-/* 246 */
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _styles = __webpack_require__(272);
+
+	var _styles2 = _interopRequireDefault(_styles);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card(props) {
+	    _classCallCheck(this, Card);
+
+	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
+	  }
+
+	  _createClass(Card, [{
+	    key: 'renderCard',
+	    value: function renderCard(view, card) {
+	      var _this2 = this;
+
+	      switch (view) {
+	        case 'read-write':
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'pin' },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: card.imgURL }),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                card.tagLine
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'card-like-btn' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { onClick: function onClick() {
+	                        _this2.props.handleLikeClick(card);
+	                      }, className: 'btn btn-primary btn-xs' },
+	                    'Like ',
+	                    card.likes.length
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'card-avatar' },
+	                  _react2.default.createElement('img', { onClick: function onClick() {
+	                      _this2.props.handleGetUserCards(card);
+	                    }, src: card.twitterIMG })
+	                )
+	              )
+	            )
+	          );
+	        case 'read-only':
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'pin' },
+	            _react2.default.createElement('img', { src: card.imgURL }),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              card.tagLine
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-like-btn disable-click' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'btn btn-primary btn-xs' },
+	                  'Like ',
+	                  card.likes.length
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card-avatar disable-click' },
+	                _react2.default.createElement('img', { src: card.twitterIMG })
+	              )
+	            )
+	          );
+	        default:
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'pin' },
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                'button',
+	                { onClick: function onClick() {
+	                    _this2.props.handleRemoveCardClick(card);
+	                  }, type: 'button', className: 'close' },
+	                '\xD7'
+	              ),
+	              _react2.default.createElement('img', { src: card.imgURL }),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                card.tagLine
+	              ),
+	              _react2.default.createElement('img', { src: card.twitterID })
+	            )
+	          );
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var card = this.props.card;
+	      var view = this.props.view;
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.renderCard(view, card)
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	}(_react.Component);
+
+	exports.default = Card;
+
+/***/ },
+/* 272 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27234,9 +28955,6 @@
 	});
 	var styles = {
 	  card: {
-	    width: '20%',
-	    height: '30%',
-	    overflow: 'auto',
 	    margin: '15px'
 	  },
 	  notAllowed: {
@@ -27254,7 +28972,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 247 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27269,7 +28987,203 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Profile = __webpack_require__(248);
+	var _axios = __webpack_require__(241);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _UserCards = __webpack_require__(274);
+
+	var _UserCards2 = _interopRequireDefault(_UserCards);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var UserCardsContainer = function (_Component) {
+	  _inherits(UserCardsContainer, _Component);
+
+	  function UserCardsContainer(props) {
+	    _classCallCheck(this, UserCardsContainer);
+
+	    var _this = _possibleConstructorReturn(this, (UserCardsContainer.__proto__ || Object.getPrototypeOf(UserCardsContainer)).call(this, props));
+
+	    _this.state = {
+	      userCards: []
+	    };
+	    return _this;
+	  }
+
+	  _createClass(UserCardsContainer, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getUserCards();
+	    }
+	  }, {
+	    key: 'checkIfCardWasLiked',
+	    value: function checkIfCardWasLiked(card) {
+	      var userID = this.props.userID;
+	      var liker = card.likes.indexOf(userID);
+	      console.log(liker);
+	      if (liker != -1) {
+	        card.likes.splice(liker, 1);
+	      } else {
+	        card.likes.push(userID);
+	      }
+	    }
+	  }, {
+	    key: 'handleLikeClick',
+	    value: function handleLikeClick(card) {
+	      var _this2 = this;
+
+	      var userId = localStorage.userId;
+	      var cards = this.state.userCards.map(function (c) {
+	        if (c._id == card._id) {
+	          console.log(c.likes);
+	          _this2.checkIfCardWasLiked(c);
+	          console.log(c.likes);
+	        }
+	        return c;
+	      });
+	      _axios2.default.put(("https://flix-herst.herokuapp.com") + '/cards/' + card._id + '/' + userId).then(function (res) {
+	        console.log(res);
+	        _this2.setState({ cards: cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'getUserCards',
+	    value: function getUserCards() {
+	      var _this3 = this;
+
+	      var userId = localStorage.userId;
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/users/' + userId + '/cards').then(function (res) {
+	        console.log(res);
+	        _this3.setState({ userCards: res.data.cards });
+	      }).catch(function (err) {
+	        console.log(err);
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(_UserCards2.default, { userCards: this.state.userCards,
+	        isLoggedIn: this.props.userID,
+	        handleLikeClick: this.handleLikeClick.bind(this) });
+	    }
+	  }]);
+
+	  return UserCardsContainer;
+	}(_react.Component);
+
+	exports.default = UserCardsContainer;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Card = __webpack_require__(271);
+
+	var _Card2 = _interopRequireDefault(_Card);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var UserCards = function (_Component) {
+	  _inherits(UserCards, _Component);
+
+	  function UserCards(props) {
+	    _classCallCheck(this, UserCards);
+
+	    return _possibleConstructorReturn(this, (UserCards.__proto__ || Object.getPrototypeOf(UserCards)).call(this, props));
+	  }
+
+	  _createClass(UserCards, [{
+	    key: 'renderCards',
+	    value: function renderCards() {
+	      var _this2 = this;
+
+	      var view = this.props.isLoggedIn ? 'read-write' : 'read-only';
+	      if (this.props.userCards.length < 1) {
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-12' },
+	          'No cards created yet.'
+	        );
+	      }
+	      return this.props.userCards.map(function (card, index) {
+	        return _react2.default.createElement(_Card2.default, { key: index, card: card, view: view,
+	          handleLikeClick: _this2.props.handleLikeClick });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'wrapper' },
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'User\'s Cards'
+	        ),
+	        _react2.default.createElement('hr', null),
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'columns' },
+	          this.renderCards()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return UserCards;
+	}(_react.Component);
+
+	exports.default = UserCards;
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _axios = __webpack_require__(241);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _Profile = __webpack_require__(276);
 
 	var _Profile2 = _interopRequireDefault(_Profile);
 
@@ -27312,7 +29226,7 @@
 	      var userID = localStorage.userID;
 
 	      if (!userID) return;
-	      axios.get(("http://127.0.0.1:3000") + '/users/' + userID + '/cards').then(function (res) {
+	      _axios2.default.get(("https://flix-herst.herokuapp.com") + '/users/' + userID + '/cards').then(function (res) {
 	        console.log(res);
 	        _this2.setState({ cards: res.data.cards });
 	      }).catch(function (err) {
@@ -27339,7 +29253,7 @@
 	      // return;
 	      var cards = this.state.cards;
 
-	      axios.post(("http://127.0.0.1:3000") + '/users/' + this.props.userID + '/cards', {
+	      _axios2.default.post(("https://flix-herst.herokuapp.com") + '/users/' + this.props.userID + '/cards', {
 	        tagLine: this.state.tagLine,
 	        imgURL: this.state.imgURL,
 	        twitterIMG: this.props.twitterIMG
@@ -27358,7 +29272,7 @@
 	      var cards = this.state.cards.filter(function (c) {
 	        return c._id != card._id;
 	      });
-	      axios.delete(("http://127.0.0.1:3000") + '/users/' + card._owner + '/cards/' + card._id).then(function (res) {
+	      _axios2.default.delete(("https://flix-herst.herokuapp.com") + '/users/' + card._owner + '/cards/' + card._id).then(function (res) {
 	        console.log(res);
 	        _this4.setState({ cards: cards });
 	      }).catch(function (err) {
@@ -27389,7 +29303,7 @@
 	exports.default = ProfileContainer;
 
 /***/ },
-/* 248 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27404,15 +29318,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Card = __webpack_require__(256);
+	var _Card = __webpack_require__(271);
 
 	var _Card2 = _interopRequireDefault(_Card);
 
-	var _CreateCard = __webpack_require__(250);
+	var _CreateCard = __webpack_require__(277);
 
 	var _CreateCard2 = _interopRequireDefault(_CreateCard);
 
-	var _styles = __webpack_require__(252);
+	var _styles = __webpack_require__(279);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27469,8 +29383,12 @@
 	          'data-toggle': 'modal', 'data-target': '#myModal' }),
 	        _react2.default.createElement(
 	          'div',
-	          { style: _styles2.default.cards, className: 'row' },
-	          this.renderCards()
+	          { id: 'wrapper' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'columns' },
+	            this.renderCards()
+	          )
 	        ),
 	        _react2.default.createElement(_CreateCard2.default, { handleImgChange: this.props.handleImgChange,
 	          twitterIMG: this.props.twitterIMG,
@@ -27487,8 +29405,7 @@
 	exports.default = Profile;
 
 /***/ },
-/* 249 */,
-/* 250 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27503,7 +29420,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _styles = __webpack_require__(251);
+	var _styles = __webpack_require__(278);
 
 	var _styles2 = _interopRequireDefault(_styles);
 
@@ -27607,7 +29524,7 @@
 	exports.default = CreateCard;
 
 /***/ },
-/* 251 */
+/* 278 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27628,7 +29545,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 252 */
+/* 279 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27646,7 +29563,7 @@
 	exports.default = styles;
 
 /***/ },
-/* 253 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27697,405 +29614,6 @@
 	}(_react.Component);
 
 	exports.default = Login;
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _UserCards = __webpack_require__(255);
-
-	var _UserCards2 = _interopRequireDefault(_UserCards);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserCardsContainer = function (_Component) {
-	  _inherits(UserCardsContainer, _Component);
-
-	  function UserCardsContainer(props) {
-	    _classCallCheck(this, UserCardsContainer);
-
-	    var _this = _possibleConstructorReturn(this, (UserCardsContainer.__proto__ || Object.getPrototypeOf(UserCardsContainer)).call(this, props));
-
-	    _this.state = {
-	      userCards: []
-	    };
-	    return _this;
-	  }
-
-	  _createClass(UserCardsContainer, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.getUserCards();
-	    }
-	  }, {
-	    key: 'checkIfCardWasLiked',
-	    value: function checkIfCardWasLiked(card) {
-	      var userID = this.props.userID;
-	      var liker = card.likes.indexOf(userID);
-	      console.log(liker);
-	      if (liker != -1) {
-	        card.likes.splice(liker, 1);
-	      } else {
-	        card.likes.push(userID);
-	      }
-	    }
-	  }, {
-	    key: 'handleLikeClick',
-	    value: function handleLikeClick(card) {
-	      var _this2 = this;
-
-	      var userId = localStorage.userId;
-	      var cards = this.state.userCards.map(function (c) {
-	        if (c._id == card._id) {
-	          console.log(c.likes);
-	          _this2.checkIfCardWasLiked(c);
-	          console.log(c.likes);
-	        }
-	        return c;
-	      });
-	      axios.put(("http://127.0.0.1:3000") + '/cards/' + card._id + '/' + userId).then(function (res) {
-	        console.log(res);
-	        _this2.setState({ cards: cards });
-	      }).catch(function (err) {
-	        console.log(err);
-	      });
-	    }
-	  }, {
-	    key: 'getUserCards',
-	    value: function getUserCards() {
-	      var _this3 = this;
-
-	      var userId = localStorage.userId;
-	      axios.get(("http://127.0.0.1:3000") + '/users/' + userId + '/cards').then(function (res) {
-	        console.log(res);
-	        _this3.setState({ userCards: res.data.cards });
-	      }).catch(function (err) {
-	        console.log(err);
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(_UserCards2.default, { userCards: this.state.userCards,
-	        isLoggedIn: this.props.userID,
-	        handleLikeClick: this.handleLikeClick.bind(this) });
-	    }
-	  }]);
-
-	  return UserCardsContainer;
-	}(_react.Component);
-
-	exports.default = UserCardsContainer;
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Card = __webpack_require__(256);
-
-	var _Card2 = _interopRequireDefault(_Card);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserCards = function (_Component) {
-	  _inherits(UserCards, _Component);
-
-	  function UserCards(props) {
-	    _classCallCheck(this, UserCards);
-
-	    return _possibleConstructorReturn(this, (UserCards.__proto__ || Object.getPrototypeOf(UserCards)).call(this, props));
-	  }
-
-	  _createClass(UserCards, [{
-	    key: 'renderCards',
-	    value: function renderCards() {
-	      var _this2 = this;
-
-	      var view = this.props.isLoggedIn ? 'read-write' : 'read-only';
-	      if (this.props.userCards.length < 1) {
-	        return _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-12' },
-	          'No cards created yet.'
-	        );
-	      }
-	      return this.props.userCards.map(function (card, index) {
-	        return _react2.default.createElement(_Card2.default, { key: index, card: card, view: view,
-	          handleLikeClick: _this2.props.handleLikeClick });
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'User\'s Cards'
-	        ),
-	        _react2.default.createElement('hr', null),
-	        this.renderCards()
-	      );
-	    }
-	  }]);
-
-	  return UserCards;
-	}(_react.Component);
-
-	exports.default = UserCards;
-
-/***/ },
-/* 256 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _styles = __webpack_require__(246);
-
-	var _styles2 = _interopRequireDefault(_styles);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Card = function (_Component) {
-	  _inherits(Card, _Component);
-
-	  function Card(props) {
-	    _classCallCheck(this, Card);
-
-	    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-	  }
-
-	  _createClass(Card, [{
-	    key: 'renderCard',
-	    value: function renderCard(view, card) {
-	      var _this2 = this;
-
-	      switch (view) {
-	        case 'read-write':
-	          return _react2.default.createElement(
-	            'div',
-	            { style: _styles2.default.card, className: 'card' },
-	            _react2.default.createElement('img', { src: card.imgURL }),
-	            _react2.default.createElement(
-	              'h5',
-	              { style: _styles2.default.tagLine },
-	              card.tagLine
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              null,
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'card-like-btn' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { onClick: function onClick() {
-	                      _this2.props.handleLikeClick(card);
-	                    }, className: 'btn btn-primary btn-xs' },
-	                  'Like ',
-	                  card.likes.length
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'card-avatar' },
-	                _react2.default.createElement('img', { onClick: function onClick() {
-	                    _this2.props.handleGetUserCards(card);
-	                  }, src: card.twitterIMG })
-	              )
-	            )
-	          );
-	        case 'read-only':
-	          return _react2.default.createElement(
-	            'div',
-	            { style: _styles2.default.card, className: 'card' },
-	            _react2.default.createElement('img', { src: card.imgURL }),
-	            _react2.default.createElement(
-	              'h5',
-	              { style: _styles2.default.tagLine },
-	              card.tagLine
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              null,
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'card-like-btn' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { style: _styles2.default.notAllowed, className: 'btn btn-primary btn-xs' },
-	                  'Like ',
-	                  card.likes.length
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'card-avatar', style: _styles2.default.notAllowed },
-	                _react2.default.createElement('img', { src: card.twitterIMG })
-	              )
-	            )
-	          );
-	        default:
-	          return _react2.default.createElement(
-	            'div',
-	            { style: _styles2.default.card, className: 'card' },
-	            _react2.default.createElement(
-	              'button',
-	              { onClick: function onClick() {
-	                  _this2.props.handleRemoveCardClick(card);
-	                }, type: 'button', className: 'close' },
-	              '\xD7'
-	            ),
-	            _react2.default.createElement('img', { src: card.imgURL }),
-	            _react2.default.createElement(
-	              'h5',
-	              { style: _styles2.default.tagLine },
-	              card.tagLine
-	            ),
-	            _react2.default.createElement('img', { src: card.twitterID })
-	          );
-	      }
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var card = this.props.card;
-	      var view = this.props.view;
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        this.renderCard(view, card)
-	      );
-	    }
-	  }]);
-
-	  return Card;
-	}(_react.Component);
-
-	exports.default = Card;
-
-/***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(184);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var NavItem = function (_Component) {
-	  _inherits(NavItem, _Component);
-
-	  function NavItem() {
-	    _classCallCheck(this, NavItem);
-
-	    return _possibleConstructorReturn(this, (NavItem.__proto__ || Object.getPrototypeOf(NavItem)).apply(this, arguments));
-	  }
-
-	  _createClass(NavItem, [{
-	    key: 'render',
-	    value: function render() {
-	      var router = this.context.router;
-	      var _props = this.props,
-	          index = _props.index,
-	          to = _props.to,
-	          children = _props.children;
-
-	      console.log(this.props);
-	      var isActive = router.isActive(to, true);
-	      var LinkComponent = index ? _reactRouter.Link : _reactRouter.IndexLink;
-
-	      return _react2.default.createElement(
-	        'li',
-	        { className: isActive ? 'active' : '' },
-	        _react2.default.createElement(
-	          LinkComponent,
-	          this.props,
-	          children
-	        )
-	      );
-	    }
-	  }]);
-
-	  return NavItem;
-	}(_react.Component);
-
-	NavItem.contextTypes = {
-	  router: _react2.default.PropTypes.object
-	};
-
-	exports.default = NavItem;
 
 /***/ }
 /******/ ]);

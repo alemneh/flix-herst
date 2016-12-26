@@ -19,10 +19,14 @@ class Home extends Component {
   }
 
   render() {
+    const view = this.props.isLoggedIn ? 'read-write' : 'read-only';
     return (
-      <div id="cards">
-        <h1>All Cards</h1><hr />
-        { this.renderCards() }
+      <div id="wrapper">
+    	   <div id="columns">
+
+          {/* <h1>All Cards</h1><hr /> */}
+          { this.renderCards() }
+        </div>
       </div>
     )
   }

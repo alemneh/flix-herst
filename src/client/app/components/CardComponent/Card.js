@@ -10,41 +10,47 @@ class Card extends Component {
     switch(view) {
       case 'read-write':
         return(
-          <div style={ Styles.card} className="card">
-            <img src={card.imgURL} />
-            <h5 style={ Styles.tagLine }>{ card.tagLine }</h5>
+          <div  className="pin">
             <div>
-              <div className="card-like-btn">
-                <a onClick={() => {this.props.handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
-              </div>
-              <div className="card-avatar">
-                <img onClick={() => { this.props.handleGetUserCards(card) }} src={ card.twitterIMG } />
+              <img src={card.imgURL} />
+              <p>{ card.tagLine }</p>
+              {/* <h5 style={ Styles.tagLine }>{ card.tagLine }</h5> */}
+              <div>
+                <div className="card-like-btn">
+                  <a onClick={() => {this.props.handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+                </div>
+                <div className="card-avatar">
+                  <img onClick={() => { this.props.handleGetUserCards(card) }} src={ card.twitterIMG } />
+                </div>
               </div>
             </div>
           </div>
         )
       case 'read-only':
         return (
-          <div style={ Styles.card} className="card">
-            <img src={card.imgURL} />
-            <h5 style={ Styles.tagLine }>{ card.tagLine }</h5>
-            <div>
-              <div className="card-like-btn" >
-                <a style={Styles.notAllowed}  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+          <div className="pin">
+              <img src={card.imgURL} />
+              <p>{card.tagLine}</p>
+              <div>
+                <div className="card-like-btn disable-click">
+                  <a className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+                </div>
+                <div className="card-avatar disable-click">
+                  <img src={ card.twitterIMG } />
+                </div>
               </div>
-              <div className="card-avatar" style={Styles.notAllowed}>
-                <img src={ card.twitterIMG } />
-              </div>
-            </div>
           </div>
         )
       default:
         return (
-          <div style={ Styles.card} className="card">
-            <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
-            <img src={card.imgURL} />
-            <h5 style={ Styles.tagLine }>{ card.tagLine }</h5>
-            <img src={ card.twitterID } />
+          <div  className="pin">
+            <div>
+              <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
+              <img src={card.imgURL} />
+              <p>{card.tagLine}</p>
+              {/* <h5 style={ Styles.tagLine }>{ card.tagLine }</h5> */}
+              <img src={ card.twitterID } />
+            </div>
           </div>
         )
     }

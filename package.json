@@ -9,6 +9,7 @@
   "author": "Alumneh Asefa",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
@@ -23,6 +24,8 @@
     "passport-twitter": "^1.0.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-masonry-component": "^4.4.0",
+    "react-masonry-layout": "^0.2.3",
     "react-router": "^3.0.0",
     "webpack": "^1.14.0"
   },

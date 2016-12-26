@@ -21,9 +21,11 @@ class UserCards extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>User's Cards</h1><hr />
-        { this.renderCards() }
+      <div id="wrapper">
+      <h1>User's Cards</h1><hr />
+        <div id="columns">
+          { this.renderCards() }
+        </div>
       </div>
     )
   }
