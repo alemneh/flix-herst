@@ -44,7 +44,7 @@ var config = {
       }
     ]
   },
-  plugins: [definePlugin]
+  plugins: [definePlugin, optimizeBundle]
 };
 
 
