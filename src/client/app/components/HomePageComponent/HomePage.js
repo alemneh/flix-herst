@@ -22,7 +22,7 @@ class Home extends Component {
     const view = this.props.isLoggedIn ? 'read-write' : 'read-only';
     return (
       <div id="wrapper">
-    	   <div id="columns">
+    	   <div id="columns" >
 
           {/* <h1>All Cards</h1><hr /> */}
           { this.renderCards() }

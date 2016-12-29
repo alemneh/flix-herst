@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Styles from './styles';
+require('./styles-card.scss');
 
 class Card extends Component {
   constructor(props) {
@@ -30,10 +30,10 @@ class Card extends Component {
         return (
           <div className="pin">
               <img src={card.imgURL} />
-              <p>{card.tagLine}</p>
+              <p className="red" >{card.tagLine}</p>
               <div>
                 <div className="card-like-btn disable-click">
-                  <a className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+                  <a className="btn btn-primary btn-xs red">Like {card.likes.length}</a>
                 </div>
                 <div className="card-avatar disable-click">
                   <img src={ card.twitterIMG } />
