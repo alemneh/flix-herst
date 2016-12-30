@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import NavContainer from './containers/NavContainer/Nav';
+import Footer from './components/FooterComponent/Footer';
 import { browserHistory } from 'react-router';
 
 class App extends Component {
@@ -49,6 +50,7 @@ class App extends Component {
           userID: this.state.userID,
           cards: this.state.cards
         }) }
+        <Footer />
       </div>
     )
   }
