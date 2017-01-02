@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import HomePage from '../../components/HomePageComponent/HomePage';
 import { browserHistory } from 'react-router';
+import { connect } from 'react-redux';
+import { fetchCards } from '../../actions/cardsAction';
 
 // helper for checking if user already liked card
 
@@ -49,14 +51,8 @@ class HomePageContainer extends Component {
   }
 
   getAllCards() {
-    axios.get(process.env.URL + '/cards')
-      .then((res) => {
-        console.log(res);
-        this.setState({ cards: res.data.cards });
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+    this.props.dispatch(fetchCards());
+  
   }
 
   handleGetUserCards(card) {
@@ -68,7 +64,7 @@ class HomePageContainer extends Component {
   render() {
     return (
       <div className="container">
-        <HomePage cards={ this.state.cards }
+        <HomePage cards={ this.props.cards }
                   isLoggedIn={ this.props.userID }
                   handleLikeClick={ this.handleLikeClick.bind(this) }
                   handleGetUserCards={ this.handleGetUserCards.bind(this) }/>
@@ -77,4 +73,9 @@ class HomePageContainer extends Component {
   }
 }
 
-export default HomePageContainer;
+function mapStateToProps(state) {
+  return {
+    cards: state.cards.cards
+  }
+}
+export default connect(mapStateToProps)(HomePageContainer);
