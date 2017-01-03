@@ -28,8 +28,8 @@ class CreateCard extends Component {
               </div>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-              <button onClick={ this.props.handleCreateCardClick } type="button" className="btn btn-primary" data-dismiss="modal">Create</button>
+              <button type="reset" className="btn btn-default" data-dismiss="modal">Close</button>
+              <button onClick={ this.props.handleCreateCardClick } type="submit" className="btn btn-primary" data-dismiss="modal">Create</button>
             </div>
           </div>
         </div>

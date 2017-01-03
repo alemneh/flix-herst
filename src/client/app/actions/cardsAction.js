@@ -26,6 +26,33 @@ export function clickLikeBtn(cardId, userId) {
   };
 }
 
+export function removeCard(card) {
+  const URL = process.env.URL + '/users/' + card._owner + '/cards/' + card._id;
+  return function(dispatch) {
+    dispatch({type: 'REMOVE_CARD'});
+    axios.delete(URL).then((res) => {
+      dispatch({type: 'REMOVE_CARD_FULFILLED', payload: card});
+    })
+    .catch((err) => {
+      dispatch({type: 'REMOVE_CARD_REJECTED', payload: err});
+    });
+  };
+}
+
+export function creatCard(newCard) {
+  const userId = localStorage.userID;
+  const URL = process.env.URL + '/users/' + userId + '/cards';
+  return function(dispatch) {
+    dispatch({type: 'CREATE_CARD'});
+    axios.post(URL, newCard).then((res) => {
+      dispatch({type: 'CREATE_CARD_FULFILLED', payload: res.data.newCard });
+    })
+    .catch((err) => {
+      dispatch({type: 'CREATE_CARD_REJECTED', payload: err });
+    });
+  };
+}
+
 export function copyTagLineInput(val) {
   return {
     type: 'TAGLINE_CHANGED',

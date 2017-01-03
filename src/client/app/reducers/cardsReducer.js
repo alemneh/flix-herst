@@ -27,11 +27,10 @@ export default function reducer(state={
     }
     case 'LIKE_BTN_CLICKED_RECEIVED': {
       const { cardId, userId} = action.payload
-      console.log(userId);
       const newCards = [...state.cards]
       const CardToUpdate = newCards.findIndex(card => card._id === cardId);
       const LikeToUpdate = newCards[CardToUpdate].likes.indexOf(userId)
-      console.log(LikeToUpdate);
+
       if(LikeToUpdate === -1) {
         newCards[CardToUpdate].likes.push(userId);
       } else {
@@ -40,6 +39,8 @@ export default function reducer(state={
 
       return {
         ...state,
+        fetching: false,
+        fetched: true,
         cards: newCards
       }
     }
@@ -51,6 +52,38 @@ export default function reducer(state={
     }
     case 'IMGURL_CHANGED': {
       return {...state, newCardImgUrl: action.payload}
+    }
+    case 'REMOVE_CARD': {
+      return {...state, fetching: true}
+    }
+    case 'REMOVE_CARD_REJECTED': {
+      return {...state, fetching: false, error: action.payload}
+    }
+    case 'REMOVE_CARD_FULFILLED': {
+      const { _id } = action.payload;
+      const newCards = state.cards.filter(card => card._id != _id);
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        cards: newCards
+      }
+    }
+    case 'CREATE_CARD': {
+      return {...state, fetching: true}
+    }
+    case 'CREATE_CARD_REJECTED': {
+      return {...state, fetching: false, error: action.payload}
+    }
+    case 'CREATE_CARD_FULFILLED': {
+      const newCard = action.payload;
+      let newCards = [...state.cards].concat(newCard);
+      return {
+        ...state,
+        fetching: false,
+        fetched: true,
+        cards: newCards
+      }
     }
 
   }

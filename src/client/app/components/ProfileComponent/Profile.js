@@ -36,7 +36,6 @@ componentWillMount() {
            </div>
         </div>
         <CreateCard handleImgChange={ this.props.handleImgChange }
-                    twitterIMG={ this.props.twitterIMG }
                     handleTagLineChange={ this.props.handleTagLineChange }
                     handleCreateCardClick={ this.props.handleCreateCardClick }
                     imgURL={this.props.imgURL}/>
