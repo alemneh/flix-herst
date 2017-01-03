@@ -5,7 +5,6 @@ class NavItem extends Component {
   render() {
     const { router } = this.context;
     const { index, to, children } = this.props;
-    console.log(this.props);
     let isActive = router.isActive(to, true);
     const LinkComponent = index ? Link : IndexLink;
 

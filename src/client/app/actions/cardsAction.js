@@ -12,3 +12,30 @@ export function fetchCards() {
       });
   };
 }
+
+export function clickLikeBtn(cardId, userId) {
+  return function(dispatch) {
+    dispatch({type: 'LIKE_BTN_CLICKED'});
+    axios.put(process.env.URL + '/cards/' + cardId + '/' +userId)
+      .then((res) => {
+        dispatch({type: 'LIKE_BTN_CLICKED_RECEIVED', payload: { cardId, userId }});
+      })
+      .catch((err) => {
+        dispatch({type: 'LIKE_BTN_CLICKED_REJECTED', payload: err});
+      });
+  };
+}
+
+export function copyTagLineInput(val) {
+  return {
+    type: 'TAGLINE_CHANGED',
+    payload: val
+  }
+}
+
+export function copyImgURLInput(val) {
+  return {
+    type: 'IMGURL_CHANGED',
+    payload: val
+  }
+}

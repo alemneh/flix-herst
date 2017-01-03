@@ -7,6 +7,7 @@ class Card extends Component {
   }
 
   renderCard(view, card) {
+    const userId = this.props.userID;
     switch(view) {
       case 'read-write':
         return(

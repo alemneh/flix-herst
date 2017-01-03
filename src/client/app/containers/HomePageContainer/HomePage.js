@@ -3,7 +3,8 @@ import axios from 'axios';
 import HomePage from '../../components/HomePageComponent/HomePage';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
-import { fetchCards } from '../../actions/cardsAction';
+import { bindActionCreators } from 'redux';
+import { fetchCards, clickLikeBtn } from '../../actions/cardsAction';
 
 // helper for checking if user already liked card
 
@@ -11,52 +12,23 @@ import { fetchCards } from '../../actions/cardsAction';
 class HomePageContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      cards: []
-    }
+
   }
 
   componentWillMount() {
-    this.getAllCards();
+    this.props.fetchCards();
   }
 
-  checkIfCardWasLiked(card) {
-    const userID = this.props.userID;
-    let liker = card.likes.indexOf(userID);
-    console.log(liker);
-    if(liker != -1) {
-      card.likes.splice(liker, 1);
-    } else {
-      card.likes.push(userID)
-    }
-  }
 
   handleLikeClick(card) {
-    let cards = this.state.cards.map((c) => {
-      if(c._id == card._id) {
-        console.log(c.likes);
-        this.checkIfCardWasLiked(c);
-        console.log(c.likes);
-      }
-      return c
-    })
-    axios.put(process.env.URL + '/cards/' + card._id + '/' + this.props.userID)
-      .then((res) => {
-        console.log(res);
-        this.setState({ cards });
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+    const cardId = card._id;
+    const userId = this.props.userID;
+    this.props.clickLikeBtn(cardId, userId)
   }
 
-  getAllCards() {
-    this.props.dispatch(fetchCards());
-  
-  }
+
 
   handleGetUserCards(card) {
-    console.log(card);
     localStorage.userId = card._owner;
     browserHistory.push('view/users/cards');
   }
@@ -78,4 +50,9 @@ function mapStateToProps(state) {
     cards: state.cards.cards
   }
 }
-export default connect(mapStateToProps)(HomePageContainer);
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchCards, clickLikeBtn}, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(HomePageContainer);
