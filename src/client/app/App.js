@@ -7,10 +7,7 @@ import { browserHistory } from 'react-router';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      userID: null,
-      cards: []
-    }
+  
   }
 
   componentWillMount() {
@@ -29,10 +26,8 @@ class App extends Component {
     axios.get(process.env.URL + '/isLoggedIn')
       .then((res) => {
         console.log(res);
-        localStorage.userID = res.data.user;
-        this.setState({
-          userID: res.data.user
-        })
+        localStorage.userId = res.data.user;
+
       })
       .catch((err) => {
         console.log(err);
@@ -46,10 +41,7 @@ class App extends Component {
     return (
       <div>
         <NavContainer userID={this.state.userID }/>
-        { React.cloneElement(this.props.children, {
-          userID: this.state.userID,
-          cards: this.state.cards
-        }) }
+        { this.props.children }
         <Footer />
       </div>
     )

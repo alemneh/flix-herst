@@ -1,11 +1,13 @@
-export default function reducer(state={
+const intialState = {
   cards: [],
   fetching: false,
   fetched: false,
   error: null,
   newCardImgUrl: '',
   newCardTagLine: ''
-}, action) {
+}
+
+export default function reducer(state=intialState, action) {
 
   switch(action.type) {
     case 'FETCH_CARDS': {

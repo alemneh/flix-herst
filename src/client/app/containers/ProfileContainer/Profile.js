@@ -16,8 +16,6 @@ class ProfileContainer extends Component {
 
   }
 
-
-
   handleImgChange(e) {
     let val = e.target.value;
     this.props.copyImgURLInput(val);
@@ -37,7 +35,6 @@ class ProfileContainer extends Component {
   handleRemoveCardClick(card) {
     this.props.removeCard(card);
   }
-
 
   render() {
     return (

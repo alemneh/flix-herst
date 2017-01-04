@@ -16,13 +16,11 @@ class UserCardsContainer extends Component {
     this.props.fetchCards(userId);
   }
 
-
   handleLikeClick(card) {
     const userId = localStorage.userId;
     const cardId = card._id;
     this.props.clickLikeBtn(cardId, userId);
   }
-
 
   render() {
     return(
@@ -43,7 +41,6 @@ function mapStateToProps(state) {
 function matchDispatchToProps(dispatch) {
   return bindActionCreators({ fetchCards, clickLikeBtn }, dispatch);
 }
-
 
 
 export default connect(mapStateToProps, matchDispatchToProps)(UserCardsContainer);

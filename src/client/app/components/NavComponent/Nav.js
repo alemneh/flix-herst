@@ -27,7 +27,7 @@ class Nav extends Component {
           <NavItem to="/profile">Profile</NavItem>
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><a href='/logout'>Logout</a></li>
+          <li><a  onClick={() => { this.props.handleLogoutClick() }}>Logout</a></li>
         </ul>
       </div>
     )

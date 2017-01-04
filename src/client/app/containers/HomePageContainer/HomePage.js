@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchCards, clickLikeBtn } from '../../actions/cardsAction';
 
-// helper for checking if user already liked card
 
 
 class HomePageContainer extends Component {
@@ -19,17 +18,13 @@ class HomePageContainer extends Component {
     this.props.fetchCards();
   }
 
-
   handleLikeClick(card) {
     const cardId = card._id;
     const userId = this.props.userID;
     this.props.clickLikeBtn(cardId, userId)
   }
 
-
-
   handleGetUserCards(card) {
-    localStorage.userId = card._owner;
     browserHistory.push('view/users/cards');
   }
 

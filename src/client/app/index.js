@@ -9,7 +9,10 @@ import Profile from './containers/ProfileContainer/Profile';
 import Login from './components/LoginComponent/Login';
 import store from './store';
 
+store.subscribe(() => {
+  console.log(store.getState());
 
+})
 
 
 

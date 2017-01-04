@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Nav from '../../components/NavComponent/Nav';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { browserHistory } from 'react-router';
+import { logOut } from '../../actions/userAction';
 
 class NavContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoggedIn: false
-    }
+
   }
 
   componentWillMount() {
@@ -30,13 +31,14 @@ class NavContainer extends Component {
 
   handleLogoutClick() {
     console.log('hit');
-    axios.get(process.env.URL + '/logout')
-      .then((res) => {
-        console.log(hit);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+    this.props.logOut();
+    // axios.get(process.env.URL + '/logout')
+    //   .then((res) => {
+    //     browserHistory.push('/');
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   })
   }
 
   handleLoginClick() {
@@ -45,14 +47,24 @@ class NavContainer extends Component {
   }
 
   render() {
-
+    console.log(this.props.userId);
     return(
       <div>
-        <Nav handleLogoutClick={ this.handleLogoutClick }
-             isLoggedIn={ this.props.userID }/>
+        <Nav handleLogoutClick={ this.handleLogoutClick.bind(this) }
+             isLoggedIn={ this.props.userId }/>
       </div>
     )
   }
 }
 
-export default NavContainer;
+function mapStateToProps(state) {
+  return {
+    userId: state.user.userId
+  }
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ logOut }, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(NavContainer);

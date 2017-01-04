@@ -10,7 +10,8 @@ let twitterOAuthRoutes = {
   logOut: function(req, res) {
     delete req.session.user;
     req.logout();
-    res.redirect('/');
+    // res.redirect('/');
+    res.json({ message: 'loggedOut'});
   }
 
 };
