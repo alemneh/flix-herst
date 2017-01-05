@@ -25,7 +25,7 @@ class UserCardsContainer extends Component {
   render() {
     return(
       <UserCards userCards={this.props.cards}
-                 isLoggedIn={ this.props.userID }
+                 isLoggedIn={ this.props.userId }
                  handleLikeClick={ this.handleLikeClick.bind(this) }/>
     )
   }
@@ -34,7 +34,8 @@ class UserCardsContainer extends Component {
 function mapStateToProps(state) {
   console.log(state);
   return {
-    cards: state.cards.cards
+    cards: state.cards.cards,
+    userId: state.user.userId
   }
 }
 

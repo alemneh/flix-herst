@@ -24,10 +24,10 @@ class Nav extends Component {
       <div>
         <ul className="nav navbar-nav">
           <NavItem to='/' index={true}>All Cards</NavItem>
-          <NavItem to="/profile">Profile</NavItem>
+          <NavItem to='/profile'>Profile</NavItem>
         </ul>
         <ul className="nav navbar-nav navbar-right">
-          <li><a  onClick={() => { this.props.handleLogoutClick() }}>Logout</a></li>
+          <li><a href='#' onClick={(e) => { this.props.handleLogoutClick(e) }}>Logout</a></li>
         </ul>
       </div>
     )
@@ -44,7 +44,7 @@ class Nav extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <Link to="/"><a className="navbar-brand" href="#">Flix-Herst</a></Link>
+              <Link to="/" className="navbar-brand">Flix-Herst</Link>
             </div>
 
             <div className="navbar-collapse collapse in" id="bs-example-navbar-collapse-1" aria-expanded="true">

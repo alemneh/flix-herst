@@ -11,8 +11,8 @@ class ProfileContainer extends Component {
   }
 
   componentWillMount() {
-    const userID = localStorage.userID;
-    this.props.fetchCards(userID);
+    const { userId } = this.props;
+    this.props.fetchCards(userId);
 
   }
 
@@ -27,9 +27,9 @@ class ProfileContainer extends Component {
   }
 
   handleCreateCardClick() {
-    const { twitterIMG, imgURL, tagLine } = this.props;
-    const newCard = { imgURL, tagLine}
-    this.props.creatCard(newCard);
+    const { twitterIMG, imgURL, tagLine, creatCard, userId } = this.props;
+    const newCard = { imgURL, tagLine, userId }
+    creatCard(newCard);
   }
 
   handleRemoveCardClick(card) {
@@ -54,7 +54,8 @@ function mapStateToProps(state) {
   return {
     cards: state.cards.cards,
     imgURL: state.cards.newCardImgUrl,
-    tagLine: state.cards.newCardTagLine
+    tagLine: state.cards.newCardTagLine,
+    userId: state.user.userId
   }
 }
 

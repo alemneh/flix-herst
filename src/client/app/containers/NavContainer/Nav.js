@@ -4,7 +4,7 @@ import Nav from '../../components/NavComponent/Nav';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { browserHistory } from 'react-router';
-import { logOut } from '../../actions/userAction';
+import { logOut, fetchUserId } from '../../actions/userAction';
 
 class NavContainer extends Component {
   constructor(props) {
@@ -13,36 +13,15 @@ class NavContainer extends Component {
   }
 
   componentWillMount() {
-    // this.checkLogIn();
+    this.props.fetchUserId();
   }
 
-  checkLogIn() {
-    axios.get(process.env.URL + '/isLoggedIn')
-      .then((res) => {
-        console.log(res.data.user);
-        this.setState({
-          isLoggedIn: res.data.user
-        })
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }
-
-  handleLogoutClick() {
-    console.log('hit');
+  handleLogoutClick(e) {
+    e.preventDefault()
     this.props.logOut();
-    // axios.get(process.env.URL + '/logout')
-    //   .then((res) => {
-    //     browserHistory.push('/');
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   })
   }
 
   handleLoginClick() {
-    console.log('hit');
     browserHistory.push('/auth/twitter');
   }
 
@@ -64,7 +43,7 @@ function mapStateToProps(state) {
 }
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({ logOut }, dispatch);
+  return bindActionCreators({ logOut, fetchUserId }, dispatch);
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(NavContainer);

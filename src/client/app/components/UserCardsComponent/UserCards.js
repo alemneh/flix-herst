@@ -1,34 +1,37 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 import Card from '../CardComponent/Card';
 
-class UserCards extends Component {
-  constructor(props) {
-    super(props);
-  }
+const UserCards = ({userCards, handleLikeClick, isLoggedIn}) => {
 
-  renderCards() {
-    const view = this.props.isLoggedIn ? 'read-write' : 'read-only';
-    if(this.props.userCards.length < 1) {
+
+  const renderCards = () => {
+    const view = isLoggedIn ? 'read-write' : 'read-only';
+    if(userCards.length < 1) {
       return (
         <div className="col-md-12">No cards created yet.</div>
       )
     }
-    return this.props.userCards.map((card, index) => {
+    return userCards.map((card, index) => {
       return <Card key={index} card={card} view={view}
-                   handleLikeClick={ this.props.handleLikeClick }/>
+                   handleLikeClick={ handleLikeClick }/>
     })
   }
 
-  render() {
-    return (
-      <div id="wrapper">
-      <h1>User's Cards</h1><hr />
-        <div id="columns">
-          { this.renderCards() }
-        </div>
+  return (
+    <div id="wrapper">
+    <h1>User's Cards</h1><hr />
+      <div id="columns">
+        { renderCards() }
       </div>
-    )
-  }
+    </div>
+  )
+
+}
+
+UserCards.propTypes = {
+  userCards: PropTypes.array.isRequired,
+  isLoggedIn: PropTypes.string.isRequired,
+  handleLikeClick: PropTypes.func.isRequired
 }
 
 

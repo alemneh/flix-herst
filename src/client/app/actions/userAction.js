@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export function fecthUserId() {
+export function fetchUserId() {
   return function(dispatch) {
     dispatch({type: 'FETCH_USER_ID'});
     axios.get(process.env.URL + '/isLoggedIn')

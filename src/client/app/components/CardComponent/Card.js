@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 require('./styles-card.scss');
 
-class Card extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Card = ({
+  card,
+  view,
+  handleLikeClick,
+  handleGetUserCards,
+  handleRemoveCardClick
+}) => {
 
-  renderCard(view, card) {
-    const userId = this.props.userID;
+
+  const renderCard = (view, card) => {
     switch(view) {
       case 'read-write':
         return(
@@ -15,13 +18,12 @@ class Card extends Component {
             <div>
               <img src={card.imgURL} />
               <p>{ card.tagLine }</p>
-              {/* <h5 style={ Styles.tagLine }>{ card.tagLine }</h5> */}
               <div>
                 <div className="card-like-btn">
-                  <a onClick={() => {this.props.handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
+                  <a onClick={() => {handleLikeClick(card)} }  className="btn btn-primary btn-xs">Like {card.likes.length}</a>
                 </div>
                 <div className="card-avatar">
-                  <img onClick={() => { this.props.handleGetUserCards(card) }} src={ card.twitterIMG } />
+                  <img onClick={() => { handleGetUserCards(card) }} src={ card.twitterIMG } />
                 </div>
               </div>
             </div>
@@ -46,10 +48,9 @@ class Card extends Component {
         return (
           <div  className="pin">
             <div>
-              <button onClick={() => {this.props.handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
+              <button onClick={() => {handleRemoveCardClick(card)}} type="button" className="close">&times;</button>
               <img src={card.imgURL} />
               <p>{card.tagLine}</p>
-              {/* <h5 style={ Styles.tagLine }>{ card.tagLine }</h5> */}
               <img src={ card.twitterID } />
             </div>
           </div>
@@ -57,15 +58,20 @@ class Card extends Component {
     }
   }
 
-  render() {
-    const card = this.props.card;
-    const view = this.props.view;
     return (
       <div>
-        { this.renderCard(view, card) }
+        { renderCard(view, card) }
       </div>
     )
-  }
+
+}
+
+Card.propTypes = {
+  view: PropTypes.string.isRequired,
+  card: PropTypes.object.isRequired,
+  handleLikeClick: PropTypes.func,
+  handleGetUserCards: PropTypes.func,
+  handleRemoveCardClick: PropTypes.func
 }
 
 export default Card;

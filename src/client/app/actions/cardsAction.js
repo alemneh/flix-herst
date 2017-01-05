@@ -40,7 +40,7 @@ export function removeCard(card) {
 }
 
 export function creatCard(newCard) {
-  const userId = localStorage.userID;
+  const { userId } = newCard;
   const URL = process.env.URL + '/users/' + userId + '/cards';
   return function(dispatch) {
     dispatch({type: 'CREATE_CARD'});

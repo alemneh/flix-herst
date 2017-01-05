@@ -7,7 +7,7 @@ import { browserHistory } from 'react-router';
 class App extends Component {
   constructor(props) {
     super(props);
-  
+
   }
 
   componentWillMount() {
@@ -18,7 +18,7 @@ class App extends Component {
 
 
   checkLoggIn() {
-    if(localStorage.userID) return;
+    if(localStorage.userId) return;
     browserHistory.push('/');
   }
 
@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavContainer userID={this.state.userID }/>
+        <NavContainer />
         { this.props.children }
         <Footer />
       </div>

@@ -20,8 +20,8 @@ class HomePageContainer extends Component {
 
   handleLikeClick(card) {
     const cardId = card._id;
-    const userId = this.props.userID;
-    this.props.clickLikeBtn(cardId, userId)
+    const { userId, clickLikeBtn } = this.props;
+    clickLikeBtn(cardId, userId)
   }
 
   handleGetUserCards(card) {
@@ -29,10 +29,11 @@ class HomePageContainer extends Component {
   }
 
   render() {
+    const { cards, userId } = this.props;
     return (
       <div className="container">
-        <HomePage cards={ this.props.cards }
-                  isLoggedIn={ this.props.userID }
+        <HomePage cards={ cards }
+                  isLoggedIn={ userId }
                   handleLikeClick={ this.handleLikeClick.bind(this) }
                   handleGetUserCards={ this.handleGetUserCards.bind(this) }/>
       </div>
@@ -42,7 +43,8 @@ class HomePageContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    cards: state.cards.cards
+    cards: state.cards.cards,
+    userId: state.user.userId
   }
 }
 

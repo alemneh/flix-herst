@@ -6,4 +6,5 @@ export default store => next => action => {
   console.log(action.type);
   localStorage.clear();
   browserHistory.push(redirect);
+  next(action);
 };
