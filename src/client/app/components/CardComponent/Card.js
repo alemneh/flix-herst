@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-require('./styles-card.scss');
+// require('./styles-card.scss');
 
 const Card = ({
   card,
