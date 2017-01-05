@@ -31,6 +31,7 @@ const Home = ({cards, isLoggedIn, handleLikeClick, handleGetUserCards}) => {
 
 Home.propType = {
   cards: PropTypes.array.isRequired,
+  isLoggedIn: PropTypes.string.isRequired,
   handleLikeClick: PropTypes.func.isRequired,
   handleGetUserCards: PropTypes.func.isRequired
 }

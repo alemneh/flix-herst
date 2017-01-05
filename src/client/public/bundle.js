@@ -31294,6 +31294,7 @@
 
 	Home.propType = {
 	  cards: _react.PropTypes.array.isRequired,
+	  isLoggedIn: _react.PropTypes.string.isRequired,
 	  handleLikeClick: _react.PropTypes.func.isRequired,
 	  handleGetUserCards: _react.PropTypes.func.isRequired
 	};
