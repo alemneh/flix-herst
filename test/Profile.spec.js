@@ -39,7 +39,6 @@ describe('<Profile />', () => {
   })
 
   it('should have an array of cards prop', () => {
-    console.log(Props);
     let { cards } = Props;
     expect(cards).to.be.defiend;
     expect(cards).to.be.an('array');
