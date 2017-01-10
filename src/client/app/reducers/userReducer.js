@@ -1,5 +1,8 @@
+import React from 'react';
+import * as types from '../ActionConstants';
+
 const intialState = {
-  userId: localStorage.userId || null,
+  userId: null,
   fetching: false,
   fetched: false,
   error: null,
@@ -9,13 +12,13 @@ const intialState = {
 
 export default function(state=intialState, action) {
   switch(action.type) {
-    case 'FETCH_USER_ID': {
+    case types.FETCH_USER_ID: {
       return {...state, fetching: true}
     }
-    case 'FETCH_USER_ID_REJECTED': {
+    case types.FETCH_USER_ID_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'FETCH_USER_ID_FULFILLED': {
+    case types.FETCH_USER_ID_FULFILLED: {
       return {
         ...state,
         fetching:false,
@@ -23,13 +26,13 @@ export default function(state=intialState, action) {
         userId: action.payload
       }
     }
-    case 'LOGOUT': {
+    case types.LOGOUT: {
       return {...state, fetching: true}
     }
-    case 'LOGOUT_REJECTED': {
+    case types.LOGOUT_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'LOGOUT_FULFILLED': {
+    case types.LOGOUT_FULFILLED: {
       return {
         ...state,
         fetching: false,

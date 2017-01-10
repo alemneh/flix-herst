@@ -17,9 +17,9 @@ class UserCardsContainer extends Component {
   }
 
   handleLikeClick(card) {
-    const userId = localStorage.userId;
+    const { userId , clickLikeBtn } = this.props;
     const cardId = card._id;
-    this.props.clickLikeBtn(cardId, userId);
+    clickLikeBtn(cardId, userId);
   }
 
   render() {

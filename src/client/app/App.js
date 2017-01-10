@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import NavContainer from './containers/NavContainer/Nav';
 import Footer from './components/FooterComponent/Footer';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { browserHistory } from 'react-router';
+import { fetchUserId } from './actions/userAction';
 
 class App extends Component {
   constructor(props) {
@@ -11,30 +14,16 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.fetchUserID();
+    this.props.fetchUserId();
     this.checkLoggIn();
   }
 
 
 
   checkLoggIn() {
-    if(localStorage.userId) return;
+    if(this.props.userId) return;
     browserHistory.push('/');
   }
-
-  fetchUserID() {
-    axios.get(process.env.URL + '/isLoggedIn')
-      .then((res) => {
-        console.log(res);
-        localStorage.userId = res.data.user;
-
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }
-
-
 
 
   render() {
@@ -48,4 +37,14 @@ class App extends Component {
   }
 }
 
-export default App
+function mapStateToProps(state) {
+  return {
+    userId: state.user.userId
+  }
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchUserId}, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(App);

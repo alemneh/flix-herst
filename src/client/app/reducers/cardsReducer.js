@@ -1,3 +1,5 @@
+import * as types from '../ActionConstants';
+
 const intialState = {
   cards: [],
   fetching: false,
@@ -5,18 +7,19 @@ const intialState = {
   error: null,
   newCardImgUrl: '',
   newCardTagLine: ''
+
 }
 
 export default function reducer(state=intialState, action) {
 
   switch(action.type) {
-    case 'FETCH_CARDS': {
+    case types.FETCH_CARDS: {
       return {...state, fetching: true}
     }
-    case 'FETCH_CARDS_REJECTED': {
+    case types.FETCH_CARDS_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'FETCH_CARDS_FULFILLED': {
+    case types.FETCH_CARDS_FULFILLED: {
       return {
         ...state,
         fetching: false,
@@ -24,10 +27,10 @@ export default function reducer(state=intialState, action) {
         cards: action.payload
       }
     }
-    case 'LIKE_BTN_CLICKED': {
+    case types.LIKE_BTN_CLICKED: {
       return {...state, fetching: true}
     }
-    case 'LIKE_BTN_CLICKED_RECEIVED': {
+    case types.LIKE_BTN_CLICKED_RECEIVED: {
       const { cardId, userId} = action.payload
       const newCards = [...state.cards]
       const CardToUpdate = newCards.findIndex(card => card._id === cardId);
@@ -46,22 +49,22 @@ export default function reducer(state=intialState, action) {
         cards: newCards
       }
     }
-    case 'LIKE_BTN_CLICKED_REJECTED': {
+    case types.LIKE_BTN_CLICKED_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'TAGLINE_CHANGED': {
+    case types.TAGLINE_CHANGED: {
       return {...state, newCardTagLine: action.payload}
     }
-    case 'IMGURL_CHANGED': {
+    case types.IMGURL_CHANGED: {
       return {...state, newCardImgUrl: action.payload}
     }
-    case 'REMOVE_CARD': {
+    case types.REMOVE_CARD: {
       return {...state, fetching: true}
     }
-    case 'REMOVE_CARD_REJECTED': {
+    case types.REMOVE_CARD_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'REMOVE_CARD_FULFILLED': {
+    case types.REMOVE_CARD_FULFILLED: {
       const { _id } = action.payload;
       const newCards = state.cards.filter(card => card._id != _id);
       return {
@@ -71,13 +74,13 @@ export default function reducer(state=intialState, action) {
         cards: newCards
       }
     }
-    case 'CREATE_CARD': {
+    case types.CREATE_CARD: {
       return {...state, fetching: true}
     }
-    case 'CREATE_CARD_REJECTED': {
+    case types.CREATE_CARD_REJECTED: {
       return {...state, fetching: false, error: action.payload}
     }
-    case 'CREATE_CARD_FULFILLED': {
+    case types.CREATE_CARD_FULFILLED: {
       const newCard = action.payload;
       let newCards = [...state.cards].concat(newCard);
       return {

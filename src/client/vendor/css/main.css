@@ -1,3 +1,34 @@
+/** Cards **/
+.card-avatar {
+  float: right;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.card-like-btn {
+  float: left;
+  margin-top: 11%;
+}
+
+.disable-click, .disable-click a {
+  cursor: not-allowed;
+}
+
+
+.card-img {
+  margin-top: 5px;
+}
+
+.close {
+  margin-bottom: 15px;
+  color: black;
+}
+
+.close:hover {
+  color: black;
+}
+
+
 
 footer div a {
   text-decoration: none;
