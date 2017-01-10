@@ -6,7 +6,7 @@ export function fetchUserId() {
     dispatch({type: types.FETCH_USER_ID});
     axios.get(process.env.URL + '/isLoggedIn')
       .then((res) => {
-        dispatch({type: types.FETCH_USER_ID_FULFILLED, payload: res.data.user });
+        return dispatch({type: types.FETCH_USER_ID_FULFILLED, payload: res.data.user });
       })
       .catch((err) => {
         dispatch({type: types.FETCH_USER_ID_REJECTED, payload: err});

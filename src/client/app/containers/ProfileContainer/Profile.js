@@ -27,7 +27,7 @@ class ProfileContainer extends Component {
   }
 
   handleCreateCardClick() {
-    const { twitterIMG, imgURL, tagLine, creatCard, userId } = this.props;
+    const { imgURL, tagLine, creatCard, userId } = this.props;
     const newCard = { imgURL, tagLine, userId }
     creatCard(newCard);
   }

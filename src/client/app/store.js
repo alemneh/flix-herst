@@ -9,4 +9,5 @@ import reducer from './reducers';
 
 const middleware = applyMiddleware(redirect, thunk, logger());
 
+
 export default createStore(reducer, middleware);
