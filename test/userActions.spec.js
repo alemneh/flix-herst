@@ -33,13 +33,8 @@ describe('async actions', () => {
     ]
 
     const store = mockStore({ user:{ userId: null } })
-    console.log(store.getState());
 
-    console.log(store.dispatch(actions.fetchUserId()));
-    // axios.get('http://localhost:3000/isLoggedIn').then((res) => {
-    //   console.log(res.data);
-    // })
-    // .catch((err) => {console.log(err);})
+  
 
     return store.dispatch(actions.fetchUserId())
 
