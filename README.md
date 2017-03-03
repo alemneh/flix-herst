@@ -35,7 +35,7 @@ Create an env directory in the root of the project
 mkdir env
 ```
 
-Create a twitter-env.json file directory in the root of the project
+Create a twitter-env.json file in the env directory
 
 ```
 touch env/twitter-env.json
